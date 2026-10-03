@@ -268,12 +268,14 @@ const htmlTemplate = `<!DOCTYPE html>
         .service-desc { font-size: 12px; color: var(--text-sec); line-height: 1.7; margin-bottom: 6px; }
         .service-price { font-size: 13px; font-weight: 700; color: var(--primary); }
 
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .gallery-item { border-radius: 14px; overflow: hidden; background: white; border: 1px solid var(--border); }
+                .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .gallery-item { border-radius: 14px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,191,165,0.25); border-color: var(--primary); }
         .gallery-image { width: 100%; aspect-ratio: 1; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.05); }
-        .gallery-title { font-size: 12px; color: var(--text-sec); font-weight: 600; padding: 10px; text-align: center; }
+        .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .gallery-item:hover .gallery-image img { transform: scale(1.1); }
+        .gallery-title { font-size: 12px; color: var(--text-sec); font-weight: 600; padding: 10px; text-align: center; transition: color 0.3s; }
+        .gallery-item:hover .gallery-title { color: var(--primary); font-weight: 700; }
 
         .about-box { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
         .about-image { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #f0f0f0; }
