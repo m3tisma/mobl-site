@@ -72,7 +72,7 @@ type SiteData struct {
 }
 
 func main() {
-	if err := os.MkdirAll("public", 0755); err != nil {
+	if err := os.MkdirAll("docs", 0755); err != nil {
 		log.Fatal(err)
 	}
 
@@ -184,7 +184,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	f, err := os.Create(filepath.Join("public", "index.html"))
+	f, err := os.Create(filepath.Join("docs", "index.html"))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -194,7 +194,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Println("✅ public/index.html ساخته شد")
+	log.Println("✅ docs/index.html ساخته شد")
 }
 
 const htmlTemplate = `<!DOCTYPE html>
