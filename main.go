@@ -90,23 +90,23 @@ func main() {
 		OrdersCount: "۱۳۷",
 		Rating:      "۴.۹",
 		ReviewsNum:  "۴۸۰",
-		HeroImage:   "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
-		AboutImage:  "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80",
+		HeroImage:   "images/hero.jpg",
+		AboutImage:  "images/about.jpg",
 		Services: []Service{
-			{Image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80", Title: "تعمیر مبل استیل", Desc: "تعمیر و بازسازی کامل مبل‌های استیل", Price: "از ۵۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&q=80", Title: "تعمیر صندلی", Desc: "تعمیر انواع صندلی اداری و غذاخوری", Price: "از ۲۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=400&q=80", Title: "تعویض پارچه", Desc: "تعویض پارچه مبل با جدیدترین طرح‌ها", Price: "از ۸۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=400&q=80", Title: "تعمیر فنر و اسکلت", Desc: "تعمیر اسکلت چوبی و فنرهای مبل", Price: "از ۴۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80", Title: "روکش مبل", Desc: "روکش‌کشی حرفه‌ای انواع مبل", Price: "از ۱ میلیون تومان"},
-			{Image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&q=80", Title: "بازسازی کامل", Desc: "بازسازی صفر تا صد مبل قدیمی", Price: "از ۲ میلیون تومان"},
+			{Image: "images/service-1.jpg", Title: "تعمیر مبل استیل", Desc: "تعمیر و بازسازی کامل مبل‌های استیل", Price: "از ۵۰۰ هزار تومان"},
+			{Image: "images/service-2.jpg", Title: "تعمیر صندلی", Desc: "تعمیر انواع صندلی اداری و غذاخوری", Price: "از ۲۰۰ هزار تومان"},
+			{Image: "images/service-3.jpg", Title: "تعویض پارچه", Desc: "تعویض پارچه مبل با جدیدترین طرح‌ها", Price: "از ۸۰۰ هزار تومان"},
+			{Image: "images/service-4.jpg", Title: "تعمیر فنر و اسکلت", Desc: "تعمیر اسکلت چوبی و فنرهای مبل", Price: "از ۴۰۰ هزار تومان"},
+			{Image: "images/service-5.jpg", Title: "روکش مبل", Desc: "روکش‌کشی حرفه‌ای انواع مبل", Price: "از ۱ میلیون تومان"},
+			{Image: "images/service-6.jpg", Title: "بازسازی کامل", Desc: "بازسازی صفر تا صد مبل قدیمی", Price: "از ۲ میلیون تومان"},
 		},
 		Gallery: []GalleryItem{
-			{Image: "https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=400&q=80", Title: "تعمیر مبل استیل"},
-			{Image: "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=400&q=80", Title: "تعمیر صندلی"},
-			{Image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&q=80", Title: "تعویض پارچه"},
-			{Image: "https://images.unsplash.com/photo-1549497538-303791108f95?w=400&q=80", Title: "تعمیر اسکلت"},
-			{Image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=400&q=80", Title: "روکش‌کشی"},
-			{Image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&q=80", Title: "بازسازی کامل"},
+			{Image: "images/gallery-1.jpg", Title: "تعمیر مبل استیل"},
+			{Image: "images/gallery-2.jpg", Title: "تعمیر صندلی"},
+			{Image: "images/gallery-3.jpg", Title: "تعویض پارچه"},
+			{Image: "images/gallery-4.jpg", Title: "تعمیر اسکلت"},
+			{Image: "images/gallery-5.jpg", Title: "روکش‌کشی"},
+			{Image: "images/gallery-6.jpg", Title: "بازسازی کامل"},
 		},
 		Reviews: []Review{
 			{Name: "مریم رضایی", City: "شیراز", Date: "۲ روز پیش", Rating: 5, Service: "تعمیر مبل استیل", Initial: "م", Text: "خیلی حرفه‌ای و سریع کار کردن. مبل استیلمون که فکر می‌کردیم باید عوضش کنیم رو مثل روز اولش کردن. قیمت هم کاملاً منصفانه بود."},
@@ -268,8 +268,8 @@ const htmlTemplate = `<!DOCTYPE html>
         .service-desc { font-size: 12px; color: var(--text-sec); line-height: 1.7; margin-bottom: 6px; }
         .service-price { font-size: 13px; font-weight: 700; color: var(--primary); }
 
-                .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .gallery-item { border-radius: 14px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .gallery-item { border-radius: 14px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor: pointer; }
         .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,191,165,0.25); border-color: var(--primary); }
         .gallery-image { width: 100%; aspect-ratio: 1; overflow: hidden; background: #f0f0f0; }
         .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
