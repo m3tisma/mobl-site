@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"log"
 	"os"
@@ -71,9 +72,57 @@ type SiteData struct {
 	QandAs      []QandA
 }
 
+// ==================== ساخت SVG ====================
+func makeSVG(filename, emoji, title, color1, color2 string) error {
+	svg := fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="g" x1="0%%" y1="0%%" x2="100%%" y2="100%%">
+      <stop offset="0%%" style="stop-color:%s;stop-opacity:1" />
+      <stop offset="100%%" style="stop-color:%s;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <circle cx="200" cy="160" r="70" fill="rgba(255,255,255,0.15)"/>
+  <text x="200" y="185" font-size="80" text-anchor="middle" dominant-baseline="middle">%s</text>
+  <text x="200" y="300" font-size="28" font-weight="bold" text-anchor="middle" fill="white" font-family="Tahoma, sans-serif">%s</text>
+</svg>`, color1, color2, emoji, title)
+
+	return os.WriteFile(filepath.Join("docs", "images", filename), []byte(svg), 0644)
+}
+
 func main() {
-	if err := os.MkdirAll("docs", 0755); err != nil {
+	if err := os.MkdirAll(filepath.Join("docs", "images"), 0755); err != nil {
 		log.Fatal(err)
+	}
+
+	// ساخت عکس‌های SVG
+	svgs := []struct {
+		File  string
+		Emoji string
+		Title string
+		C1    string
+		C2    string
+	}{
+		{"hero.svg", "🛋️", "تعمیرات مبل", "#00bfa5", "#00796b"},
+		{"about.svg", "🔧", "استاد مهدی", "#009688", "#004d40"},
+		{"service-1.svg", "🛋️", "مبل استیل", "#00bfa5", "#00897b"},
+		{"service-2.svg", "🪑", "صندلی", "#26a69a", "#00695c"},
+		{"service-3.svg", "🧵", "تعویض پارچه", "#4db6ac", "#00796b"},
+		{"service-4.svg", "🔧", "فنر و اسکلت", "#009688", "#004d40"},
+		{"service-5.svg", "🎨", "روکش مبل", "#00acc1", "#00838f"},
+		{"service-6.svg", "✨", "بازسازی کامل", "#26c6da", "#00838f"},
+		{"gallery-1.svg", "🛋️", "مبل استیل", "#00bfa5", "#00695c"},
+		{"gallery-2.svg", "🪑", "صندلی", "#26a69a", "#004d40"},
+		{"gallery-3.svg", "🧵", "پارچه", "#4db6ac", "#00897b"},
+		{"gallery-4.svg", "🔧", "اسکلت", "#009688", "#00695c"},
+		{"gallery-5.svg", "🎨", "روکش", "#00acc1", "#00796b"},
+		{"gallery-6.svg", "✨", "بازسازی", "#26c6da", "#004d40"},
+	}
+
+	for _, s := range svgs {
+		if err := makeSVG(s.File, s.Emoji, s.Title, s.C1, s.C2); err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	data := SiteData{
@@ -90,23 +139,23 @@ func main() {
 		OrdersCount: "۱۳۷",
 		Rating:      "۴.۹",
 		ReviewsNum:  "۴۸۰",
-		HeroImage:   "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
-		AboutImage:  "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80",
+		HeroImage:   "images/hero.svg",
+		AboutImage:  "images/about.svg",
 		Services: []Service{
-			{Image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80", Title: "تعمیر مبل استیل", Desc: "تعمیر و بازسازی کامل مبل‌های استیل", Price: "از ۵۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&q=80", Title: "تعمیر صندلی", Desc: "تعمیر انواع صندلی اداری و غذاخوری", Price: "از ۲۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=400&q=80", Title: "تعویض پارچه", Desc: "تعویض پارچه مبل با جدیدترین طرح‌ها", Price: "از ۸۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=400&q=80", Title: "تعمیر فنر و اسکلت", Desc: "تعمیر اسکلت چوبی و فنرهای مبل", Price: "از ۴۰۰ هزار تومان"},
-			{Image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80", Title: "روکش مبل", Desc: "روکش‌کشی حرفه‌ای انواع مبل", Price: "از ۱ میلیون تومان"},
-			{Image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&q=80", Title: "بازسازی کامل", Desc: "بازسازی صفر تا صد مبل قدیمی", Price: "از ۲ میلیون تومان"},
+			{Image: "images/service-1.svg", Title: "تعمیر مبل استیل", Desc: "تعمیر و بازسازی کامل مبل‌های استیل", Price: "از ۵۰۰ هزار تومان"},
+			{Image: "images/service-2.svg", Title: "تعمیر صندلی", Desc: "تعمیر انواع صندلی اداری و غذاخوری", Price: "از ۲۰۰ هزار تومان"},
+			{Image: "images/service-3.svg", Title: "تعویض پارچه", Desc: "تعویض پارچه مبل با جدیدترین طرح‌ها", Price: "از ۸۰۰ هزار تومان"},
+			{Image: "images/service-4.svg", Title: "تعمیر فنر و اسکلت", Desc: "تعمیر اسکلت چوبی و فنرهای مبل", Price: "از ۴۰۰ هزار تومان"},
+			{Image: "images/service-5.svg", Title: "روکش مبل", Desc: "روکش‌کشی حرفه‌ای انواع مبل", Price: "از ۱ میلیون تومان"},
+			{Image: "images/service-6.svg", Title: "بازسازی کامل", Desc: "بازسازی صفر تا صد مبل قدیمی", Price: "از ۲ میلیون تومان"},
 		},
 		Gallery: []GalleryItem{
-			{Image: "https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=400&q=80", Title: "تعمیر مبل استیل"},
-			{Image: "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=400&q=80", Title: "تعمیر صندلی"},
-			{Image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&q=80", Title: "تعویض پارچه"},
-			{Image: "https://images.unsplash.com/photo-1549497538-303791108f95?w=400&q=80", Title: "تعمیر اسکلت"},
-			{Image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=400&q=80", Title: "روکش‌کشی"},
-			{Image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&q=80", Title: "بازسازی کامل"},
+			{Image: "images/gallery-1.svg", Title: "تعمیر مبل استیل"},
+			{Image: "images/gallery-2.svg", Title: "تعمیر صندلی"},
+			{Image: "images/gallery-3.svg", Title: "تعویض پارچه"},
+			{Image: "images/gallery-4.svg", Title: "تعمیر اسکلت"},
+			{Image: "images/gallery-5.svg", Title: "روکش‌کشی"},
+			{Image: "images/gallery-6.svg", Title: "بازسازی کامل"},
 		},
 		Reviews: []Review{
 			{Name: "مریم رضایی", City: "شیراز", Date: "۲ روز پیش", Rating: 5, Service: "تعمیر مبل استیل", Initial: "م", Text: "خیلی حرفه‌ای و سریع کار کردن. مبل استیلمون که فکر می‌کردیم باید عوضش کنیم رو مثل روز اولش کردن. قیمت هم کاملاً منصفانه بود."},
@@ -194,7 +243,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Println("✅ public/index.html ساخته شد")
+	log.Println("✅ docs/index.html و ۱۴ عکس SVG ساخته شد")
 }
 
 const htmlTemplate = `<!DOCTYPE html>
@@ -271,8 +320,7 @@ const htmlTemplate = `<!DOCTYPE html>
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
         .gallery-item { border-radius: 14px; overflow: hidden; background: white; border: 1px solid var(--border); }
         .gallery-image { width: 100%; aspect-ratio: 1; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.05); }
+        .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .gallery-title { font-size: 12px; color: var(--text-sec); font-weight: 600; padding: 10px; text-align: center; }
 
         .about-box { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
