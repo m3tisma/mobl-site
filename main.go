@@ -209,6 +209,7 @@ const htmlTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="c_5BHSanzYDshMdaRxD44stxcS5k_YWRvcAkUVBMkls" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
