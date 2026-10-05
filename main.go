@@ -55,8 +55,12 @@ type SiteData struct {
 	About       string
 	LongAbout   string
 	Phone       string
+	PhoneRaw    string
 	Whatsapp    string
 	Address     string
+	AddressRaw  string
+	MapEmbed    string
+	MapLink     string
 	Instagram   string
 	Experience  string
 	OrdersCount string
@@ -77,14 +81,18 @@ func main() {
 	}
 
 	data := SiteData{
-		Title:       "تعمیرات مبل در شیراز | استاد مهدی",
-		Name:        "استاد مهدی",
-		Slogan:      "تعمیر تخصصی انواع مبل، صندلی و پرسی",
-		About:       "با بیش از ۷ سال تجربه، مبل شما را در منزل تعمیر می‌کنم",
-		LongAbout:   "با توجه به افزایش قیمت خرید مبل، تعمیر مبل در منزل با استقبال فراوانی روبه‌رو شده است. تعمیر مبل در منزل یعنی نیازی به انتقال مبل به کارگاه نیست و در زمان و هزینه‌ای که صرف می‌شود صرفه‌جویی می‌شود. با تعمیر مبل در منزل، می‌توانید یک مبل مستحکم و زیبا داشته باشید. من به عنوان یک تعمیرکار متخصص مبل، با ۷ سال سابقه کار در این حرفه، در کوتاه‌ترین زمان مبل قدیمی شما را تعمیر و بازسازی می‌کنم.",
+		Title:       "تعمیرات مبل در شیراز | کارگاه تعمیرات مبل قهرمانی",
+		Name:        "تعمیرات مبل قهرمانی",
+		Slogan:      "تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما",
+		About:       "با بیش از ۷ سال تجربه، مبل شما را در کارگاه تخصصی‌مان تعمیر می‌کنیم",
+		LongAbout:   "کارگاه تعمیرات مبل قهرمانی با بیش از ۷ سال سابقه در زمینه تعمیر و بازسازی انواع مبل، صندلی و پرسی در شیراز فعالیت می‌کند. ما با بهره‌گیری از ابزارهای حرفه‌ای و مواد اولیه باکیفیت، مبل قدیمی شما را به روزهای اوجش برمی‌گردانیم. تخصص ما شامل تعمیر مبل استیل، چستر، راحتی، تعمیر صندلی اداری و غذاخوری، تعویض پارچه، روکش‌کشی، تعمیر فنر و اسکلت و بازسازی کامل مبل است. با ۷ سال تجربه و بیش از ۱۳۷ سفارش موفق، آماده خدمت‌رسانی به شما عزیزان هستیم. مبل خود را به کارگاه ما بیاورید و با کیفیتی بی‌نظیر و قیمتی منصفانه تحویل بگیرید.",
 		Phone:       "۰۹۱۲۳۴۵۶۷۸۹",
+		PhoneRaw:    "+989123456789",
 		Whatsapp:    "989123456789",
-		Address:     "شیراز، خدمات در محل شما",
+		Address:     "شیراز، کارگاه تعمیرات مبل قهرمانی",
+		AddressRaw:  "Shiraz",
+		MapEmbed:    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111388.83368571!2d52.441!3d29.591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU2hpcmF6!5e0!3m2!1sen!2s!4v1234567890",
+		MapLink:     "https://www.google.com/maps/search/?api=1&query=Shiraz",
 		Instagram:   "mobl_repair_shiraz",
 		Experience:  "۷",
 		OrdersCount: "۱۳۷",
@@ -93,7 +101,7 @@ func main() {
 		HeroImage:   "images/hero.jpg",
 		AboutImage:  "images/about.jpg",
 		Services: []Service{
-			{Image: "images/service-1.jpg", Title: "تعمیر مبل استیل", Desc: "تعمیر و بازسازی کامل مبل‌های استیل", Price: "از ۵۰۰ هزار تومان"},
+			{Image: "images/service-1.jpg", Title: "تعمیر مبل استیل", Desc: "تعمیر و بازسازی کامل مبل‌های استیل در کارگاه", Price: "از ۵۰۰ هزار تومان"},
 			{Image: "images/service-2.jpg", Title: "تعمیر صندلی", Desc: "تعمیر انواع صندلی اداری و غذاخوری", Price: "از ۲۰۰ هزار تومان"},
 			{Image: "images/service-3.jpg", Title: "تعویض پارچه", Desc: "تعویض پارچه مبل با جدیدترین طرح‌ها", Price: "از ۸۰۰ هزار تومان"},
 			{Image: "images/service-4.jpg", Title: "تعمیر فنر و اسکلت", Desc: "تعمیر اسکلت چوبی و فنرهای مبل", Price: "از ۴۰۰ هزار تومان"},
@@ -109,50 +117,50 @@ func main() {
 			{Image: "images/gallery-6.jpg", Title: "بازسازی کامل"},
 		},
 		Reviews: []Review{
-			{Name: "مریم رضایی", City: "شیراز", Date: "۲ روز پیش", Rating: 5, Service: "تعمیر مبل استیل", Initial: "م", Text: "خیلی حرفه‌ای و سریع کار کردن. مبل استیلمون که فکر می‌کردیم باید عوضش کنیم رو مثل روز اولش کردن. قیمت هم کاملاً منصفانه بود."},
+			{Name: "مریم رضایی", City: "شیراز", Date: "۲ روز پیش", Rating: 5, Service: "تعمیر مبل استیل", Initial: "م", Text: "مبل استیلمون رو بردیم کارگاهشون و واقعاً حرفه‌ای کار کردن. مبل که فکر می‌کردیم باید عوضش کنیم رو مثل روز اولش کردن. قیمت هم کاملاً منصفانه بود."},
 			{Name: "علی محمدی", City: "شیراز", Date: "۱ هفته پیش", Rating: 5, Service: "بازسازی کامل", Initial: "ع", Text: "مبل چستر قدیمی مادرم رو کامل بازسازی کردن. از پارچه‌گیری تا اسکلت و فنر. نتیجه واقعاً عالی شد. حتماً به همه توصیه می‌کنم."},
-			{Name: "زهرا کریمی", City: "شیراز", Date: "۲ هفته پیش", Rating: 4, Service: "تعویض پارچه", Initial: "ز", Text: "پارچه مبل رو عوض کردن و خیلی تمیز و حرفه‌ای کار کردن. حتی مبل رو هم از خونه بیرون نبردن. فقط یه کم دیرتر از قرار قبلی اومدن."},
+			{Name: "زهرا کریمی", City: "شیراز", Date: "۲ هفته پیش", Rating: 4, Service: "تعویض پارچه", Initial: "ز", Text: "پارچه مبل رو عوض کردن و خیلی تمیز و حرفه‌ای کار کردن. کارگاهشون هم مرتب و منظمه. فقط یه کم دیرتر از قرار قبلی تحویل دادن."},
 			{Name: "حسین احمدی", City: "شیراز", Date: "۳ هفته پیش", Rating: 5, Service: "تعمیر صندلی", Initial: "ح", Text: "چند تا صندلی اداری داشتم که فکر نمی‌کردم درست بشن. آقای قهرمانی واقعاً کارشون درجه یکه. صندلی‌ها مثل نو شدن."},
-			{Name: "فاطمه نوری", City: "مرودشت", Date: "۱ ماه پیش", Rating: 4, Service: "روکش مبل", Initial: "ف", Text: "کارشون تمیز و باکیفیته. فقط به خاطر فاصله شهر ما، یه کم دیرتر رسیدن. ولی نتیجه کار ارزشش رو داشت."},
-			{Name: "رضا مرادی", City: "شیراز", Date: "۱ ماه پیش", Rating: 5, Service: "تعمیر اسکلت", Initial: "ر", Text: "اسکلت مبل خیلی خراب بود و از چند جا پرسیدم گفتن باید بری کارگاه. ولی ایشان تو خونه درستش کردن. عالی بود."},
+			{Name: "فاطمه نوری", City: "مرودشت", Date: "۱ ماه پیش", Rating: 4, Service: "روکش مبل", Initial: "ف", Text: "کارشون تمیز و باکیفیته. من از مرودشت اومدم شیراز و ارزشش رو داشت. نتیجه کار عالی بود."},
+			{Name: "رضا مرادی", City: "شیراز", Date: "۱ ماه پیش", Rating: 5, Service: "تعمیر اسکلت", Initial: "ر", Text: "اسکلت مبل خیلی خراب بود و از چند جا پرسیدم گفتن باید مبل رو عوض کنی. ولی اینجا درستش کردن. عالی بود."},
 			{Name: "سارا حسینی", City: "شیراز", Date: "۱ ماه پیش", Rating: 5, Service: "تعمیر مبل استیل", Initial: "س", Text: "خیلی وقت‌شناس و منصف هستن. قبل از شروع کار، قیمت رو دقیق گفتن و هیچ هزینه اضافه‌ای نگرفتن."},
 			{Name: "محمد کریمی", City: "کازرون", Date: "۲ ماه پیش", Rating: 4, Service: "بازسازی کامل", Initial: "م", Text: "مبل قدیمی خونه رو کامل بازسازی کردن. کیفیت کار خیلی خوب بود. فقط یه کم بیشتر از چیزی که فکر می‌کردم طول کشید."},
-			{Name: "نرگس رحیمی", City: "شیراز", Date: "۲ ماه پیش", Rating: 5, Service: "تعویض پارچه", Initial: "ن", Text: "از انتخاب پارچه تا نصبش همه چیز حرفه‌ای بود. به همه دوستام معرفیشون کردم."},
+			{Name: "نرگس رحیمی", City: "شیراز", Date: "۲ ماه پیش", Rating: 5, Service: "تعویض پارچه", Initial: "ن", Text: "از انتخاب پارچه تا تحویل نهایی، همه چیز حرفه‌ای بود. به همه دوستام معرفیشون کردم."},
 		},
 		FAQs: []FAQ{
-			{Question: "هزینه تعمیر مبل در منزل چقدر است؟", Answer: "هزینه بستگی به نوع مبل و میزان کار دارد. برای اطلاع دقیق، کافیه عکس مبلتون رو واتساپ بفرستید تا در اسرع وقت قیمت دقیق بهتون اعلام بشه."},
-			{Question: "آیا مبل رو از منزل می‌برید؟", Answer: "خیر، تمام کارها در منزل شما انجام می‌شود. با این روش در زمان و هزینه‌ی رفت و آمد صرفه‌جویی می‌شود."},
-			{Question: "چقدر طول می‌کشد تا کار تمام شود؟", Answer: "بسته به نوع کار، معمولاً بین ۱ تا ۳ روز. برای کارهای فوری هم امکان‌پذیره."},
+			{Question: "هزینه تعمیر مبل چقدر است؟", Answer: "هزینه بستگی به نوع مبل و میزان کار دارد. برای اطلاع دقیق، کافیه عکس مبلتون رو واتساپ بفرستید تا در اسرع وقت قیمت دقیق بهتون اعلام بشه."},
+			{Question: "آیا مبل رو از منزل ما می‌برید؟", Answer: "خیر، تعمیرات در کارگاه ما انجام می‌شود. شما مبل را به کارگاه ما می‌آورید و بعد از تعمیر تحویل می‌گیرید. برای هماهنگی و آدرس کارگاه، با ما تماس بگیرید."},
+			{Question: "چقدر طول می‌کشد تا کار تمام شود؟", Answer: "بسته به نوع کار، معمولاً بین ۱ تا ۵ روز. برای کارهای فوری هم امکان‌پذیره."},
 			{Question: "آیا روی کارتون ضمانت می‌دید؟", Answer: "بله، تمام تعمیرات ۶ ماه ضمانت دارند. اگر مشکلی پیش بیاید، رایگان رفع می‌شود."},
-			{Question: "چه پارچه‌هایی برای مبل استفاده می‌کنید؟", Answer: "از بهترین پارچه‌های ایرانی و خارجی استفاده می‌کنم. نمونه‌ها رو می‌تونید به صورت حضوری ببینید."},
+			{Question: "چه پارچه‌هایی برای مبل استفاده می‌کنید؟", Answer: "از بهترین پارچه‌های ایرانی و خارجی استفاده می‌کنیم. نمونه‌ها رو می‌تونید به صورت حضوری در کارگاه ببینید."},
 		},
 		QandAs: []QandA{
 			{
 				ID: 1, Name: "شاپور زارع", Date: "۱ روز پیش",
 				Question: "سلام وقت بخیر من پایه ی زیر مبلام کج شده داره میشکنه باید دلبشه هزینه اش به چه صورت هست؟",
 				Replies: []QReply{
-					{Author: "استاد مهدی", Date: "۱ روز پیش", Text: "سلام. برای تعمیر پایه مبل، بستگی به نوع مبل و شدت شکستگی داره. اگه عکس مبل رو واتساپ بفرستید، دقیق راهنماییتون می‌کنم و قیمت رو اعلام می‌کنم."},
+					{Author: "تعمیرات مبل قهرمانی", Date: "۱ روز پیش", Text: "سلام. برای تعمیر پایه مبل، بستگی به نوع مبل و شدت شکستگی داره. اگه عکس مبل رو واتساپ بفرستید، دقیق راهنماییتون می‌کنم و قیمت رو اعلام می‌کنم."},
 				},
 			},
 			{
 				ID: 2, Name: "مریم مومنی", Date: "۹ روز پیش",
-				Question: "سلام مبل تازه خریداری کردم که بعضی جاهایش زدگی و رنگ پریدگی داره امکان ترمیم در منزل وجود داره؟",
+				Question: "سلام مبل تازه خریداری کردم که بعضی جاهایش زدگی و رنگ پریدگی داره امکان ترمیم وجود داره؟",
 				Replies: []QReply{
-					{Author: "استاد مهدی", Date: "۹ روز پیش", Text: "سلام. بله، ترمیم رنگ و زدگی مبل در منزل انجام می‌شه. کافیه عکس محل زدگی رو بفرستید تا بررسی کنم و هزینه رو بگم."},
+					{Author: "تعمیرات مبل قهرمانی", Date: "۹ روز پیش", Text: "سلام. بله، ترمیم رنگ و زدگی مبل انجام می‌شه. کافیه عکس محل زدگی رو بفرستید تا بررسی کنم و هزینه رو بگم."},
 				},
 			},
 			{
 				ID: 3, Name: "عبدالعلی صابری", Date: "۱ ماه پیش",
 				Question: "سلام سه تا مبل کلاسیک که تعویض پارچه و فوم و رنگ چوب کردن. چهارتا مبل یک نفره و یک سه نفره راحتی تمام پارچه که تعویض فوم و پارچه و فنر دارن. لطفا بفرمائید هزینه‌اش چقدره و امکان قسطی هست؟",
 				Replies: []QReply{
-					{Author: "استاد مهدی", Date: "۱ ماه پیش", Text: "سلام. برای این حجم کار، حتماً باید حضوری ببینم. لطفاً عکس‌ها رو واتساپ بفرستید یا تماس بگیرید تا هماهنگ کنیم. در مورد قسطی هم می‌تونیم صحبت کنیم."},
+					{Author: "تعمیرات مبل قهرمانی", Date: "۱ ماه پیش", Text: "سلام. برای این حجم کار، حتماً باید حضوری ببینیم. لطفاً عکس‌ها رو واتساپ بفرستید یا تشریف بیارید کارگاه تا هماهنگ کنیم. در مورد قسطی هم می‌تونیم صحبت کنیم."},
 				},
 			},
 			{
 				ID: 4, Name: "حسین احمدی", Date: "۵ روز پیش",
 				Question: "برای مبل راحتی که فنرهاش خورده شده چقدر هزینه میگیرید؟ پارچه خودم دارم.",
 				Replies: []QReply{
-					{Author: "استاد مهدی", Date: "۵ روز پیش", Text: "سلام. تعویض فنر مبل راحتی بسته به تعداد فنرها و نوع مبل متفاوته. اگه پارچه خودتون باشه، هزینه کمتر می‌شه. عکس بفرستید تا دقیق بگم."},
+					{Author: "تعمیرات مبل قهرمانی", Date: "۵ روز پیش", Text: "سلام. تعویض فنر مبل راحتی بسته به تعداد فنرها و نوع مبل متفاوته. اگه پارچه خودتون باشه، هزینه کمتر می‌شه. عکس بفرستید تا دقیق بگم."},
 				},
 			},
 		},
@@ -204,8 +212,42 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
-    <meta name="description" content="{{.Slogan}} - {{.About}}">
+    <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: {{.Phone}}">
+    <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز, تعمیرات مبل قهرمانی">
+    <meta name="author" content="تعمیرات مبل قهرمانی">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://moblshiraz.ir/">
+    <meta property="og:title" content="{{.Title}}">
+    <meta property="og:description" content="{{.About}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moblshiraz.ir/">
+    <meta property="og:image" content="https://moblshiraz.ir/images/hero.jpg">
+    <meta property="og:locale" content="fa_IR">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "تعمیرات مبل قهرمانی",
+      "image": "https://moblshiraz.ir/images/hero.jpg",
+      "telephone": "{{.PhoneRaw}}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "شیراز",
+        "addressRegion": "فارس",
+        "addressCountry": "IR"
+      },
+      "areaServed": "شیراز و حومه",
+      "description": "{{.About}}",
+      "priceRange": "۲۰۰,۰۰۰ - ۵,۰۰۰,۰۰۰ تومان",
+      "openingHours": "Sa-Th 09:00-20:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{.Rating}}",
+        "reviewCount": "{{.ReviewsNum}}"
+      }
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root {
@@ -224,10 +266,15 @@ const htmlTemplate = `<!DOCTYPE html>
 
         .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
         .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 18px; color: var(--primary); }
+        .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--primary); }
         .brand-icon { width: 32px; height: 32px; border-radius: 10px; overflow: hidden; background: var(--primary); }
         .brand-icon img { width: 100%; height: 100%; object-fit: cover; }
-        .phone-btn { background: var(--primary-light); color: var(--primary); padding: 8px 14px; border-radius: 10px; font-size: 12px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+        .top-actions { display: flex; gap: 8px; }
+        .icon-btn { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 18px; transition: all 0.2s; }
+        .icon-btn.phone { background: var(--primary-light); color: var(--primary); }
+        .icon-btn.phone:active { background: var(--primary); color: white; }
+        .icon-btn.whatsapp { background: #e7f9ef; color: #25D366; }
+        .icon-btn.whatsapp:active { background: #25D366; color: white; }
 
         .hero { background: white; padding: 20px 16px 30px; }
         .hero-inner { max-width: 1100px; margin: auto; }
@@ -238,8 +285,13 @@ const htmlTemplate = `<!DOCTYPE html>
         .price-box { background: var(--primary-light); border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
         .price-label { font-size: 12px; color: var(--text-sec); }
         .price-value { font-size: 15px; font-weight: 800; color: var(--primary); }
-        .cta-btn { display: block; width: 100%; padding: 16px; background: var(--primary); color: white; border-radius: 14px; text-align: center; font-size: 15px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,191,165,0.3); }
-        .cta-btn:active { background: var(--primary-dark); }
+
+        .quick-actions { display: flex; gap: 10px; margin-bottom: 16px; }
+        .quick-btn { flex: 1; padding: 14px; border-radius: 12px; text-decoration: none; text-align: center; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s; }
+        .quick-btn.call { background: var(--primary); color: white; box-shadow: 0 8px 20px rgba(0,191,165,0.3); }
+        .quick-btn.call:active { background: var(--primary-dark); }
+        .quick-btn.wa { background: #25D366; color: white; box-shadow: 0 8px 20px rgba(37,211,102,0.3); }
+        .quick-btn.wa:active { background: #1da851; }
 
         .stats { background: white; padding: 20px 16px; border-top: 1px solid var(--border); }
         .stats-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-around; text-align: center; }
@@ -248,7 +300,7 @@ const htmlTemplate = `<!DOCTYPE html>
         .stat-label { font-size: 11px; color: var(--text-sec); margin-top: 4px; }
         .stat-item + .stat-item { border-right: 1px solid var(--border); }
 
-        .tabs-wrap { position: sticky; top: 57px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .tabs-wrap { position: sticky; top: 63px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
         .tabs-wrap::-webkit-scrollbar { display: none; }
         .tabs { display: flex; gap: 6px; padding: 10px 16px; max-width: 1100px; margin: auto; white-space: nowrap; }
         .tab { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; background: transparent; color: var(--text-sec); border: 1.5px solid var(--border); cursor: pointer; white-space: nowrap; }
@@ -342,13 +394,18 @@ const htmlTemplate = `<!DOCTYPE html>
         .faq-item.open .faq-answer { padding: 0 16px 16px; max-height: 500px; }
 
         .contact-box { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
-        .contact-item { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+        .contact-item { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: background 0.2s; }
         .contact-item:last-child { border-bottom: none; }
+        .contact-item:active { background: var(--bg); }
         .contact-icon { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+        .contact-icon.wa { background: #e7f9ef; color: #25D366; }
+        .contact-icon.map { background: #fef3c7; color: #d97706; }
         .contact-info { flex: 1; }
         .contact-label { font-size: 11px; color: var(--text-sec); }
         .contact-value { font-size: 14px; font-weight: 700; }
-        .contact-value a { color: var(--text); text-decoration: none; }
+
+        .map-container { margin-top: 16px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: white; }
+        .map-container iframe { width: 100%; height: 300px; border: 0; display: block; }
 
         .trust-badges { display: flex; gap: 12px; margin-top: 16px; }
         .trust-badge { flex: 1; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; }
@@ -362,8 +419,12 @@ const htmlTemplate = `<!DOCTYPE html>
         .social-btn { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; }
         .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
 
-        .float-whatsapp { position: fixed; bottom: 20px; left: 20px; right: 20px; background: var(--primary); color: white; padding: 16px; border-radius: 16px; text-align: center; font-size: 15px; font-weight: 700; text-decoration: none; z-index: 99; box-shadow: 0 10px 30px rgba(0,191,165,0.4); display: flex; align-items: center; justify-content: center; gap: 8px; }
-        .float-whatsapp:active { background: var(--primary-dark); }
+        .float-actions { position: fixed; bottom: 20px; left: 20px; right: 20px; display: flex; gap: 10px; z-index: 99; }
+        .float-btn { flex: 1; padding: 16px; border-radius: 16px; text-align: center; font-size: 15px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .float-btn.call { background: var(--primary); color: white; }
+        .float-btn.call:active { background: var(--primary-dark); }
+        .float-btn.wa { background: #25D366; color: white; }
+        .float-btn.wa:active { background: #1da851; }
 
         @media (min-width: 768px) {
             body { font-size: 15px; }
@@ -374,7 +435,8 @@ const htmlTemplate = `<!DOCTYPE html>
             .section-title { font-size: 22px; }
             .services-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-            .float-whatsapp { left: auto; right: 30px; bottom: 30px; padding: 14px 24px; border-radius: 50px; font-size: 14px; }
+            .float-actions { left: auto; right: 30px; bottom: 30px; width: auto; }
+            .float-btn { padding: 14px 24px; border-radius: 50px; font-size: 14px; }
             .stats-inner { max-width: 700px; }
             .stat-value { font-size: 22px; }
         }
@@ -388,7 +450,10 @@ const htmlTemplate = `<!DOCTYPE html>
                 <div class="brand-icon"><img src="{{.HeroImage}}" alt="{{.Name}}"></div>
                 <span>{{.Name}}</span>
             </div>
-            <a href="tel:{{.Phone}}" class="phone-btn">📞 تماس</a>
+            <div class="top-actions">
+                <a href="tel:{{.PhoneRaw}}" class="icon-btn phone" aria-label="تماس">📞</a>
+                <a href="https://wa.me/{{.Whatsapp}}" class="icon-btn whatsapp" aria-label="واتساپ" target="_blank">💬</a>
+            </div>
         </div>
     </header>
 
@@ -396,12 +461,15 @@ const htmlTemplate = `<!DOCTYPE html>
         <div class="hero-inner">
             <h1 class="hero-title">{{.Slogan}}</h1>
             <p class="hero-sub">{{.About}}</p>
-            <div class="hero-image"><img src="{{.HeroImage}}" alt="تعمیرات مبل"></div>
+            <div class="hero-image"><img src="{{.HeroImage}}" alt="تعمیرات مبل در شیراز"></div>
             <div class="price-box">
                 <span class="price-label">هزینه خدمات</span>
                 <span class="price-value">از ۲۰۰ هزار تومان</span>
             </div>
-            <a href="https://wa.me/{{.Whatsapp}}" class="cta-btn">شروع کنید ←</a>
+            <div class="quick-actions">
+                <a href="tel:{{.PhoneRaw}}" class="quick-btn call">📞 تماس فوری</a>
+                <a href="https://wa.me/{{.Whatsapp}}" class="quick-btn wa" target="_blank">💬 واتساپ</a>
+            </div>
         </div>
     </section>
 
@@ -415,7 +483,7 @@ const htmlTemplate = `<!DOCTYPE html>
 
     <div class="tabs-wrap">
         <div class="tabs">
-            <button class="tab active" data-tab="about">درباره من</button>
+            <button class="tab active" data-tab="about">درباره ما</button>
             <button class="tab" data-tab="services">خدمات</button>
             <button class="tab" data-tab="gallery">نمونه کارها</button>
             <button class="tab" data-tab="qanda">پرسش و پاسخ</button>
@@ -426,21 +494,21 @@ const htmlTemplate = `<!DOCTYPE html>
     </div>
 
     <section class="section" id="about">
-        <h2 class="section-title">درباره من</h2>
-        <p class="section-sub">با بیش از ۷ سال تجربه در تعمیرات مبل</p>
+        <h2 class="section-title">درباره ما</h2>
+        <p class="section-sub">با بیش از ۷ سال تجربه در تعمیرات مبل در شیراز</p>
         <div class="about-box">
-            <div class="about-image"><img src="{{.AboutImage}}" alt="درباره استاد مهدی"></div>
+            <div class="about-image"><img src="{{.AboutImage}}" alt="کارگاه تعمیرات مبل قهرمانی در شیراز"></div>
             <div class="about-text"><p>{{.LongAbout}}</p></div>
         </div>
     </section>
 
     <section class="section" id="services">
-        <h2 class="section-title">خدمات من</h2>
+        <h2 class="section-title">خدمات ما</h2>
         <p class="section-sub">با کیفیت‌ترین خدمات تعمیرات مبل در شیراز</p>
         <div class="services-list">
             {{range .Services}}
             <div class="service-card">
-                <div class="service-image"><img src="{{.Image}}" alt="{{.Title}}" loading="lazy"></div>
+                <div class="service-image"><img src="{{.Image}}" alt="{{.Title}} در شیراز" loading="lazy"></div>
                 <div class="service-body">
                     <div class="service-name">{{.Title}}</div>
                     <div class="service-desc">{{.Desc}}</div>
@@ -453,11 +521,11 @@ const htmlTemplate = `<!DOCTYPE html>
 
     <section class="section" id="gallery">
         <h2 class="section-title">نمونه کارها</h2>
-        <p class="section-sub">نگاهی به کارهای اخیر</p>
+        <p class="section-sub">نگاهی به کارهای اخیر تعمیرات مبل</p>
         <div class="gallery-grid">
             {{range .Gallery}}
             <div class="gallery-item">
-                <div class="gallery-image"><img src="{{.Image}}" alt="{{.Title}}" loading="lazy"></div>
+                <div class="gallery-image"><img src="{{.Image}}" alt="{{.Title}} در شیراز" loading="lazy"></div>
                 <div class="gallery-title">{{.Title}}</div>
             </div>
             {{end}}
@@ -466,19 +534,15 @@ const htmlTemplate = `<!DOCTYPE html>
 
     <section class="section" id="qanda">
         <h2 class="section-title">پرسش و پاسخ</h2>
-        <p class="section-sub">سوالات مشتریان و پاسخ‌های من</p>
-
+        <p class="section-sub">سوالات مشتریان و پاسخ‌های ما</p>
         <div class="qa-section">
             <div class="qa-header">
                 <div class="qa-count"><span>{{len .QandAs}}</span> پرسش</div>
                 <a href="https://wa.me/{{.Whatsapp}}" class="qa-ask-btn" target="_blank">+ ثبت پرسش</a>
             </div>
-
             {{range $index, $qa := .QandAs}}
             <div class="qa-item{{if eq $index 0}} open{{end}}">
-                <div class="qa-meta">
-                    <span class="qa-author">{{$qa.Name}}</span> · {{$qa.Date}}
-                </div>
+                <div class="qa-meta"><span class="qa-author">{{$qa.Name}}</span> · {{$qa.Date}}</div>
                 <div class="qa-question">{{$qa.Question}}</div>
                 <div class="qa-actions">
                     <button class="qa-toggle" onclick="toggleQA(this)">
@@ -503,14 +567,13 @@ const htmlTemplate = `<!DOCTYPE html>
                 </div>
             </div>
             {{end}}
-
             <button class="qa-show-more" onclick="alert('به زودی...')">+ نمایش بیشتر</button>
         </div>
     </section>
 
     <section class="section" id="reviews">
         <h2 class="section-title">نظرات مشتریان</h2>
-        <p class="section-sub">افتخار من، رضایت شماست</p>
+        <p class="section-sub">افتخار ما، رضایت شماست</p>
         {{range $index, $rev := .Reviews}}
         <div class="review-card{{if ge $index 3}} review-hidden{{end}}">
             <div class="review-header">
@@ -545,18 +608,45 @@ const htmlTemplate = `<!DOCTYPE html>
     </section>
 
     <section class="section" id="contact">
-        <h2 class="section-title">تماس با من</h2>
+        <h2 class="section-title">تماس با ما</h2>
         <p class="section-sub">برای مشاوره و سفارش در تماس باشید</p>
         <div class="contact-box">
-            <div class="contact-item"><div class="contact-icon">📞</div><div class="contact-info"><div class="contact-label">شماره تماس</div><div class="contact-value"><a href="tel:{{.Phone}}">{{.Phone}}</a></div></div></div>
-            <div class="contact-item"><div class="contact-icon">💬</div><div class="contact-info"><div class="contact-label">واتساپ</div><div class="contact-value"><a href="https://wa.me/{{.Whatsapp}}" target="_blank">ارسال پیام</a></div></div></div>
-            <div class="contact-item"><div class="contact-icon">📍</div><div class="contact-info"><div class="contact-label">منطقه خدمات</div><div class="contact-value">{{.Address}}</div></div></div>
-            <div class="contact-item"><div class="contact-icon">📷</div><div class="contact-info"><div class="contact-label">اینستاگرام</div><div class="contact-value"><a href="https://instagram.com/{{.Instagram}}" target="_blank">@{{.Instagram}}</a></div></div></div>
+            <a href="tel:{{.PhoneRaw}}" class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-info">
+                    <div class="contact-label">تماس تلفنی</div>
+                    <div class="contact-value">{{.Phone}}</div>
+                </div>
+            </a>
+            <a href="https://wa.me/{{.Whatsapp}}" class="contact-item" target="_blank">
+                <div class="contact-icon wa">💬</div>
+                <div class="contact-info">
+                    <div class="contact-label">واتساپ</div>
+                    <div class="contact-value">ارسال پیام در واتساپ</div>
+                </div>
+            </a>
+            <a href="{{.MapLink}}" class="contact-item" target="_blank">
+                <div class="contact-icon map">📍</div>
+                <div class="contact-info">
+                    <div class="contact-label">آدرس کارگاه</div>
+                    <div class="contact-value">{{.Address}}</div>
+                </div>
+            </a>
+            <a href="https://instagram.com/{{.Instagram}}" class="contact-item" target="_blank">
+                <div class="contact-icon">📷</div>
+                <div class="contact-info">
+                    <div class="contact-label">اینستاگرام</div>
+                    <div class="contact-value">@{{.Instagram}}</div>
+                </div>
+            </a>
         </div>
         <div class="trust-badges">
             <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
             <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text">۷ سال سابقه</div></div>
             <div class="trust-badge"><div class="trust-icon">💰</div><div class="trust-text">قیمت منصفانه</div></div>
+        </div>
+        <div class="map-container">
+            <iframe src="{{.MapEmbed}}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقعیت کارگاه تعمیرات مبل در شیراز"></iframe>
         </div>
     </section>
 
@@ -564,14 +654,17 @@ const htmlTemplate = `<!DOCTYPE html>
         <div class="footer-brand">{{.Name}}</div>
         <p class="footer-text">{{.Slogan}}</p>
         <div class="footer-social">
-            <a href="https://instagram.com/{{.Instagram}}" class="social-btn" target="_blank">📷</a>
-            <a href="https://wa.me/{{.Whatsapp}}" class="social-btn" target="_blank">💬</a>
-            <a href="tel:{{.Phone}}" class="social-btn">📞</a>
+            <a href="tel:{{.PhoneRaw}}" class="social-btn" aria-label="تماس">📞</a>
+            <a href="https://wa.me/{{.Whatsapp}}" class="social-btn" target="_blank" aria-label="واتساپ">💬</a>
+            <a href="https://instagram.com/{{.Instagram}}" class="social-btn" target="_blank" aria-label="اینستاگرام">📷</a>
         </div>
-        <p class="footer-copy">© ۱۴۰۳ {{.Name}} — تمامی حقوق محفوظ است</p>
+        <p class="footer-copy">© ۱۴۰۳ {{.Name}} — تعمیرات مبل در شیراز</p>
     </footer>
 
-    <a href="https://wa.me/{{.Whatsapp}}" class="float-whatsapp" target="_blank">💬 درخواست تعمیر مبل</a>
+    <div class="float-actions">
+        <a href="tel:{{.PhoneRaw}}" class="float-btn call">📞 تماس</a>
+        <a href="https://wa.me/{{.Whatsapp}}" class="float-btn wa" target="_blank">💬 واتساپ</a>
+    </div>
 
     <script>
         function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
