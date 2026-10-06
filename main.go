@@ -89,7 +89,7 @@ func main() {
 		Phone:       "09013643428",
 		PhoneRaw:    "+989013643428",
 		Whatsapp:    "989013643428",
-		Address:     "Address:     "شیراز، سلطان‌آباد، خیابان مسکن مهر، اولین دوربرگردان سمت چپ، کارگاه تعمیرات مبل قهرمانی",",
+		Address:     "شیراز، سلطان‌آباد، خیابان مسکن مهر، اولین دوربرگردان سمت چپ، کارگاه تعمیرات مبل قهرمانی",
 		AddressRaw:  "Shiraz",
 		MapEmbed:    "https://maps.google.com/maps?q=29.528733,52.544659&z=16&output=embed",
 		MapLink:     "https://www.google.com/maps/search/?api=1&query=29.528733,52.544659",
