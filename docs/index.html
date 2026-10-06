@@ -68,12 +68,13 @@
         .stat-label { font-size: 11px; color: var(--text-sec); margin-top: 4px; }
         .stat-item + .stat-item { border-right: 1px solid var(--border); }
 
-        .tabs-wrap { position: sticky; top: 63px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; }
+        .tabs-wrap { position: fixed; top: 63px; left: 0; right: 0; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
         .tabs-wrap::-webkit-scrollbar { display: none; }
         .tabs { display: flex; gap: 6px; padding: 10px 16px; max-width: 1100px; margin: auto; white-space: nowrap; }
         .tab { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; background: transparent; color: var(--text-sec); border: 1.5px solid var(--border); cursor: pointer; white-space: nowrap; }
         .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
-
+       
+        .tabs-spacer { height: 57px; display: block; }
         .section { padding: 24px 16px; max-width: 1100px; margin: auto; }
         .section-title { font-size: 18px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
         .section-title::before { content: ''; width: 4px; height: 20px; background: var(--primary); border-radius: 2px; }
@@ -253,6 +254,8 @@
             <button class="tab" data-tab="contact">تماس</button>
         </div>
     </div>
+
+    <div class="tabs-spacer"></div>
 
     <section class="section" id="about">
         <h2 class="section-title">درباره ما</h2>
