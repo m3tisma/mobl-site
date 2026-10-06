@@ -240,7 +240,7 @@ const htmlTemplate = `<!DOCTYPE html>
       },
       "areaServed": "شیراز و حومه",
       "description": "{{.About}}",
-      "priceRange": "۲۰۰,۰۰۰ - ۵,۰۰۰,۰۰۰ تومان",
+      "priceRange": "200,000 - 5,000,000 تومان",
       "openingHours": "Sa-Th 09:00-20:00",
       "aggregateRating": {
         "@type": "AggregateRating",
