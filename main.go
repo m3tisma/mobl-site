@@ -96,8 +96,8 @@ func main() {
 		Instagram:   "moblshz",
 		Experience:  "۷",
 		OrdersCount: "۱۳۷",
-		Rating:      "۴.۹",
-		ReviewsNum:  "۴۸۰",
+		Rating:      "4.9",
+		ReviewsNum:  "480",
 		HeroImage:   "images/hero.jpg",
 		AboutImage:  "images/about.jpg",
 		Services: []Service{
