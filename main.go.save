@@ -116,7 +116,6 @@ func main() {
 			{Image: "images/service-6.jpg", Title: "بازسازی کامل", Desc: "بازسازی صفر تا صد مبل قدیمی", Price: "از ۲ میلیون تومان"},
 		},
 		Gallery: []GalleryItem{
-			{Image: "images/gallery-1.jpg", Title: "تعمیر مبل چستر"},
 			{Image: "images/gallery-2.jpg", Title: "تعمیر صندلی", Link: "gallery-sandali.html"},
 			{Image: "images/gallery-3.jpg", Title: "تعویض پارچه", Link: "gallery-parche.html"},
 			{Image: "images/gallery-4.jpg", Title: "تعمیر اسکلت"},
