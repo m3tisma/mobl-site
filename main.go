@@ -70,6 +70,7 @@ type SiteData struct {
 	Gallery           []GalleryItem
 	RestorationImages []GalleryItem
 	ParcheImages      []GalleryItem
+	SandaliImages     []GalleryItem
 	Reviews           []Review
 	FAQs              []FAQ
 	QandAs            []QandA
@@ -116,7 +117,7 @@ func main() {
 		},
 		Gallery: []GalleryItem{
 			{Image: "images/gallery-1.jpg", Title: "تعمیر مبل استیل"},
-			{Image: "images/gallery-2.jpg", Title: "تعمیر صندلی"},
+			{Image: "images/gallery-2.jpg", Title: "تعمیر صندلی", Link: "gallery-sandali.html"},
 			{Image: "images/gallery-3.jpg", Title: "تعویض پارچه", Link: "gallery-parche.html"},
 			{Image: "images/gallery-4.jpg", Title: "تعمیر اسکلت"},
 			{Image: "images/gallery-5.jpg", Title: "روکش‌کشی"},
@@ -127,6 +128,10 @@ func main() {
 		},
 		ParcheImages: []GalleryItem{
 			{Image: "images/before-after-2.jpg", Title: "تعویض پارچه مبل"},
+		},
+		SandaliImages: []GalleryItem{
+			{Image: "images/before-after-3.jpg", Title: "تعویض پارچه صندلی ناهارخوری"},
+			{Image: "images/before-after-4.jpg", Title: "تعمیر و تعویض پارچه صندلی"},
 		},
 		Reviews: []Review{
 			{Name: "مریم رضایی", City: "شیراز", Date: "۲ روز پیش", Rating: 5, Service: "تعمیر مبل استیل", Initial: "م", Text: "مبل استیلمون رو بردیم کارگاهشون و واقعاً حرفه‌ای کار کردن. مبل که فکر می‌کردیم باید عوضش کنیم رو مثل روز اولش کردن. قیمت هم کاملاً منصفانه بود."},
@@ -230,6 +235,28 @@ func main() {
 		log.Fatal(err)
 	}
 	f3.Close()
+
+	// ساخت gallery-sandali.html
+	sandaliData := RestorationData{
+		Name:      data.Name,
+		Phone:     data.Phone,
+		PhoneRaw:  data.PhoneRaw,
+		Whatsapp:  data.Whatsapp,
+		Instagram: data.Instagram,
+		Images:    data.SandaliImages,
+	}
+	tmpl4, err := template.New("sandali").Parse(sandaliTemplate)
+	if err != nil {
+		log.Fatal(err)
+	}
+	f4, err := os.Create(filepath.Join("docs", "gallery-sandali.html"))
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := tmpl4.Execute(f4, sandaliData); err != nil {
+		log.Fatal(err)
+	}
+	f4.Close()
 	log.Println("✅ docs/index.html و docs/gallery-restoration.html ساخته شدند")
 }
 
@@ -675,6 +702,108 @@ const htmlTemplate = `<!DOCTYPE html>
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') nextImage();
             if (e.key === 'ArrowRight') prevImage();
+        });
+    </script>
+</body>
+</html>`
+const sandaliTemplate = `<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00bfa5">
+    <title>گالری تعمیر صندلی | {{.Name}}</title>
+    <meta name="description" content="نمونه کارهای تعمیر صندلی در کارگاه تعمیرات مبل قهرمانی شیراز">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
+        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+
+        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+
+        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+        .header p { font-size: 13px; color: var(--text-sec); }
+
+        .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
+        .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+        .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
+        .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
+        .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+        .gallery-item:hover .gallery-image img { transform: scale(1.03); }
+        .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
+
+        .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
+
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+        .lightbox.active { display: flex; }
+        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+        .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+        .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
+        .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+
+        @media (min-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .header h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-inner">
+            <a href="index.html" class="back-btn">← بازگشت به سایت</a>
+            <div class="brand">🛋️ {{.Name}}</div>
+        </div>
+    </header>
+
+    <div class="header">
+        <h1>گالری تعمیر صندلی</h1>
+        <p>نمونه‌کارهای تعمیر صندلی در کارگاه ما (قبل و بعد)</p>
+    </div>
+
+    <div class="gallery-container">
+        {{if .Images}}
+        <div class="gallery-grid">
+            {{range $index, $item := .Images}}
+            <div class="gallery-item" onclick="openLightbox({{$index}})">
+                <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy"></div>
+                <div class="gallery-title">{{$item.Title}}</div>
+            </div>
+            {{end}}
+        </div>
+        {{else}}
+        <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
+        {{end}}
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+        <div class="lightbox-inner">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
+        function openLightbox(index) {
+            document.getElementById('lightbox-img').src = images[index].src;
+            document.getElementById('lightbox-caption').textContent = images[index].title;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
         });
     </script>
 </body>
