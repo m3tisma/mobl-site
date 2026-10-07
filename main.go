@@ -128,6 +128,7 @@ func main() {
 		},
 		ParcheImages: []GalleryItem{
 			{Image: "images/before-after-2.jpg", Title: "تعویض پارچه مبل"},
+  		        {Image: "images/before-after-5.jpg", Title: "تعویض پارچه مبل ال"},
 		},
 		SandaliImages: []GalleryItem{
 			{Image: "images/before-after-3.jpg", Title: "تعویض پارچه صندلی ناهارخوری"},
