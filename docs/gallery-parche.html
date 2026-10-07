@@ -73,6 +73,11 @@
                 <div class="gallery-title">تعویض پارچه مبل ال</div>
             </div>
             
+            <div class="gallery-item" onclick="openLightbox( 2 )">
+                <div class="gallery-image"><img src="images/before-after-6.jpg" alt="تعویض پارچه مبل استیل" loading="lazy"></div>
+                <div class="gallery-title">تعویض پارچه مبل استیل</div>
+            </div>
+            
         </div>
         
     </div>
@@ -86,7 +91,7 @@
     </div>
 
     <script>
-        const images = [{ src: 'images\/before-after-2.jpg', title: 'تعویض پارچه مبل' },{ src: 'images\/before-after-5.jpg', title: 'تعویض پارچه مبل ال' },];
+        const images = [{ src: 'images\/before-after-2.jpg', title: 'تعویض پارچه مبل' },{ src: 'images\/before-after-5.jpg', title: 'تعویض پارچه مبل ال' },{ src: 'images\/before-after-6.jpg', title: 'تعویض پارچه مبل استیل' },];
         function openLightbox(index) {
             document.getElementById('lightbox-img').src = images[index].src;
             document.getElementById('lightbox-caption').textContent = images[index].title;
