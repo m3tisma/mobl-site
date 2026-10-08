@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" width="600" height="140">
+  <!-- آیکون مبل -->
+  <g transform="translate(410, 20)">
+    <!-- پشتی -->
+    <path fill="#00bfa5" d="M 20 30 Q 20 12 40 12 L 140 12 Q 160 12 160 30 L 160 80 L 20 80 Z"/>
+    <!-- دسته چپ -->
+    <path fill="#00bfa5" d="M 0 50 Q 0 38 15 38 L 22 38 L 22 100 L 0 100 Z"/>
+    <!-- دسته راست -->
+    <path fill="#00bfa5" d="M 180 50 Q 180 38 165 38 L 158 38 L 158 100 L 180 100 Z"/>
+    <!-- نشیمن -->
+    <path fill="#00bfa5" d="M 0 78 L 180 78 L 180 102 L 0 102 Z"/>
+    <!-- خطوط سفید کوسن‌ها -->
+    <line x1="8" y1="82" x2="172" y2="82" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <line x1="90" y1="82" x2="90" y2="100" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <!-- پایه‌ها -->
+    <rect fill="#00bfa5" x="15" y="102" width="14" height="14" rx="2"/>
+    <rect fill="#00bfa5" x="151" y="102" width="14" height="14" rx="2"/>
+  </g>
+
+  <!-- متن برند -->
+  <text x="205" y="72" text-anchor="middle" font-family="Vazirmatn, Tahoma, Arial, sans-serif" font-weight="bold" font-size="46" fill="#00bfa5">مبل شیراز</text>
+  <!-- شعار -->
+  <text x="205" y="103" text-anchor="middle" font-family="Vazirmatn, Tahoma, Arial, sans-serif" font-size="15" fill="#6c757d">تعمیرات تخصصی مبل</text>
+</svg>

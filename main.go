@@ -92,7 +92,7 @@ func main() {
 
 	data := SiteData{
 		Title:       "تعمیرات مبل شیراز",
-		Name:        "تعمیرات مبل شیراز",
+		Name:        "مبل شیراز",
 		Slogan:      "تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما",
 		About:       "با بیش از ۷ سال تجربه، مبل شما را در کارگاه تخصصی‌مان تعمیر می‌کنیم",
 		LongAbout:   "کارگاه تعمیرات مبل قهرمانی با بیش از ۷ سال سابقه در زمینه تعمیر و بازسازی انواع مبل، صندلی و پرسی در شیراز فعالیت می‌کند. ما با بهره‌گیری از ابزارهای حرفه‌ای و مواد اولیه باکیفیت، مبل قدیمی شما را به روزهای اوجش برمی‌گردانیم.",
@@ -269,6 +269,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: {{.Phone}}">
     <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
     <meta name="author" content="تعمیرات مبل قهرمانی">
@@ -477,7 +478,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <header class="top-bar">
         <div class="top-inner">
             <div class="brand">
-                <div class="brand-icon"><img src="{{.HeroImage}}" alt="{{.Name}}"></div>
+                <div class="brand-icon"><img src="images/logo.png" alt="{{.Name}}"></div>
                 <span>{{.Name}}</span>
             </div>
             <div class="top-actions">
