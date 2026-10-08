@@ -100,7 +100,7 @@ func main() {
 		PhoneRaw:    "+989013643428",
 		Whatsapp:    "989013643428",
 		Address:     "شیراز، سلطان‌آباد، خیابان مسکن مهر، اولین دوربرگردان سمت چپ، کارگاه تعمیرات مبل قهرمانی",
-		Instagram:   "moblshz",
+		Instagram:   "moblshiraz.ir",
 		Experience:  "۷",
 		OrdersCount: "۱۳۷",
 		Rating:      "4.9",
