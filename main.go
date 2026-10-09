@@ -216,6 +216,7 @@ func main() {
 		log.Fatal(err)
 	}
 	f2.Close()
+
 	// ساخت gallery-parche.html
 	parcheData := RestorationData{
 		Name:      data.Name,
@@ -638,12 +639,9 @@ const htmlTemplate = `<!DOCTYPE html>
             <a href="https://instagram.com/{{.Instagram}}" class="contact-item" target="_blank"><div class="contact-icon">📷</div><div class="contact-info"><div class="contact-label">اینستاگرام</div><div class="contact-value">@{{.Instagram}}</div></div></a>
             <div class="contact-item"><div class="contact-icon map">📍</div><div class="contact-info"><div class="contact-label">آدرس کارگاه</div><div class="contact-value">{{.Address}}</div></div></div>
         </div>
-        <div class="neshan-map-container">
-            <div id="neshan-map"></div>
-            <a href="https://neshan.org/maps/places/29.528733,52.544659" target="_blank" class="map-link">
-                📍 مسیریابی با نشان (روی موبایل باز می‌شود)
-            </a>
-        </div>
+        <a href="https://neshan.org/maps/@29.528733,52.544659,16z" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00bfa5, #009688); color:white; text-align:center; padding:18px; border-radius:14px; font-weight:bold; text-decoration:none; margin-top:20px; box-shadow:0 8px 20px rgba(0,191,165,0.3); font-family:tahoma;">
+            📍 مشاهده آدرس کارگاه روی نقشه نشان
+        </a>
         <div class="trust-badges">
             <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
             <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text">۷ سال سابقه</div></div>
@@ -717,23 +715,9 @@ const htmlTemplate = `<!DOCTYPE html>
             if (e.key === 'ArrowRight') prevImage();
         });
     </script>
-    <!-- نقشه نشان -->
-    <link rel="stylesheet" href="https://api.neshan.org/v1/maps/leaflet/1.9.2/leaflet.css" />
-    <script src="https://api.neshan.org/v1/maps/leaflet/1.9.2/leaflet.js?key=web.f80f03090e1e4d2d8a95cea0c222cc47"></script>
-    <script>
-      var map = new L.Map('neshan-map', {
-        key: 'web.f80f03090e1e4d2d8a95cea0c222cc47',
-        maptype: 'dreamy',
-        center: [29.528733, 52.544659],
-        zoom: 16
-      });
-      L.marker([29.528733, 52.544659]).addTo(map)
-        .bindPopup('تعمیرات مبل قهرمانی')
-        .openPopup();
-    </script>
-
 </body>
 </html>`
+
 const sandaliTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -836,6 +820,7 @@ const sandaliTemplate = `<!DOCTYPE html>
     </script>
 </body>
 </html>`
+
 const parcheTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -938,6 +923,7 @@ const parcheTemplate = `<!DOCTYPE html>
     </script>
 </body>
 </html>`
+
 const restorationTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>

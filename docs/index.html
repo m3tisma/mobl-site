@@ -6,7 +6,6 @@
     <meta name="theme-color" content="#00bfa5">
     <title>تعمیرات مبل شیراز</title>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
     <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: 09013643428">
     <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
     <meta name="author" content="تعمیرات مبل قهرمانی">
@@ -579,12 +578,9 @@
             <a href="https://instagram.com/moblshiraz.ir" class="contact-item" target="_blank"><div class="contact-icon">📷</div><div class="contact-info"><div class="contact-label">اینستاگرام</div><div class="contact-value">@moblshiraz.ir</div></div></a>
             <div class="contact-item"><div class="contact-icon map">📍</div><div class="contact-info"><div class="contact-label">آدرس کارگاه</div><div class="contact-value">شیراز، سلطان‌آباد، خیابان مسکن مهر، اولین دوربرگردان سمت چپ، کارگاه تعمیرات مبل قهرمانی</div></div></div>
         </div>
-        <div class="neshan-map-container">
-            <div id="neshan-map"></div>
-            <a href="https://neshan.org/maps/places/29.528733,52.544659" target="_blank" class="map-link">
-                📍 مسیریابی با نشان (روی موبایل باز می‌شود)
-            </a>
-        </div>
+        <a href="https://neshan.org/maps/@29.528733,52.544659,16z" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00bfa5, #009688); color:white; text-align:center; padding:18px; border-radius:14px; font-weight:bold; text-decoration:none; margin-top:20px; box-shadow:0 8px 20px rgba(0,191,165,0.3); font-family:tahoma;">
+            📍 مشاهده آدرس کارگاه روی نقشه نشان
+        </a>
         <div class="trust-badges">
             <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
             <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text">۷ سال سابقه</div></div>
@@ -658,20 +654,5 @@
             if (e.key === 'ArrowRight') prevImage();
         });
     </script>
-    
-    <link rel="stylesheet" href="https://api.neshan.org/v1/maps/leaflet/1.9.2/leaflet.css" />
-    <script src="https://api.neshan.org/v1/maps/leaflet/1.9.2/leaflet.js?key=web.f80f03090e1e4d2d8a95cea0c222cc47"></script>
-    <script>
-      var map = new L.Map('neshan-map', {
-        key: 'web.f80f03090e1e4d2d8a95cea0c222cc47',
-        maptype: 'dreamy',
-        center: [29.528733, 52.544659],
-        zoom: 16
-      });
-      L.marker([29.528733, 52.544659]).addTo(map)
-        .bindPopup('تعمیرات مبل قهرمانی')
-        .openPopup();
-    </script>
-
 </body>
 </html>
