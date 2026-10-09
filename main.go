@@ -270,6 +270,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
     <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: {{.Phone}}">
     <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
     <meta name="author" content="تعمیرات مبل قهرمانی">
@@ -440,6 +441,10 @@ const htmlTemplate = `<!DOCTYPE html>
         .contact-label { font-size: 11px; color: var(--text-sec); }
         .contact-value { font-size: 14px; font-weight: 700; }
 
+        .neshan-map-container { margin-top: 20px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: white; }
+        .neshan-map-container #neshan-map { width: 100%; height: 300px; z-index: 1; }
+        .map-link { display: block; padding: 14px; text-align: center; background: var(--primary-light); color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 700; }
+        .map-link:active { background: var(--primary); color: white; }
         .trust-badges { display: flex; gap: 12px; margin-top: 16px; }
         .trust-badge { flex: 1; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; }
         .trust-icon { font-size: 28px; margin-bottom: 6px; }
@@ -633,6 +638,12 @@ const htmlTemplate = `<!DOCTYPE html>
             <a href="https://wa.me/{{.Whatsapp}}" class="contact-item" target="_blank"><div class="contact-icon wa">💬</div><div class="contact-info"><div class="contact-label">واتساپ</div><div class="contact-value">ارسال پیام در واتساپ</div></div></a>
             <a href="https://instagram.com/{{.Instagram}}" class="contact-item" target="_blank"><div class="contact-icon">📷</div><div class="contact-info"><div class="contact-label">اینستاگرام</div><div class="contact-value">@{{.Instagram}}</div></div></a>
             <div class="contact-item"><div class="contact-icon map">📍</div><div class="contact-info"><div class="contact-label">آدرس کارگاه</div><div class="contact-value">{{.Address}}</div></div></div>
+        </div>
+        <div class="neshan-map-container">
+            <div id="neshan-map"></div>
+            <a href="https://neshan.org/maps/places/29.528733,52.544659" target="_blank" class="map-link">
+                📍 مسیریابی با نشان (روی موبایل باز می‌شود)
+            </a>
         </div>
         <div class="trust-badges">
             <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
@@ -1012,6 +1023,17 @@ const restorationTemplate = `<!DOCTYPE html>
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('neshan-map').setView([29.528733, 52.544659], 16);
+            L.tileLayer('https://tiles.neshan.org/v1/{z}/{x}/{y}.png?key=web.f80f03090e1e4d2d8a95cea0c222cc47', {
+            attribution: '© نشان',
+            maxZoom: 18
+        }).addTo(map);
+        L.marker([29.528733, 52.544659]).addTo(map)
+            .bindPopup('تعمیرات مبل شیراز')
+            .openPopup();
     </script>
 </body>
 </html>`
