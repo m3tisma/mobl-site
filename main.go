@@ -639,9 +639,9 @@ const htmlTemplate = `<!DOCTYPE html>
             <a href="https://instagram.com/{{.Instagram}}" class="contact-item" target="_blank"><div class="contact-icon">📷</div><div class="contact-info"><div class="contact-label">اینستاگرام</div><div class="contact-value">@{{.Instagram}}</div></div></a>
             <div class="contact-item"><div class="contact-icon map">📍</div><div class="contact-info"><div class="contact-label">آدرس کارگاه</div><div class="contact-value">{{.Address}}</div></div></div>
         </div>
-        <a href="https://neshan.org/maps/@29.528689821496627,52.5446158481659,17z" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00bfa5, #009688); color:white; text-align:center; padding:18px; border-radius:14px; font-weight:bold; text-decoration:none; margin-top:20px; box-shadow:0 8px 20px rgba(0,191,165,0.3); font-family:tahoma;">
-            📍 مشاهده آدرس کارگاه روی نقشه نشان
-             </a>       
+        <a href="https://nshn.ir/be_bgLzhPFQAyo" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00bfa5, #009688); color:white; text-align:center; padding:18px; border-radius:14px; font-weight:bold; text-decoration:none; margin-top:20px; box-shadow:0 8px 20px rgba(0,191,165,0.3); font-family:tahoma;">
+    📍 مشاهده آدرس کارگاه روی نقشه نشان
+</a>
             <div class="trust-badges">
             <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
             <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text">۷ سال سابقه</div></div>
