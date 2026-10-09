@@ -718,6 +718,21 @@ const htmlTemplate = `<!DOCTYPE html>
             if (e.key === 'ArrowRight') prevImage();
         });
     </script>
+    <!-- نقشه نشان -->
+    <link rel="stylesheet" href="https://api.neshan.org/v1/maps/leaflet/1.9.2/leaflet.css" />
+    <script src="https://api.neshan.org/v1/maps/leaflet/1.9.2/leaflet.js?key=web.f80f03090e1e4d2d8a95cea0c222cc47"></script>
+    <script>
+      var map = new L.Map('neshan-map', {
+        key: 'web.f80f03090e1e4d2d8a95cea0c222cc47',
+        maptype: 'dreamy',
+        center: [29.528733, 52.544659],
+        zoom: 16
+      });
+      L.marker([29.528733, 52.544659]).addTo(map)
+        .bindPopup('تعمیرات مبل قهرمانی')
+        .openPopup();
+    </script>
+
 </body>
 </html>`
 const sandaliTemplate = `<!DOCTYPE html>
