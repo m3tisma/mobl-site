@@ -108,9 +108,9 @@ func main() {
 		HeroImage:   "images/hero.jpg",
 		AboutImage:  "images/about.jpg",
 		Services: []Service{
-			{Image: "images/service-1.jpg", Title: "تعمیر مبل چستر", Desc: "تعمیر و بازسازی کامل مبل‌های استیل در کارگاه", Price: "از ۵۰۰ هزار تومان"},
+			{Image: "images/service-3.jpg", Title: "تعمیر مبل چستر", Desc: "تعمیر و بازسازی کامل مبل‌های استیل در کارگاه", Price: "از ۵۰۰ هزار تومان"},
 			{Image: "images/service-2.jpg", Title: "تعمیر صندلی", Desc: "تعمیر انواع صندلی اداری و غذاخوری", Price: "از ۲۰۰ هزار تومان"},
-			{Image: "images/service-3.jpg", Title: "تعویض پارچه", Desc: "تعویض پارچه مبل با جدیدترین طرح‌ها", Price: "از ۸۰۰ هزار تومان"},
+			{Image: "images/service-1.jpg", Title: "تعویض پارچه", Desc: "تعویض پارچه مبل با جدیدترین طرح‌ها", Price: "از ۸۰۰ هزار تومان"},
 			{Image: "images/service-4.jpg", Title: "تعمیر مبل راحتی", Desc: "تعمیر اسکلت چوبی و فنرهای مبل", Price: "از ۴۰۰ هزار تومان"},
 			{Image: "images/service-5.jpg", Title: "تعمیرات سرویس خواب", Desc: "روکش‌کشی حرفه‌ای انواع مبل", Price: "از ۱ میلیون تومان"},
 			{Image: "images/service-6.jpg", Title: "بازسازی کامل", Desc: "بازسازی صفر تا صد مبل قدیمی", Price: "از ۲ میلیون تومان"},
