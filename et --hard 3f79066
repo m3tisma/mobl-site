@@ -1,0 +1,60 @@
+[33m361a2f2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m update main gallery sandali image
+[33m01b267c[m update main gallery rahati image
+[33m2eaeafe[m update main gallery sandali image
+[33m3f79066[m use exact nshn short link
+[33mf535a4a[m update exact location coordinates
+[33m8b4dc3d[m replace map with simple button
+[33mc4cf7f2[m backup before map fix
+[33mb63f9ff[m remove duplicate leaflet code
+[33m6df739c[m add neshan map javascript
+[33me6cd60c[m add neshan map
+[33m750e9ce[m update instagram handle
+[33m42a2557[m add new before-after images with mobl shiraz logo
+[33m3dfeb11[m delete inner gallery images
+[33m5f931d5[m replace parche gallery images with new logo
+[33m0cd92e4[m add logo to header and favicon
+[33maf6b4b1[m fix phone number
+[33m394a297[m add new parche image
+[33m10d08f6[m add L-shape sofa to parche gallery
+[33md17aa7c[m change service title to chester
+[33mc755619[m change skeleton title to comfortable sofa
+[33m2f3a28b[m change gallery title to chester
+[33mac9afe3[m add sandali gallery page
+[33m2ba0417[m add parche gallery page
+[33mf24cf12[m add about section CSS
+[33m0c599f1[m revert overflow changes to fix sticky tabs
+[33m99b3682[m fix sticky tabs
+[33m114f975[m fix tabs position
+[33mc1107f4[m fix sticky tabs with position fixed
+[33mc5a2cf3[m fix sticky tabs on mobile
+[33mfd36a75[m fix mobile horizontal overflow
+[33m1466858[m add separate gallery page for restoration
+[33m5a4707d[m fix address and remove map
+[33m1b7bdb8[m update exact address
+[33me57895c[m remove map section
+[33meeefa02[m fix priceRange to english
+[33m5447488[m fix schema numbers to english
+[33m122298e[m add sitemap
+[33m33daf6b[m add google verification
+[33m1aeff17[m update map with exact location
+[33me728feb[m Merge branch 'main' of https://github.com/m3tisma/mobl-site
+[33mb391094[m restore images
+[33m1cd069f[m change title to tamirat mobl shiraz
+[33mf3d6f8f[m Create CNAME
+[33m5661560[m restore images
+[33mdd580bd[m update real contact info
+[33m39a09e2[m Merge branch 'main' of https://github.com/m3tisma/mobl-site
+[33m934909f[m restore images + workshop content
+[33m795407b[m change to workshop-based services
+[33m0a83734[m Create CNAME
+[33m0a3cca1[m Merge branch 'main' of https://github.com/m3tisma/mobl-site
+[33m5ff8b8d[m use real images
+[33m3591216[m Add files via upload
+[33m9ca15bf[m Create .gitkeep
+[33meccc9d9[m Create .gitkeep
+[33m0e33003[m add hover effect and docs folder
+[33mb1cf724[m add hover effect
+[33mb5bf849[m add SVG images
+[33m5f85b43[m add SVG images
+[33m698506d[m change output to docs folder
+[33m5156b4f[m first commit - mobl site
