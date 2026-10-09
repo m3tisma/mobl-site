@@ -117,9 +117,9 @@ func main() {
 		},
 		Gallery: []GalleryItem{
 			{Image: "images/gallery-1.jpg", Title: "تعمیر مبل چستر"},
-			{Image: "images/gallery-2.jpg", Title: "تعمیر صندلی", Link: "gallery-sandali.html"},
+			{Image: "images/gallery-4.jpg", Title: "تعمیر صندلی", Link: "gallery-sandali.html"},
 			{Image: "images/gallery-3.jpg", Title: "تعویض پارچه", Link: "gallery-parche.html"},
-			{Image: "images/gallery-4.jpg", Title: "تعمیر مبل راحتی"},
+			{Image: "images/gallery-2.jpg", Title: "تعمیر مبل راحتی"},
                         {Image: "images/gallery-5.jpg", Title: "تعمیرات سرویس خواب"},
 			{Image: "images/gallery-6.jpg", Title: "بازسازی کامل", Link: "gallery-restoration.html"},
 		},
