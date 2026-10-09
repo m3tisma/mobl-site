@@ -1039,16 +1039,5 @@ const restorationTemplate = `<!DOCTYPE html>
             if (e.key === 'Escape') closeLightbox();
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        var map = L.map('neshan-map').setView([29.528733, 52.544659], 16);
-            L.tileLayer('https://tiles.neshan.org/v1/{z}/{x}/{y}.png?key=web.f80f03090e1e4d2d8a95cea0c222cc47', {
-            attribution: '© نشان',
-            maxZoom: 18
-        }).addTo(map);
-        L.marker([29.528733, 52.544659]).addTo(map)
-            .bindPopup('تعمیرات مبل شیراز')
-            .openPopup();
-    </script>
 </body>
 </html>`
