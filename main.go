@@ -270,7 +270,6 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
     <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: {{.Phone}}">
     <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
     <meta name="author" content="تعمیرات مبل قهرمانی">
