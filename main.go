@@ -462,6 +462,18 @@ const htmlTemplate = `<!DOCTYPE html>
         .float-btn.call { background: var(--primary); color: white; }
         .float-btn.wa { background: #25D366; color: white; }
 
+        /* دکمه منو و منوی موبایل */
+        .menu-btn { background: transparent; border: none; font-size: 22px; cursor: pointer; color: var(--primary); padding: 4px; display: flex; align-items: center; justify-content: center; margin-left: 4px; }
+        .menu-btn:active { background: var(--primary-light); border-radius: 8px; }
+        
+        .mobile-menu-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background: white; z-index: 2000; box-shadow: -5px 0 30px rgba(0,0,0,0.15); transition: right 0.3s ease; display: flex; flex-direction: column; }
+        .mobile-menu-overlay.active { right: 0; }
+        .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid var(--border); font-weight: 800; font-size: 16px; color: var(--text); }
+        .menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-sec); padding: 4px; }
+        .mobile-menu-list { list-style: none; padding: 10px 0; display: flex; flex-direction: column; }
+        .mobile-menu-list li a { display: block; padding: 16px 20px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--bg); transition: background 0.2s; }
+        .mobile-menu-list li a:hover { background: var(--primary-light); color: var(--primary); }
+
         @media (min-width: 768px) {
             body { font-size: 15px; }
             .hero-title { font-size: 32px; }
@@ -480,9 +492,23 @@ const htmlTemplate = `<!DOCTYPE html>
 </head>
 <body>
 
+    <!-- منوی موبایل -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span>منوی سایت</span>
+            <button class="menu-close-btn" onclick="toggleMenu()" aria-label="بستن">✕</button>
+        </div>
+        <ul class="mobile-menu-list">
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="blog/index.html">وبلاگ</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+        </ul>
+    </div>
+
     <header class="top-bar">
         <div class="top-inner">
             <div class="brand">
+                <button class="menu-btn" onclick="toggleMenu()" aria-label="منو">☰</button>
                 <div class="brand-icon"><img src="images/logo.png" alt="{{.Name}}"></div>
                 <span>{{.Name}}</span>
             </div>
@@ -677,6 +703,12 @@ const htmlTemplate = `<!DOCTYPE html>
     </div>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+
         function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
         function toggleQA(el) { el.closest('.qa-item').classList.toggle('open'); }
         function showMoreReviews(btn) { document.querySelectorAll('.review-hidden').forEach(el => el.classList.add('show')); btn.style.display = 'none'; }
