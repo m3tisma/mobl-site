@@ -120,13 +120,14 @@ type QandA struct {
 }
 
 type BlogPost struct {
-	Title   string
-	Slug    string
-	Date    string
-	Excerpt string
-	Content template.HTML
+	Title    string
+	Slug     string
+	Date     string
+	Excerpt  string
+	Image    string
+	ImageAlt string
+	Content  template.HTML
 }
-
 type SiteData struct {
 	Title             string
 	Name              string
@@ -240,14 +241,15 @@ func main() {
 
 	blogPosts := []BlogPost{
 		{
-			Title:   "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
-			Slug:    "hazine-tamir-mobl-shiraz",
-			Date:    "۱۴۰۵/۰۱/۱۵",
-			Excerpt: "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
-			Content: template.HTML(firstBlogPostContent),
+			Title:    "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
+			Slug:     "hazine-tamir-mobl-shiraz",
+			Date:     "۱۴۰۵/۰۱/۱۵",
+			Excerpt:  "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
+			Image:    "images/blog-hazine-tamir.jpg",
+			ImageAlt: "تعمیر مبل در شیراز - نمونه کارگاه مبل شیراز",
+			Content:  template.HTML(firstBlogPostContent),
 		},
 	}
-
 	funcMap := template.FuncMap{
 		"loop": func(n int) []int {
 			result := make([]int, n)
