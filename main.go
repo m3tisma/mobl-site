@@ -7,6 +7,76 @@ import (
 	"path/filepath"
 )
 
+
+var firstBlogPostContent = `
+<h2>مبل، قلب تپنده هر خانه‌ست</h2>
+<p>وقتی مبل قدیمی می‌شه، خراب می‌شه یا پارچه‌ش رنگ می‌بازه، اولین سوالی که ذهن‌مون رو مشغول می‌کنه اینه: «هزینه تعمیر مبل در شیراز چقدره؟» توی این راهنمای کامل، تمام عوامل مؤثر بر قیمت تعمیر مبل رو بررسی می‌کنیم و تعرفه تقریبی هر خدمت رو براتون می‌گیم تا با خیال راحت تصمیم بگیرید.</p>
+
+<h2>عوامل مؤثر بر هزینه تعمیر مبل در شیراز</h2>
+<p>قیمت تعمیر مبل یه عدد ثابت نیست و به چند عامل بستگی داره. اگه این عوامل رو بشناسید، راحت‌تر می‌تونید هزینه‌ها رو تخمین بزنید.</p>
+
+<h3>۱. نوع مبل (چستر، استیل، راحتی)</h3>
+<p>مبل‌های چستر و استیل به دلیل ساختار پیچیده‌تر و دگمه‌کوبی، دستمزد بیشتری نسبت به مبل‌های راحتی دارن. تعمیر مبل راحتی معمولاً ساده‌تر و ارزان‌تر تموم می‌شه.</p>
+
+<h3>۲. میزان خرابی و آسیب</h3>
+<p>اگه فقط پارچه مبل خراب شده باشه، هزینه کمتره. ولی اگه اسکلت چوبی، فنرها و چوب‌بندی هم آسیب دیده باشن، هزینه به‌طور قابل‌توجهی بالا می‌ره.</p>
+
+<h3>۳. نوع پارچه و متریال</h3>
+<p>پارچه‌های ایرانی ارزان‌ترن، ولی پارچه‌های خارجی و ضدلک قیمت بالاتری دارن. همچنین استفاده از اسفنج باکیفیت و فنرهای استاندارد، هزینه نهایی رو افزایش می‌ده.</p>
+
+<h3>۴. دستمزد کارگاه</h3>
+<p>هر کارگاهی بسته به تجربه، تخصص و کیفیت کارش، دستمزد متفاوتی می‌گیره. کارگاه‌های حرفه‌ای مثل <a href="../index.html#about">تعمیرات مبل شیراز</a> با وجود دستمزد منصفانه، کیفیت بالاتری ارائه می‌دن.</p>
+
+<h2>تعرفه تقریبی تعمیرات مبل در شیراز (۱۴۰۵)</h2>
+<p>این قیمت‌ها تقریبی هستن و بسته به نوع مبل و میزان کار می‌تونن تغییر کنن. برای قیمت دقیق، حتماً عکس مبلتون رو برامون بفرستید.</p>
+
+<table>
+<thead>
+<tr><th>نوع خدمت</th><th>بازه قیمت (تومان)</th></tr>
+</thead>
+<tbody>
+<tr><td>تعمیر مبل راحتی ۷-۸ نفره</td><td>۱۵,۰۰۰,۰۰۰ تا ۲۵,۰۰۰,۰۰۰</td></tr>
+<tr><td>تعمیر مبل استیل ۹ نفره</td><td>۱۸,۰۰۰,۰۰۰ تا ۳۰,۰۰۰,۰۰۰</td></tr>
+<tr><td>تعمیر مبل چستر ۳ نفره</td><td>۱۵,۰۰۰,۰۰۰ تا ۲۵,۰۰۰,۰۰۰</td></tr>
+<tr><td>تعویض پارچه مبل استیل ۹ نفره (بدون پارچه)</td><td>۴,۰۰۰,۰۰۰ تا ۶,۵۰۰,۰۰۰</td></tr>
+<tr><td>تعویض پارچه مبل راحتی ۷ نفره (بدون پارچه)</td><td>۳,۵۰۰,۰۰۰ تا ۵,۵۰۰,۰۰۰</td></tr>
+<tr><td>تعمیر صندلی ناهارخوری (هر عدد)</td><td>۱,۵۰۰,۰۰۰ تا ۲,۵۰۰,۰۰۰</td></tr>
+<tr><td>تعمیر لقی صندلی ناهارخوری</td><td>از ۸۰۰,۰۰۰</td></tr>
+<tr><td>رنگ‌آمیزی هر صندلی ناهارخوری</td><td>از ۲,۰۰۰,۰۰۰</td></tr>
+<tr><td>بازسازی کامل مبل</td><td>از ۲۵,۰۰۰,۰۰۰</td></tr>
+<tr><td>رنگ‌آمیزی مبل استیل ۹ نفره</td><td>۱۰,۰۰۰,۰۰۰ تا ۱۵,۰۰۰,۰۰۰</td></tr>
+</tbody>
+</table>
+
+<h2>تعمیر مبل چستر چقدر هزینه دارد؟</h2>
+<p>مبل چستر به دلیل ظاهر کلاسیک و دگمه‌های تودرتو، یکی از پرطرفدارترین مبل‌هاست. هزینه تعمیر مبل چستر بستگی به میزان دگمه‌کوبی، جنس پارچه و وضعیت اسکلت داره. به‌طور میانگین، رویه‌کوبی و تعویض اسفنج مبل چستر سه‌نفره از ۲۲ میلیون تومان شروع می‌شه و تعویض پارچه چستر سه‌نفره با لمسه‌دوزی می‌تونه تا ۲۵ میلیون تومان هم برسه. اگه فقط تعویض پارچه نیاز باشه (بدون تعویض اسفنج)، هزینه کمتر می‌شه. برای مشاهده نمونه‌کارهای ما، <a href="../index.html#gallery">گالری تعمیر مبل چستر</a> رو ببینید.</p>
+
+<h2>هزینه تعویض پارچه مبل در شیراز</h2>
+<p>تعویض پارچه، محبوب‌ترین خدمت تعمیرات مبل هست. چون با هزینه‌ای کمتر از خرید مبل نو، ظاهر مبل کاملاً عوض می‌شه. هزینه تعویض پارچه به متراژ مبل، نوع پارچه و دستمزد بستگی داره. به‌طور میانگین، تعویض پارچه یه مبل استیل ۹ نفره بین ۴ تا ۶.۵ میلیون تومان (فقط دستمزد) هزینه داره. برای انتخاب پارچه مناسب، حتماً <a href="../index.html#services">راهنمای انتخاب پارچه</a> رو مطالعه کنید.</p>
+
+<h2>بازسازی کامل مبل چقدر هزینه دارد؟</h2>
+<p>بازسازی کامل یعنی صفر تا صد مبل: تعمیر اسکلت، تعویض فنر، تعویض اسفنج، پارچه‌کشی و رویه‌کوبی. این کار برای مبل‌های قدیمی و باارزش توصیه می‌شه. هزینه بازسازی کامل از ۲۵ میلیون تومان شروع می‌شه و بسته به نوع مبل می‌تونه تا ۵۰ میلیون تومان هم برسه. نمونه‌های بازسازی ما رو توی <a href="../gallery-restoration.html">گالری بازسازی کامل</a> ببینید.</p>
+
+<h2>چطور هزینه تعمیر مبل را کاهش دهیم؟ (۵ راهکار)</h2>
+<ol>
+<li><strong>زودتر اقدام کنید:</strong> خرابی کوچک رو به تعمیرات بزرگ تبدیل نکنید. تعمیر به‌موقع، هزینه کمتری داره.</li>
+<li><strong>عکس بفرستید:</strong> قبل از مراجعه حضوری، عکس مبلتون رو واتساپ کنید تا قیمت تقریبی رو بگیم.</li>
+<li><strong>پارچه مناسب انتخاب کنید:</strong> پارچه‌های ایرانی با کیفیت خوب، هم ارزان‌ترن هم دوام خوبی دارن.</li>
+<li><strong>از کارگاه‌های معتبر استفاده کنید:</strong> کارگاه‌های غیرحرفه‌ای ممکنه ارزان‌تر باشن ولی بعداً هزینه دوباره‌کاری رو بهتون تحمیل می‌کنن.</li>
+<li><strong>تعمیر در محل یا کارگاه؟</strong> بسته به نوع خرابی، ممکنه تعمیر در کارگاه ارزان‌تر تموم بشه.</li>
+</ol>
+
+<h2>چرا کارگاه تعمیرات مبل شیراز را انتخاب کنیم؟</h2>
+<p>ما با بیش از ۷ سال سابقه در تعمیر و بازسازی انواع مبل، صندلی و پرسی در شیراز، افتخار داریم که رضایت بیش از ۱۳۷ مشتری رو جلب کردیم. خدمات ما شامل تعمیر مبل چستر، استیل، راحتی، تعویض پارچه، سرویس خواب و بازسازی کامل هست. تمام کارها با <strong>ضمانت ۶ ماهه</strong> انجام می‌شه و قیمت‌ها کاملاً منصفانه‌ست. هدف ما فقط تعمیر نیست؛ <strong>لبخند رضایت شماست</strong>.</p>
+<p>برای مشاهده نمونه‌کارها و نظرات مشتریان، به <a href="../index.html">صفحه اصلی سایت</a> سر بزنید. همچنین می‌تونید از طریق <a href="https://wa.me/989013643428">واتساپ</a> یا <a href="tel:+989013643428">تماس تلفنی</a> با ما در ارتباط باشید.</p>
+
+<h2>نتیجه‌گیری</h2>
+<p>هزینه تعمیر مبل در شیراز بسته به نوع مبل، میزان خرابی و پارچه انتخابی متفاوته. با این حال، تعمیر مبل همیشه به‌صرفه‌تر از خرید مبل نوئه، مخصوصاً اگه مبلتون اسکلت سالمی داشته باشه. برای دریافت مشاوره رایگان و قیمت دقیق، <strong>همین حالا عکس مبلتون رو به واتساپ ما بفرستید</strong> تا در اسرع وقت پاسخگو باشیم.</p>
+<p>📍 <strong>آدرس کارگاه:</strong> شیراز، سلطان‌آباد، خیابان مسکن مهر، اولین دوربرگردان سمت چپ<br>
+📞 <strong>تماس:</strong> ۰۹۰۱۳۶۴۳۴۲۸<br>
+💬 <strong>واتساپ:</strong> <a href="https://wa.me/989013643428">کلیک کنید</a></p>
+`
+
 type Service struct {
 	Image string
 	Title string
@@ -47,6 +117,14 @@ type QandA struct {
 	Date     string
 	Question string
 	Replies  []QReply
+}
+
+type BlogPost struct {
+	Title   string
+	Slug    string
+	Date    string
+	Excerpt string
+	Content string
 }
 
 type SiteData struct {
@@ -160,6 +238,16 @@ func main() {
 		},
 	}
 
+	blogPosts := []BlogPost{
+		{
+			Title:   "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
+			Slug:    "hazine-tamir-mobl-shiraz",
+			Date:    "۱۴۰۵/۰۱/۱۵",
+			Excerpt: "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
+			Content: firstBlogPostContent,
+		},
+	}
+
 	funcMap := template.FuncMap{
 		"loop": func(n int) []int {
 			result := make([]int, n)
@@ -261,6 +349,42 @@ func main() {
 	}
 	f4.Close()
 	log.Println("✅ docs/index.html و docs/gallery-restoration.html ساخته شدند")
+	// ساخت پوشه blog
+	if err := os.MkdirAll("docs/blog", 0755); err != nil {
+		log.Fatal(err)
+	}
+
+	// ساخت blog/index.html
+	tmplBlogIndex, err := template.New("blogIndex").Parse(blogIndexTemplate)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fBlogIndex, err := os.Create(filepath.Join("docs", "blog", "index.html"))
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := tmplBlogIndex.Execute(fBlogIndex, blogPosts); err != nil {
+		log.Fatal(err)
+	}
+	fBlogIndex.Close()
+
+	// ساخت صفحات مقالات
+	for _, post := range blogPosts {
+		tmplPost, err := template.New("blogPost").Parse(blogPostTemplate)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fPost, err := os.Create(filepath.Join("docs", "blog", post.Slug+".html"))
+		if err != nil {
+			log.Fatal(err)
+		}
+		if err := tmplPost.Execute(fPost, post); err != nil {
+			log.Fatal(err)
+		}
+		fPost.Close()
+	}
+
+	log.Println("✅ صفحات وبلاگ ساخته شدند")
 }
 
 const htmlTemplate = `<!DOCTYPE html>
@@ -1056,5 +1180,155 @@ const restorationTemplate = `<!DOCTYPE html>
             if (e.key === 'Escape') closeLightbox();
         });
     </script>
+</body>
+</html>`
+const blogIndexTemplate = `<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وبلاگ تعمیرات مبل شیراز | مقالات تخصصی</title>
+    <meta name="description" content="مقالات آموزشی و راهنمای تخصصی تعمیر، بازسازی و نگهداری مبل در شیراز. جدیدترین مطالب درباره مبل چستر، استیل، راحتی و صندلی.">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
+        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+        .header p { font-size: 13px; color: var(--text-sec); }
+        .container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+        .post-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .post-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: transform 0.3s; }
+        .post-card:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.15); }
+        .post-image { width: 100%; aspect-ratio: 16/9; background: var(--primary-light); display: flex; align-items: center; justify-content: center; font-size: 48px; color: var(--primary); }
+        .post-body { padding: 20px; }
+        .post-date { font-size: 11px; color: var(--text-sec); margin-bottom: 8px; }
+        .post-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: var(--text); text-decoration: none; display: block; }
+        .post-title:hover { color: var(--primary); }
+        .post-excerpt { font-size: 13px; color: var(--text-sec); line-height: 1.8; margin-bottom: 14px; }
+        .read-more { display: inline-block; color: var(--primary); font-weight: 700; font-size: 13px; text-decoration: none; }
+        .read-more:hover { text-decoration: underline; }
+        .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px; text-align: center; margin-top: 30px; }
+        .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
+        .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
+        .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
+        @media (min-width: 768px) {
+            .post-grid { grid-template-columns: repeat(2, 1fr); }
+            .header h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-inner">
+            <a href="../index.html" class="back-btn">← بازگشت به سایت</a>
+            <div class="brand">🛋️ مبل شیراز</div>
+        </div>
+    </header>
+
+    <div class="header">
+        <h1>وبلاگ تعمیرات مبل شیراز</h1>
+        <p>مقالات تخصصی، راهنماها و نکات کاربردی درباره تعمیر و نگهداری مبل</p>
+    </div>
+
+    <div class="container">
+        <div class="post-grid">
+            {{range .}}
+            <div class="post-card">
+                <div class="post-image">📝</div>
+                <div class="post-body">
+                    <div class="post-date">{{.Date}}</div>
+                    <a href="{{.Slug}}.html" class="post-title">{{.Title}}</a>
+                    <p class="post-excerpt">{{.Excerpt}}</p>
+                    <a href="{{.Slug}}.html" class="read-more">ادامه مطلب ←</a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-brand">مبل شیراز</div>
+        <p class="footer-text">تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما</p>
+        <p class="footer-copy">© ۱۴۰۵ مبل شیراز — تعمیرات مبل در شیراز</p>
+    </footer>
+
+</body>
+</html>`
+
+const blogPostTemplate = `<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+    <meta name="description" content="{{.Excerpt}}">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
+        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+        .header .meta { font-size: 12px; color: var(--text-sec); }
+        .container { max-width: 800px; margin: auto; padding: 24px 16px 100px; }
+        .content { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+        .content h1 { font-size: 22px; font-weight: 900; margin-bottom: 16px; }
+        .content h2 { font-size: 18px; font-weight: 800; margin-top: 24px; margin-bottom: 10px; color: var(--primary); }
+        .content h3 { font-size: 15px; font-weight: 700; margin-top: 18px; margin-bottom: 8px; }
+        .content p { margin-bottom: 14px; line-height: 2; }
+        .content ul, .content ol { margin-right: 20px; margin-bottom: 14px; }
+        .content li { margin-bottom: 6px; }
+        .content a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .content a:hover { text-decoration: underline; }
+        .content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+        .content table th, .content table td { border: 1px solid var(--border); padding: 10px; text-align: right; }
+        .content table th { background: var(--primary-light); color: var(--primary); font-weight: 700; }
+        .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px; text-align: center; margin-top: 30px; }
+        .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
+        .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
+        .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
+        @media (min-width: 768px) {
+            .header h1 { font-size: 32px; }
+            .content { padding: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-inner">
+            <a href="../index.html" class="back-btn">← بازگشت به سایت</a>
+            <div class="brand">🛋️ مبل شیراز</div>
+        </div>
+    </header>
+
+    <div class="header">
+        <h1>{{.Title}}</h1>
+        <div class="meta">تاریخ انتشار: {{.Date}}</div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            {{.Content}}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-brand">مبل شیراز</div>
+        <p class="footer-text">تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما</p>
+        <p class="footer-copy">© ۱۴۰۵ مبل شیراز — تعمیرات مبل در شیراز</p>
+    </footer>
+
 </body>
 </html>`
