@@ -1244,7 +1244,7 @@ const blogIndexTemplate = `<!DOCTYPE html>
             {{range .}}
             <div class="post-card">
                                 <div class="post-image">
-                    <img src="{{.Image}}" alt="{{.ImageAlt}}" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+                    <img src="../{{.Image}}" alt="{{.ImageAlt}}" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
                 </div>
                 <div class="post-body">
                     <div class="post-date">{{.Date}}</div>
@@ -1323,7 +1323,7 @@ const blogPostTemplate = `<!DOCTYPE html>
     </div>
 
     <div class="container" style="padding-bottom:0;">
-        <img src="{{.Image}}" alt="{{.ImageAlt}}" loading="lazy" style="width:100%; border-radius:16px; margin-bottom:20px; box-shadow:0 8px 30px rgba(0,0,0,0.1);">
+        <img src="../{{.Image}}" alt="{{.ImageAlt}}" loading="lazy" style="width:100%; border-radius:16px; margin-bottom:20px; box-shadow:0 8px 30px rgba(0,0,0,0.1);">
     </div>
 
     <div class="container">
