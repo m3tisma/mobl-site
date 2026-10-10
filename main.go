@@ -124,7 +124,7 @@ type BlogPost struct {
 	Slug    string
 	Date    string
 	Excerpt string
-	Content string
+	Content template.HTML
 }
 
 type SiteData struct {
@@ -244,7 +244,7 @@ func main() {
 			Slug:    "hazine-tamir-mobl-shiraz",
 			Date:    "۱۴۰۵/۰۱/۱۵",
 			Excerpt: "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
-			Content: firstBlogPostContent,
+			Content: template.HTML(firstBlogPostContent),
 		},
 	}
 
