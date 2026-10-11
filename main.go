@@ -125,6 +125,7 @@ type BlogPost struct {
 	Date     string
 	Excerpt  string
 	Image    string
+        ImageThumb string
 	ImageAlt string
 	Content  template.HTML
 }
@@ -254,6 +255,7 @@ func main() {
 			Date:     "۱۴۰۵/۰۱/۱۵",
 			Excerpt:  "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
 			Image:    "images/blog-hazine-tamir.jpg",
+                        ImageThumb: "images/blog-hazine-tamir-thumb.jpg",
 			ImageAlt: "تعمیر مبل در شیراز - نمونه کارگاه مبل شیراز",
 			Content:  template.HTML(firstBlogPostContent),
 		},
@@ -1294,7 +1296,7 @@ const blogIndexTemplate = `<!DOCTYPE html>
             {{range .}}
             <div class="post-card">
                                 <div class="post-image">
-                    <img src="../{{.Image}}" alt="{{.ImageAlt}}" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+                <img src="../{{.ImageThumb}}" alt="{{.ImageAlt}}" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
                 </div>
                 <div class="post-body">
                     <div class="post-date">{{.Date}}</div>
