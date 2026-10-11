@@ -699,10 +699,6 @@ const htmlTemplate = `<!DOCTYPE html>
         .social-btn { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; }
         .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
 
-        .float-actions { position: fixed; bottom: 20px; left: 20px; right: 20px; display: flex; gap: 10px; z-index: 99; }
-        .float-btn { flex: 1; padding: 16px; border-radius: 16px; text-align: center; font-size: 15px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .float-btn.call { background: var(--primary); color: white; }
-        .float-btn.wa { background: #25D366; color: white; }
 
         /* دکمه منو و منوی موبایل */
         .menu-btn { background: transparent; border: none; font-size: 22px; cursor: pointer; color: var(--primary); padding: 4px; display: flex; align-items: center; justify-content: center; margin-left: 4px; }
@@ -725,8 +721,6 @@ const htmlTemplate = `<!DOCTYPE html>
             .section-title { font-size: 22px; }
             .services-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-            .float-actions { left: auto; right: 30px; bottom: 30px; width: auto; }
-            .float-btn { padding: 14px 24px; border-radius: 50px; font-size: 14px; }
             .stats-inner { max-width: 700px; }
             .stat-value { font-size: 22px; }
         }
@@ -931,10 +925,6 @@ const htmlTemplate = `<!DOCTYPE html>
         <p class="footer-copy">© ۱۴۰۳ {{.Name}} — تعمیرات مبل در شیراز</p>
     </footer>
 
-    <div class="float-actions">
-        <a href="tel:{{.PhoneRaw}}" class="float-btn call">📞 تماس</a>
-        <a href="https://wa.me/{{.Whatsapp}}" class="float-btn wa" target="_blank">💬 واتساپ</a>
-    </div>
 
     <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
         <div class="lightbox-inner">
