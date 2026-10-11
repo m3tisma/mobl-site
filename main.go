@@ -216,7 +216,9 @@ func main() {
 			{Image: "images/before-after-4.jpg", Title: "تعمیر و تعویض پارچه صندلی"},
 		},
 		ChesterImages: []GalleryItem{
-			{Image: "images/gallery-1.jpg", Title: "تعمیر مبل چستر"},
+			ChesterImages: []GalleryItem{
+			{Image: "images/chester-2.jpg", Title: "تعمیر مبل چستر - نمونه جدید"},
+		},
 			{Image: "images/chester-2.jpg", Title: "تعمیر مبل چستر - نمونه جدید"},
 		},
 		Reviews: []Review{
