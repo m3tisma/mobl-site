@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"log"
 	"os"
@@ -129,6 +130,14 @@ type BlogPost struct {
 	ImageAlt string
 	Content  template.HTML
 }
+
+type BlogPageData struct {
+	Posts       []BlogPost
+	CurrentPage int
+	TotalPages  int
+	PrevPage    string
+	NextPage    string
+}
 type SiteData struct {
 	Title             string
 	Name              string
@@ -248,6 +257,9 @@ func main() {
 		},
 	}
 
+	// تنظیمات صفحه‌بندی وبلاگ
+	postsPerPage := 6
+
 	blogPosts := []BlogPost{
 		{
 			Title:    "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
@@ -267,6 +279,9 @@ func main() {
 				result[i] = i
 			}
 			return result
+		},
+		"add": func(a, b int) int {
+			return a + b
 		},
 		"stars": func(rating int) template.HTML {
 			html := ""
@@ -408,19 +423,67 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// ساخت blog/index.html
-	tmplBlogIndex, err := template.New("blogIndex").Parse(blogIndexTemplate)
+	// محاسبه تعداد صفحات
+	totalPosts := len(blogPosts)
+	totalPages := (totalPosts + postsPerPage - 1) / postsPerPage
+	if totalPages < 1 {
+		totalPages = 1
+	}
+
+	tmplBlogIndex, err := template.New("blogIndex").Funcs(funcMap).Parse(blogIndexTemplate)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fBlogIndex, err := os.Create(filepath.Join("docs", "blog", "index.html"))
-	if err != nil {
-		log.Fatal(err)
+
+	// ساخت صفحات وبلاگ
+	for pageNum := 1; pageNum <= totalPages; pageNum++ {
+		start := (pageNum - 1) * postsPerPage
+		end := start + postsPerPage
+		if end > totalPosts {
+			end = totalPosts
+		}
+
+		pagePosts := blogPosts[start:end]
+
+		// تعیین مسیر فایل خروجی
+		var outputPath string
+		if pageNum == 1 {
+			outputPath = filepath.Join("docs", "blog", "index.html")
+		} else {
+			outputPath = filepath.Join("docs", "blog", fmt.Sprintf("page%d.html", pageNum))
+		}
+
+		// تعیین لینک صفحه قبل و بعد
+		prevPage := ""
+		nextPage := ""
+		if pageNum > 1 {
+			if pageNum == 2 {
+				prevPage = "index.html"
+			} else {
+				prevPage = fmt.Sprintf("page%d.html", pageNum-1)
+			}
+		}
+		if pageNum < totalPages {
+			nextPage = fmt.Sprintf("page%d.html", pageNum+1)
+		}
+
+		pageData := BlogPageData{
+			Posts:       pagePosts,
+			CurrentPage: pageNum,
+			TotalPages:  totalPages,
+			PrevPage:    prevPage,
+			NextPage:    nextPage,
+		}
+
+		fBlogIndex, err := os.Create(outputPath)
+		if err != nil {
+			log.Fatal(err)
+		}
+		if err := tmplBlogIndex.Execute(fBlogIndex, pageData); err != nil {
+			log.Fatal(err)
+		}
+		fBlogIndex.Close()
 	}
-	if err := tmplBlogIndex.Execute(fBlogIndex, blogPosts); err != nil {
-		log.Fatal(err)
-	}
-	fBlogIndex.Close()
 
 	// ساخت صفحات مقالات
 	for _, post := range blogPosts {
@@ -1241,8 +1304,23 @@ const blogIndexTemplate = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{if eq .CurrentPage 1}}
     <title>وبلاگ تعمیرات مبل شیراز | مقالات تخصصی</title>
+    {{else}}
+    <title>وبلاگ تعمیرات مبل شیراز - صفحه {{.CurrentPage}} | مقالات تخصصی</title>
+    {{end}}
     <meta name="description" content="مقالات آموزشی و راهنمای تخصصی تعمیر، بازسازی و نگهداری مبل در شیراز. جدیدترین مطالب درباره مبل چستر، استیل، راحتی و صندلی.">
+    {{if eq .CurrentPage 1}}
+    <link rel="canonical" href="https://moblshiraz.ir/blog/">
+    {{else}}
+    <link rel="canonical" href="https://moblshiraz.ir/blog/page{{.CurrentPage}}.html">
+    {{end}}
+    {{if .PrevPage}}
+    <link rel="prev" href="{{.PrevPage}}">
+    {{end}}
+    {{if .NextPage}}
+    <link rel="next" href="{{.NextPage}}">
+    {{end}}
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
@@ -1267,6 +1345,13 @@ const blogIndexTemplate = `<!DOCTYPE html>
         .post-excerpt { font-size: 13px; color: var(--text-sec); line-height: 1.8; margin-bottom: 14px; }
         .read-more { display: inline-block; color: var(--primary); font-weight: 700; font-size: 13px; text-decoration: none; }
         .read-more:hover { text-decoration: underline; }
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 30px; padding: 20px 0; flex-wrap: wrap; }
+        .pagination a, .pagination span { display: flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 14px; transition: all 0.2s; }
+        .pagination a { background: white; color: var(--text); border: 1.5px solid var(--border); }
+        .pagination a:hover { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+        .pagination .current { background: var(--primary); color: white; border: 1.5px solid var(--primary); }
+        .pagination .nav-btn { background: var(--primary); color: white; border: 1.5px solid var(--primary); padding: 0 16px; }
+        .pagination .nav-btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: white; }
         .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px; text-align: center; margin-top: 30px; }
         .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
         .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
@@ -1293,7 +1378,7 @@ const blogIndexTemplate = `<!DOCTYPE html>
 
     <div class="container">
         <div class="post-grid">
-            {{range .}}
+            {{range .Posts}}
             <div class="post-card">
                                 <div class="post-image">
                 <img src="../{{.ImageThumb}}" alt="{{.ImageAlt}}" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
@@ -1308,6 +1393,30 @@ const blogIndexTemplate = `<!DOCTYPE html>
             {{end}}
         </div>
     </div>
+
+        {{if gt .TotalPages 1}}
+        <div class="pagination">
+            {{if .PrevPage}}
+            <a href="{{.PrevPage}}" class="nav-btn">← قبلی</a>
+            {{end}}
+            
+            {{range $i := loop .TotalPages}}
+                {{$pageNum := add $i 1}}
+                {{if eq $pageNum $.CurrentPage}}
+                    <span class="current">{{$pageNum}}</span>
+                {{else if eq $pageNum 1}}
+                    <a href="index.html">{{$pageNum}}</a>
+                {{else}}
+                    <a href="page{{$pageNum}}.html">{{$pageNum}}</a>
+                {{end}}
+            {{end}}
+            
+            {{if .NextPage}}
+            <a href="{{.NextPage}}" class="nav-btn">بعدی →</a>
+            {{end}}
+        </div>
+        {{end}}
+
 
     <footer class="footer">
         <div class="footer-brand">مبل شیراز</div>
