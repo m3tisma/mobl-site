@@ -447,28 +447,30 @@ func main() {
 	// تنظیمات صفحه‌بندی وبلاگ
 	postsPerPage := 6
 
+
 	blogPosts := []BlogPost{
-		{
-			Title:    "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
-			Slug:     "hazine-tamir-mobl-shiraz",
-			Date:     "۱۴۰۵/۰۱/۱۵",
-			Excerpt:  "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
-			Image:    "images/blog-hazine-tamir.jpg",
-                        ImageThumb: "images/blog-hazine-tamir-thumb.jpg",
-			ImageAlt: "تعمیر مبل در شیراز - نمونه کارگاه مبل شیراز",
-			Content:  template.HTML(firstBlogPostContent),
-		},
 		{
 			Title:      "راهنمای کامل تعمیر مبل در شیراز (۱۴۰۵) | از تشخیص خرابی تا بازسازی",
 			Slug:       "rahnamaye-tamir-mobl-shiraz",
-			Date:       "۱۴۰۵/۰۱/۲۰",
+			Date:       "۱۴۰۵/۰۷/۲۰",
 			Excerpt:    "در این راهنمای جامع، تمام جوانب تعمیر مبل در شیراز را بررسی می‌کنیم: از نشانه‌های نیاز به تعمیر تا مراحل تخصصی، انتخاب پارچه و فوم، هزینه‌ها و نکات نگهداری. با مطالعه این مقاله، تصمیم بهتری برای مبل خود بگیرید.",
 			Image:      "images/blog2-1.webp",
 			ImageThumb: "images/blog2-thumb.webp",
 			ImageAlt:   "راهنمای کامل تعمیر مبل در شیراز",
 			Content:    template.HTML(secondBlogPostContent),
 		},
+		{
+			Title:    "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
+			Slug:     "hazine-tamir-mobl-shiraz",
+			Date:     "۱۴۰۵/۰۱/۱۵",
+			Excerpt:  "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
+			Image:    "images/blog-hazine-tamir.jpg",
+			ImageThumb: "images/blog-hazine-tamir-thumb.jpg",
+			ImageAlt: "تعمیر مبل در شیراز - نمونه کارگاه مبل شیراز",
+			Content:  template.HTML(firstBlogPostContent),
+		},
 	}
+
 
 	funcMap := template.FuncMap{
 		"loop": func(n int) []int {
