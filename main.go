@@ -711,8 +711,8 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
@@ -1206,8 +1206,8 @@ const sandaliTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
@@ -1324,8 +1324,8 @@ const parcheTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
@@ -1442,8 +1442,8 @@ const restorationTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
@@ -1559,8 +1559,8 @@ const blogIndexTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
@@ -1703,8 +1703,8 @@ const blogPostTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
@@ -1793,8 +1793,8 @@ const chesterTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
@@ -1900,8 +1900,8 @@ const rahatiTemplate = `<!DOCTYPE html>
     <meta property="og:site_name" content="مبل شیراز">
     <script type="application/ld+json">
     {
-      "": "https://schema.org",
-      "": "WebSite",
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       "name": "مبل شیراز",
       "url": "https://moblshiraz.ir/"
     }
