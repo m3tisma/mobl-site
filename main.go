@@ -711,6 +711,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" type="image/png" href="images/logo.png">
     <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: {{.Phone}}">
     <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
@@ -1196,6 +1197,7 @@ const sandaliTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر صندلی | {{.Name}}</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="description" content="نمونه کارهای تعمیر صندلی در کارگاه تعمیرات مبل قهرمانی شیراز">
     <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
         -face {
@@ -1304,6 +1306,7 @@ const parcheTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعویض پارچه مبل | {{.Name}}</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="description" content="نمونه کارهای تعویض پارچه مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
     <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
         -face {
@@ -1412,6 +1415,7 @@ const restorationTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری بازسازی کامل مبل | {{.Name}}</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="description" content="نمونه کارهای بازسازی کامل مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
     <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
         -face {
@@ -1519,8 +1523,10 @@ const blogIndexTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{if eq .CurrentPage 1}}
     <title>وبلاگ تعمیرات مبل شیراز | مقالات تخصصی</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     {{else}}
     <title>وبلاگ تعمیرات مبل شیراز - صفحه {{.CurrentPage}} | مقالات تخصصی</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     {{end}}
     <meta name="description" content="مقالات آموزشی و راهنمای تخصصی تعمیر، بازسازی و نگهداری مبل در شیراز. جدیدترین مطالب درباره مبل چستر، استیل، راحتی و صندلی.">
     {{if eq .CurrentPage 1}}
@@ -1651,6 +1657,7 @@ const blogPostTemplate = `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Title}}</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="description" content="{{.Excerpt}}">
     <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
         -face {
@@ -1732,6 +1739,7 @@ const chesterTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل چستر | {{.Name}}</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="description" content="نمونه کارهای تعمیر مبل چستر در کارگاه تعمیرات مبل شیراز">
     <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
         -face {
@@ -1829,6 +1837,7 @@ const rahatiTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل راحتی | {{.Name}}</title>
+    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="description" content="نمونه کارهای تعمیر مبل راحتی در کارگاه تعمیرات مبل شیراز">
     <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
         -face {
