@@ -737,7 +737,13 @@ const htmlTemplate = `<!DOCTYPE html>
       "aggregateRating": {"@type": "AggregateRating", "ratingValue": "{{.Rating}}", "reviewCount": "{{.ReviewsNum}}"}
     }
     </script>
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-dark: #009688; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; --yellow: #ffd54f; }
         html { scroll-behavior: smooth; }
@@ -1192,7 +1198,13 @@ const sandaliTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر صندلی | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعمیر صندلی در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
         body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
@@ -1294,7 +1306,13 @@ const parcheTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعویض پارچه مبل | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعویض پارچه مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
         body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
@@ -1396,7 +1414,13 @@ const restorationTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری بازسازی کامل مبل | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای بازسازی کامل مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
         body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
@@ -1511,7 +1535,13 @@ const blogIndexTemplate = `<!DOCTYPE html>
     {{if .NextPage}}
     <link rel="next" href="{{.NextPage}}">
     {{end}}
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
         body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
@@ -1623,7 +1653,13 @@ const blogPostTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Title}}</title>
     <meta name="description" content="{{.Excerpt}}">
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
         body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
@@ -1698,7 +1734,13 @@ const chesterTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل چستر | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعمیر مبل چستر در کارگاه تعمیرات مبل شیراز">
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
         body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
@@ -1789,7 +1831,13 @@ const rahatiTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل راحتی | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعمیر مبل راحتی در کارگاه تعمیرات مبل شیراز">
-    <style>
+    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+        -face {
+            font-family: 'Vazirmatn';
+            src: url('/fonts/Vazirmatn.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
         body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
