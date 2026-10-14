@@ -708,6 +708,15 @@ const htmlTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
@@ -1194,6 +1203,15 @@ const sandaliTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر صندلی | {{.Name}}</title>
@@ -1303,6 +1321,15 @@ const parcheTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعویض پارچه مبل | {{.Name}}</title>
@@ -1412,6 +1439,15 @@ const restorationTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری بازسازی کامل مبل | {{.Name}}</title>
@@ -1520,6 +1556,15 @@ const blogIndexTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{if eq .CurrentPage 1}}
     <title>وبلاگ تعمیرات مبل شیراز | مقالات تخصصی</title>
@@ -1655,6 +1700,15 @@ const blogPostTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Title}}</title>
     <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
@@ -1736,6 +1790,15 @@ const chesterTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل چستر | {{.Name}}</title>
@@ -1834,6 +1897,15 @@ const rahatiTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:site_name" content="مبل شیراز">
+    <script type="application/ld+json">
+    {
+      "": "https://schema.org",
+      "": "WebSite",
+      "name": "مبل شیراز",
+      "url": "https://moblshiraz.ir/"
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل راحتی | {{.Name}}</title>
