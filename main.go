@@ -722,7 +722,6 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://moblshiraz.ir/">
     <meta property="og:locale" content="fa_IR">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -1193,7 +1192,6 @@ const sandaliTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر صندلی | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعمیر صندلی در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
@@ -1296,7 +1294,6 @@ const parcheTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعویض پارچه مبل | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعویض پارچه مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
@@ -1399,7 +1396,6 @@ const restorationTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری بازسازی کامل مبل | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای بازسازی کامل مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
@@ -1515,7 +1511,6 @@ const blogIndexTemplate = `<!DOCTYPE html>
     {{if .NextPage}}
     <link rel="next" href="{{.NextPage}}">
     {{end}}
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
@@ -1628,7 +1623,6 @@ const blogPostTemplate = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Title}}</title>
     <meta name="description" content="{{.Excerpt}}">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
@@ -1704,7 +1698,6 @@ const chesterTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل چستر | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعمیر مبل چستر در کارگاه تعمیرات مبل شیراز">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
@@ -1796,7 +1789,6 @@ const rahatiTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>گالری تعمیر مبل راحتی | {{.Name}}</title>
     <meta name="description" content="نمونه کارهای تعمیر مبل راحتی در کارگاه تعمیرات مبل شیراز">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
