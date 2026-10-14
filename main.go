@@ -965,7 +965,7 @@ const htmlTemplate = `<!DOCTYPE html>
         <div class="hero-inner">
             <h1 class="hero-title">{{.Slogan}}</h1>
             <p class="hero-sub">{{.About}}</p>
-            <div class="hero-image"><img src="{{.HeroImage}}" alt="تعمیرات مبل در شیراز"></div>
+            <div class="hero-image"><img src="{{.HeroImage}}" alt="تعمیرات مبل در شیراز" fetchpriority="high"></div>
             <div class="price-box">
                 <span class="price-label">هزینه خدمات</span>
                 <span class="price-value">از ۲۰۰ هزار تومان</span>
