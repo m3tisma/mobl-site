@@ -1005,7 +1005,7 @@ const htmlTemplate = `<!DOCTYPE html>
         <h2 class="section-title">درباره ما</h2>
         <p class="section-sub">با بیش از ۷ سال تجربه در تعمیرات مبل در شیراز</p>
         <div class="about-box">
-            <div class="about-image"><img src="{{.AboutImage}}" alt="کارگاه تعمیرات مبل قهرمانی در شیراز"></div>
+            <div class="about-image"><img src="{{.AboutImage}}" alt="کارگاه تعمیرات مبل قهرمانی در شیراز" loading="lazy"></div>
             <div class="about-text"><p>{{.LongAbout}}</p></div>
         </div>
     </section>
