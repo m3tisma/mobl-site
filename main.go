@@ -712,7 +712,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <meta name="theme-color" content="#00bfa5">
     <title>{{.Title}}</title>
     <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
     <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: {{.Phone}}">
     <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
     <meta name="author" content="تعمیرات مبل قهرمانی">
@@ -950,7 +950,7 @@ const htmlTemplate = `<!DOCTYPE html>
         <div class="top-inner">
             <div class="brand">
                 <button class="menu-btn" onclick="toggleMenu()" aria-label="منو">☰</button>
-                <div class="brand-icon"><img src="images/logo.png" alt="{{.Name}}"></div>
+                <div class="brand-icon"><img src="images/logo.webp" alt="{{.Name}}"></div>
                 <span>{{.Name}}</span>
             </div>
             <div class="top-actions">
