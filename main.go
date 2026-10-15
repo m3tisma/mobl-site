@@ -268,100 +268,100 @@ var secondBlogPostContent = `
 type Service struct {
 	Image string
 	Title string
-	Desc  string
+	Desc string
 	Price string
 }
 
 type GalleryItem struct {
 	Image string
 	Title string
-	Link  string
+	Link string
 }
 
 type Review struct {
-	Name    string
-	City    string
-	Date    string
-	Rating  int
-	Text    string
+	Name  string
+	City  string
+	Date  string
+	Rating int
+	Text  string
 	Service string
 	Initial string
 }
 
 type FAQ struct {
 	Question string
-	Answer   string
+	Answer  string
 }
 
 type QReply struct {
 	Author string
-	Date   string
-	Text   string
+	Date  string
+	Text  string
 }
 
 type QandA struct {
-	ID       int
-	Name     string
-	Date     string
+	ID    int
+	Name   string
+	Date   string
 	Question string
-	Replies  []QReply
+	Replies []QReply
 }
 
 type BlogPost struct {
-	Title    string
-	Slug     string
-	Date     string
-	Excerpt  string
-	Image    string
-        ImageThumb string
+	Title  string
+	Slug   string
+	Date   string
+	Excerpt string
+	Image  string
+    ImageThumb string
 	ImageAlt string
-	Content  template.HTML
+	Content template.HTML
 }
 
 type BlogPageData struct {
-	Posts       []BlogPost
+	Posts    []BlogPost
 	CurrentPage int
-	TotalPages  int
-	PrevPage    string
-	NextPage    string
+	TotalPages int
+	PrevPage  string
+	NextPage  string
 }
 type SiteData struct {
-	Title             string
-	Name              string
-	Slogan            string
-    H1Title           string
-	About             string
-	LongAbout         string
-	Phone             string
-	PhoneRaw          string
-	Whatsapp          string
-	Address           string
-	Instagram         string
-	Experience        string
-	OrdersCount       string
-	Rating            string
-	ReviewsNum        string
-	HeroImage         string
-	AboutImage        string
-	Services          []Service
-	Gallery           []GalleryItem
+	Title       string
+	Name       string
+	Slogan      string
+  H1Title      string
+	About       string
+	LongAbout     string
+	Phone       string
+	PhoneRaw     string
+	Whatsapp     string
+	Address      string
+	Instagram     string
+	Experience    string
+	OrdersCount    string
+	Rating      string
+	ReviewsNum    string
+	HeroImage     string
+	AboutImage    string
+	Services     []Service
+	Gallery      []GalleryItem
 	RestorationImages []GalleryItem
-	ParcheImages      []GalleryItem
-	SandaliImages     []GalleryItem
-	ChesterImages     []GalleryItem
-	RahatiImages      []GalleryItem
-	Reviews           []Review
-	FAQs              []FAQ
-	QandAs            []QandA
+	ParcheImages   []GalleryItem
+	SandaliImages   []GalleryItem
+	ChesterImages   []GalleryItem
+	RahatiImages   []GalleryItem
+	Reviews      []Review
+	FAQs       []FAQ
+	QandAs      []QandA
 }
 
 type RestorationData struct {
-	Name      string
-	Phone     string
-	PhoneRaw  string
-	Whatsapp  string
+	Name   string
+	Phone   string
+	PhoneRaw string
+	Whatsapp string
 	Instagram string
-	Images    []GalleryItem
+	Images  []GalleryItem
 }
 
 func main() {
@@ -370,23 +370,23 @@ func main() {
 	}
 
 	data := SiteData{
-		Title:       "تعمیرات مبل شیراز | تعمیر مبل در شیراز",
-		Name:        "مبل شیراز",
-		Slogan:      "تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما",
-            H1Title:     "تعمیرات مبل در شیراز",
-		About:       "با بیش از ۷ سال تجربه، مبل شما را در کارگاه تخصصی‌مان تعمیر می‌کنیم",
-		LongAbout:   "کارگاه تعمیرات مبل شیراز با بیش از ۷ سال سابقه در زمینه تعمیر و بازسازی انواع مبل، صندلی و پرسی در شیراز فعالیت می‌کند. ما با بهره‌گیری از ابزارهای حرفه‌ای، مواد اولیه باکیفیت و تیمی مجرب، مبل قدیمی شما را به روزهای اوجش برمی‌گردانیم. هدف ما فقط تعمیر نیست؛ بلکه بازگرداندن زیبایی، راحتی و خاطرات خانه شماست. ضمانت ما لبخند رضایت شماست و تا رسیدن به بهترین نتیجه کنارتان می‌مانیم.",
-		Phone:       "09013643428",
-		PhoneRaw:    "+989013643428",
-		Whatsapp:    "989013643428",
-		Address:     "شیراز، سلطان‌آباد، خیابان مسکن مهر، اولین دوربرگردان سمت چپ، کارگاه تعمیرات مبل شیراز",
-		Instagram:   "moblshiraz.ir",
-		Experience:  "۷",
+		Title:    "تعمیرات مبل شیراز | تعمیر مبل در شیراز",
+		Name:    "مبل شیراز",
+		Slogan:   "تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما",
+      H1Title:   "تعمیرات مبل در شیراز",
+		About:    "با بیش از ۷ سال تجربه، مبل شما را در کارگاه تخصصی‌مان تعمیر می‌کنیم",
+		LongAbout:  "کارگاه تعمیرات مبل شیراز با بیش از ۷ سال سابقه در زمینه تعمیر و بازسازی انواع مبل، صندلی و پرسی در شیراز فعالیت می‌کند. ما با بهره‌گیری از ابزارهای حرفه‌ای، مواد اولیه باکیفیت و تیمی مجرب، مبل قدیمی شما را به روزهای اوجش برمی‌گردانیم. هدف ما فقط تعمیر نیست؛ بلکه بازگرداندن زیبایی، راحتی و خاطرات خانه شماست. ضمانت ما لبخند رضایت شماست و تا رسیدن به بهترین نتیجه کنارتان می‌مانیم.",
+		Phone:    "09013643428",
+		PhoneRaw:  "+989013643428",
+		Whatsapp:  "989013643428",
+		Address:   "شیراز، سلطان‌آباد، خیابان مسکن مهر، اولین دوربرگردان سمت چپ، کارگاه تعمیرات مبل شیراز",
+		Instagram:  "moblshiraz.ir",
+		Experience: "۷",
 		OrdersCount: "۱۳۷",
-		Rating:      "4.9",
-		ReviewsNum:  "480",
-		HeroImage:   "images/hero.webp",
-		AboutImage:  "images/about.webp",
+		Rating:   "4.9",
+		ReviewsNum: "480",
+		HeroImage:  "images/hero.webp",
+		AboutImage: "images/about.webp",
 		Services: []Service{
 			{Image: "images/service-3.webp", Title: "تعمیر مبل چستر", Desc: "تعمیر و بازسازی کامل مبل‌های استیل در کارگاه", Price: "از 19 میلیون تومان"},
 			{Image: "images/service-2.webp", Title: "تعمیر صندلی", Desc: "تعمیر انواع صندلی اداری و غذاخوری", Price: "از 1 میلیون تومان"},
@@ -400,7 +400,7 @@ func main() {
 			{Image: "images/gallery-4.webp", Title: "تعمیر صندلی", Link: "gallery-sandali.html"},
 			{Image: "images/gallery-3.webp", Title: "تعویض پارچه", Link: "gallery-parche.html"},
 			{Image: "images/gallery-2.webp", Title: "تعمیر مبل راحتی", Link: "gallery-rahati.html"},
-                        {Image: "images/gallery-5.webp", Title: "تعمیرات سرویس خواب"},
+            {Image: "images/gallery-5.webp", Title: "تعمیرات سرویس خواب"},
 			{Image: "images/gallery-6.webp", Title: "بازسازی کامل", Link: "gallery-restoration.html"},
 		},
 		RestorationImages: []GalleryItem{
@@ -408,7 +408,7 @@ func main() {
 		},
 		ParcheImages: []GalleryItem{
 			{Image: "images/before-after-2.webp", Title: "تعویض پارچه مبل"},
-  		        {Image: "images/before-after-5.webp", Title: "تعویض پارچه مبل ال"},
+ 		    {Image: "images/before-after-5.webp", Title: "تعویض پارچه مبل ال"},
 			{Image: "images/before-after-6.webp", Title: "تعویض پارچه مبل استیل"},
 		},
 		SandaliImages: []GalleryItem{
@@ -452,24 +452,24 @@ func main() {
 
 	blogPosts := []BlogPost{
 		{
-			Title:      "راهنمای کامل تعمیر مبل در شیراز (۱۴۰۵) | از تشخیص خرابی تا بازسازی",
-			Slug:       "rahnamaye-tamir-mobl-shiraz",
-			Date:       "۱۴۰۵/۰۷/۲۰",
-			Excerpt:    "در این راهنمای جامع، تمام جوانب تعمیر مبل در شیراز را بررسی می‌کنیم: از نشانه‌های نیاز به تعمیر تا مراحل تخصصی، انتخاب پارچه و فوم، هزینه‌ها و نکات نگهداری. با مطالعه این مقاله، تصمیم بهتری برای مبل خود بگیرید.",
-			Image:      "images/blog2-1.webp",
+			Title:   "راهنمای کامل تعمیر مبل در شیراز (۱۴۰۵) | از تشخیص خرابی تا بازسازی",
+			Slug:    "rahnamaye-tamir-mobl-shiraz",
+			Date:    "۱۴۰۵/۰۷/۲۰",
+			Excerpt:  "در این راهنمای جامع، تمام جوانب تعمیر مبل در شیراز را بررسی می‌کنیم: از نشانه‌های نیاز به تعمیر تا مراحل تخصصی، انتخاب پارچه و فوم، هزینه‌ها و نکات نگهداری. با مطالعه این مقاله، تصمیم بهتری برای مبل خود بگیرید.",
+			Image:   "images/blog2-1.webp",
 			ImageThumb: "images/blog2-thumb.webp",
-			ImageAlt:   "راهنمای کامل تعمیر مبل در شیراز",
-			Content:    template.HTML(secondBlogPostContent),
+			ImageAlt:  "راهنمای کامل تعمیر مبل در شیراز",
+			Content:  template.HTML(secondBlogPostContent),
 		},
 		{
-			Title:    "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
-			Slug:     "hazine-tamir-mobl-shiraz",
-			Date:     "۱۴۰۵/۰۱/۱۵",
-			Excerpt:  "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
-			Image:    "images/blog-hazine-tamir.webp",
+			Title:  "هزینه تعمیر مبل در شیراز چقدر است؟ راهنمای ۱۴۰۵",
+			Slug:   "hazine-tamir-mobl-shiraz",
+			Date:   "۱۴۰۵/۰۱/۱۵",
+			Excerpt: "قیمت تعمیر مبل در شیراز چقدره؟ از تعمیر مبل چستر تا تعویض پارچه و بازسازی کامل، همه هزینه‌ها رو با جزئیات بررسی کردیم. راهنمای کامل ۱۴۰۵ برای انتخاب هوشمندانه.",
+			Image:  "images/blog-hazine-tamir.webp",
 			ImageThumb: "images/blog-hazine-tamir-thumb.webp",
 			ImageAlt: "تعمیر مبل در شیراز - نمونه کارگاه مبل شیراز",
-			Content:  template.HTML(firstBlogPostContent),
+			Content: template.HTML(firstBlogPostContent),
 		},
 	}
 
@@ -514,12 +514,12 @@ func main() {
 
 	// ساخت gallery-restoration.html
 	restData := RestorationData{
-		Name:      data.Name,
-		Phone:     data.Phone,
-		PhoneRaw:  data.PhoneRaw,
-		Whatsapp:  data.Whatsapp,
+		Name:   data.Name,
+		Phone:   data.Phone,
+		PhoneRaw: data.PhoneRaw,
+		Whatsapp: data.Whatsapp,
 		Instagram: data.Instagram,
-		Images:    data.RestorationImages,
+		Images:  data.RestorationImages,
 	}
 	tmpl2, err := template.New("restoration").Parse(restorationTemplate)
 	if err != nil {
@@ -536,12 +536,12 @@ func main() {
 
 	// ساخت gallery-parche.html
 	parcheData := RestorationData{
-		Name:      data.Name,
-		Phone:     data.Phone,
-		PhoneRaw:  data.PhoneRaw,
-		Whatsapp:  data.Whatsapp,
+		Name:   data.Name,
+		Phone:   data.Phone,
+		PhoneRaw: data.PhoneRaw,
+		Whatsapp: data.Whatsapp,
 		Instagram: data.Instagram,
-		Images:    data.ParcheImages,
+		Images:  data.ParcheImages,
 	}
 	tmpl3, err := template.New("parche").Parse(parcheTemplate)
 	if err != nil {
@@ -558,12 +558,12 @@ func main() {
 
 	// ساخت gallery-sandali.html
 	sandaliData := RestorationData{
-		Name:      data.Name,
-		Phone:     data.Phone,
-		PhoneRaw:  data.PhoneRaw,
-		Whatsapp:  data.Whatsapp,
+		Name:   data.Name,
+		Phone:   data.Phone,
+		PhoneRaw: data.PhoneRaw,
+		Whatsapp: data.Whatsapp,
 		Instagram: data.Instagram,
-		Images:    data.SandaliImages,
+		Images:  data.SandaliImages,
 	}
 	tmpl4, err := template.New("sandali").Parse(sandaliTemplate)
 	if err != nil {
@@ -580,12 +580,12 @@ func main() {
 	log.Println("✅ docs/index.html و docs/gallery-restoration.html ساخته شدند")
 	// ساخت gallery-chester.html
 	chesterData := RestorationData{
-		Name:      data.Name,
-		Phone:     data.Phone,
-		PhoneRaw:  data.PhoneRaw,
-		Whatsapp:  data.Whatsapp,
+		Name:   data.Name,
+		Phone:   data.Phone,
+		PhoneRaw: data.PhoneRaw,
+		Whatsapp: data.Whatsapp,
 		Instagram: data.Instagram,
-		Images:    data.ChesterImages,
+		Images:  data.ChesterImages,
 	}
 	tmpl5, err := template.New("chester").Parse(chesterTemplate)
 	if err != nil {
@@ -601,12 +601,12 @@ func main() {
 	f5.Close()
 	// ساخت gallery-rahati.html
 	rahatiData := RestorationData{
-		Name:      data.Name,
-		Phone:     data.Phone,
-		PhoneRaw:  data.PhoneRaw,
-		Whatsapp:  data.Whatsapp,
+		Name:   data.Name,
+		Phone:   data.Phone,
+		PhoneRaw: data.PhoneRaw,
+		Whatsapp: data.Whatsapp,
 		Instagram: data.Instagram,
-		Images:    data.RahatiImages,
+		Images:  data.RahatiImages,
 	}
 	tmpl6, err := template.New("rahati").Parse(rahatiTemplate)
 	if err != nil {
@@ -670,11 +670,11 @@ func main() {
 		}
 
 		pageData := BlogPageData{
-			Posts:       pagePosts,
+			Posts:    pagePosts,
 			CurrentPage: pageNum,
-			TotalPages:  totalPages,
-			PrevPage:    prevPage,
-			NextPage:    nextPage,
+			TotalPages: totalPages,
+			PrevPage:  prevPage,
+			NextPage:  nextPage,
 		}
 
 		fBlogIndex, err := os.Create(outputPath)
@@ -709,992 +709,992 @@ func main() {
 const htmlTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#00bfa5">
+  <title>{{.Title}}</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+<meta name="description" content="تعمیر تخصصی مبل چستر، استیل، راحتی و صندلی در شیراز. تعویض پارچه، بازسازی کامل و روکش‌کشی با ۷ سال سابقه و ضمانت ۶ ماهه. مشاوره رایگان و ارسال عکس در واتساپ. تماس: {{.Phone}}">
+  <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
+  <meta name="author" content="تعمیرات مبل ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://moblshiraz.ir/">
+  <meta property="og:title" content="{{.Title}}">
+  <meta property="og:description" content="{{.About}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moblshiraz.ir/">
+  <meta property="og:locale" content="fa_IR">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "LocalBusiness",
+   "name": "مبل شیراز",
+   "telephone": "{{.PhoneRaw}}",
+   "address": {"@type": "PostalAddress", "addressLocality": "شیراز", "addressRegion": "فارس", "addressCountry": "IR"},
+   "areaServed": "شیراز و حومه",
+   "description": "{{.About}}",
+   "priceRange": "200000 - 5000000",
+   "openingHours": "Sa-Th 09:00-20:00",
+   "aggregateRating": {"@type": "AggregateRating", "ratingValue": "{{.Rating}}", "reviewCount": "{{.ReviewsNum}}"}
+  }
+  </script>
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="theme-color" content="#00bfa5">
-    <title>{{.Title}}</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon.png">
-    <link rel="apple-touch-icon" href="/images/favicon.png">
-    <meta name="description" content="تعمیرات مبل در شیراز - تعمیر مبل استیل، چستر، راحتی، تعویض پارچه و روکش مبل در کارگاه تخصصی. با ۷ سال سابقه و ضمانت ۶ ماهه. تماس: {{.Phone}}">
-    <meta name="keywords" content="تعمیرات مبل شیراز, تعمیر مبل, کارگاه تعمیر مبل, تعمیر مبل استیل, تعویض پارچه مبل, روکش مبل, تعمیر صندلی شیراز, بازسازی مبل شیراز">
-    <meta name="author" content="تعمیرات مبل قهرمانی">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://moblshiraz.ir/">
-    <meta property="og:title" content="{{.Title}}">
-    <meta property="og:description" content="{{.About}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://moblshiraz.ir/">
-    <meta property="og:locale" content="fa_IR">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "مبل شیراز",
-      "telephone": "{{.PhoneRaw}}",
-      "address": {"@type": "PostalAddress", "addressLocality": "شیراز", "addressRegion": "فارس", "addressCountry": "IR"},
-      "areaServed": "شیراز و حومه",
-      "description": "{{.About}}",
-      "priceRange": "200000 - 5000000",
-      "openingHours": "Sa-Th 09:00-20:00",
-      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "{{.Rating}}", "reviewCount": "{{.ReviewsNum}}"}
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
+    :root { --primary: #00bfa5; --primary-dark: #009688; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; --yellow: #ffd54f; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; width: 100%; }
+    .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--primary); }
+    .brand-icon { width: 32px; height: 32px; border-radius: 10px; overflow: hidden; background: var(--primary); }
+    .brand-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .top-actions { display: flex; gap: 8px; }
+    .icon-btn { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 18px; transition: all 0.2s; }
+    .icon-btn.phone { background: var(--primary-light); color: var(--primary); }
+    .icon-btn.whatsapp { background: #e7f9ef; color: #25D366; }
+
+    .hero { background: white; padding: 20px 16px 30px; }
+    .hero-inner { max-width: 1100px; margin: auto; }
+    .hero-title { font-size: 22px; font-weight: 900; line-height: 1.5; margin-bottom: 8px; }
+    .hero-sub { font-size: 13px; color: var(--text-sec); margin-bottom: 20px; }
+    .hero-image { width: 100%; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; margin-bottom: 20px; background: #f0f0f0; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .price-box { background: var(--primary-light); border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
+    .price-label { font-size: 12px; color: var(--text-sec); }
+    .price-value { font-size: 15px; font-weight: 800; color: var(--primary); }
+
+    .quick-actions { display: flex; gap: 10px; margin-bottom: 16px; }
+    .quick-btn { flex: 1; padding: 14px; border-radius: 12px; text-decoration: none; text-align: center; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s; }
+    .quick-btn.call { background: var(--primary); color: white; box-shadow: 0 8px 20px rgba(0,191,165,0.3); }
+    .quick-btn.wa { background: #25D366; color: white; box-shadow: 0 8px 20px rgba(37,211,102,0.3); }
+
+    .stats { background: white; padding: 20px 16px; border-top: 1px solid var(--border); }
+    .stats-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-around; text-align: center; }
+    .stat-item { flex: 1; }
+    .stat-value { font-size: 18px; font-weight: 900; }
+    .stat-label { font-size: 11px; color: var(--text-sec); margin-top: 4px; }
+    .stat-item + .stat-item { border-right: 1px solid var(--border); }
+
+    .tabs-wrap { position: sticky; top: 60px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .tabs-wrap::-webkit-scrollbar { display: none; }
+    .tabs { display: flex; gap: 6px; padding: 10px 16px; max-width: 1100px; margin: auto; white-space: nowrap; }
+    .tab { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; background: transparent; color: var(--text-sec); border: 1.5px solid var(--border); cursor: pointer; white-space: nowrap; }
+    .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+    
+    .tabs-spacer { height: 57px; display: block; }
+    .section { padding: 24px 16px; max-width: 1100px; margin: auto; }
+    .section-title { font-size: 18px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .section-title::before { content: ''; width: 4px; height: 20px; background: var(--primary); border-radius: 2px; }
+    .section-sub { font-size: 12px; color: var(--text-sec); margin-bottom: 18px; }
+
+    .services-list { display: flex; flex-direction: column; gap: 12px; }
+    .service-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .about-box { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .about-image { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #f0f0f0; }
+    .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about-text { padding: 20px; font-size: 13px; line-height: 2; }
+    .service-image { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #f0f0f0; }
+    .service-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .service-body { padding: 16px; }
+    .service-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .service-desc { font-size: 12px; color: var(--text-sec); line-height: 1.7; margin-bottom: 6px; }
+    .service-price { font-size: 13px; font-weight: 700; color: var(--primary); }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .gallery-item { border-radius: 14px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor: pointer; position: relative; }
+    .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,191,165,0.25); border-color: var(--primary); }
+    .gallery-item::after { content: '🔍'; position: absolute; top: 10px; left: 10px; background: rgba(0,191,165,0.9); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; opacity: 0; transition: opacity 0.3s; }
+    .gallery-item:hover::after { opacity: 1; }
+    .gallery-item.linked::after { content: '📂'; background: rgba(255,152,0,0.95); }
+    .gallery-image { width: 100%; aspect-ratio: 1; overflow: hidden; background: #f0f0f0; }
+    .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover .gallery-image img { transform: scale(1.1); }
+    .gallery-title { font-size: 12px; color: var(--text-sec); font-weight: 600; padding: 10px; text-align: center; transition: color 0.3s; }
+    .gallery-item:hover .gallery-title { color: var(--primary); font-weight: 700; }
+
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .lightbox.active { display: flex; }
+    .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+    .lightbox img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; text-align: center; }
+    .lightbox-counter { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 6px; }
+    .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 26px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    .lightbox-prev { right: -60px; }
+    .lightbox-next { left: -60px; }
+    @media (max-width: 768px) { .lightbox-prev { right: 10px; } .lightbox-next { left: 10px; } .lightbox-close { top: 10px; left: 10px; } }
+
+    .review-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 16px; margin-bottom: 12px; }
+    .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0; }
+    .review-name { font-size: 13px; font-weight: 700; }
+    .review-meta { font-size: 11px; color: var(--text-sec); }
+    .review-text { font-size: 13px; line-height: 1.9; }
+    .review-service { display: inline-block; margin-top: 10px; padding: 4px 10px; border-radius: 8px; background: var(--primary-light); color: var(--primary); font-size: 11px; font-weight: 600; }
+    .review-stars { font-size: 16px; margin-bottom: 8px; letter-spacing: 2px; line-height: 1; }
+    .review-stars .star.filled { color: #ffd54f; }
+    .review-stars .star.empty { color: #d1d5db; }
+
+    .review-hidden { display: none; }
+    .review-hidden.show { display: block; }
+    .show-more-btn { display: block; width: 100%; padding: 14px; background: white; border: 1.5px solid var(--primary); color: var(--primary); border-radius: 14px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit; margin-top: 8px; }
+
+    .qa-section { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+    .qa-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .qa-count { font-size: 14px; font-weight: 800; }
+    .qa-count span { color: var(--primary); }
+    .qa-ask-btn { background: var(--primary); color: white; padding: 10px 16px; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+    .qa-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+    .qa-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .qa-item:first-child { padding-top: 0; }
+    .qa-meta { font-size: 11px; color: var(--text-sec); margin-bottom: 6px; }
+    .qa-meta .qa-author { font-weight: 700; color: var(--text); }
+    .qa-question { font-size: 13px; font-weight: 600; line-height: 1.9; margin-bottom: 10px; }
+    .qa-actions { display: flex; align-items: center; gap: 16px; font-size: 12px; }
+    .qa-toggle { background: none; border: none; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 4px; font-family: inherit; padding: 0; }
+    .qa-toggle .arrow { transition: transform 0.3s; display: inline-block; font-size: 10px; }
+    .qa-item.open .qa-toggle .arrow { transform: rotate(180deg); }
+    .qa-reply-btn { background: none; border: none; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; padding: 0; text-decoration: none; }
+    .qa-replies { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .qa-item.open .qa-replies { max-height: 1000px; margin-top: 12px; }
+    .qa-reply { background: var(--bg); border-radius: 12px; padding: 14px; margin-top: 10px; border-right: 3px solid var(--primary); }
+    .qa-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .qa-reply-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
+    .qa-reply-name { font-size: 12px; font-weight: 700; }
+    .qa-reply-date { font-size: 10px; color: var(--text-sec); }
+    .qa-reply-text { font-size: 12.5px; line-height: 1.9; color: var(--text); }
+    .qa-show-more { display: block; width: 100%; margin-top: 16px; padding: 12px; background: transparent; border: 1.5px solid var(--primary); color: var(--primary); border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
+
+    .faq-item { background: white; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px; overflow: hidden; }
+    .faq-question { padding: 16px; font-size: 13px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 10px; }
+    .faq-icon { width: 24px; height: 24px; flex-shrink: 0; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(180deg); }
+    .faq-answer { padding: 0 16px; max-height: 0; overflow: hidden; font-size: 12.5px; color: var(--text-sec); line-height: 1.9; transition: all 0.3s ease; }
+    .faq-item.open .faq-answer { padding: 0 16px 16px; max-height: 500px; }
+
+    .contact-box { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+    .contact-item { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-icon { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .contact-icon.wa { background: #e7f9ef; color: #25D366; }
+    .contact-icon.map { background: #fef3c7; color: #d97706; }
+    .contact-info { flex: 1; }
+    .contact-label { font-size: 11px; color: var(--text-sec); }
+    .contact-value { font-size: 14px; font-weight: 700; }
+
+    .neshan-map-container { margin-top: 20px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: white; }
+    .neshan-map-container #neshan-map { width: 100%; height: 300px; z-index: 1; }
+    .map-link { display: block; padding: 14px; text-align: center; background: var(--primary-light); color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 700; }
+    .map-link:active { background: var(--primary); color: white; }
+    .trust-badges { display: flex; gap: 12px; margin-top: 16px; }
+    .trust-badge { flex: 1; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; }
+    .trust-icon { font-size: 28px; margin-bottom: 6px; }
+    .trust-text { font-size: 10px; color: var(--text-sec); line-height: 1.5; }
+
+    .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px 100px; text-align: center; margin-top: 30px; }
+    .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
+    .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
+    .footer-social { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
+    .social-btn { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; }
+    .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
+
+
+    /* دکمه منو و منوی موبایل */
+    .menu-btn { background: transparent; border: none; font-size: 22px; cursor: pointer; color: var(--primary); padding: 4px; display: flex; align-items: center; justify-content: center; margin-left: 4px; }
+    .menu-btn:active { background: var(--primary-light); border-radius: 8px; }
+    
+    .mobile-menu-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background: white; z-index: 2000; box-shadow: -5px 0 30px rgba(0,0,0,0.15); transition: right 0.3s ease; display: flex; flex-direction: column; }
+    .mobile-menu-overlay.active { right: 0; }
+    .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid var(--border); font-weight: 800; font-size: 16px; color: var(--text); }
+    .menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-sec); padding: 4px; }
+    .mobile-menu-list { list-style: none; padding: 10px 0; display: flex; flex-direction: column; }
+    .mobile-menu-list li a { display: block; padding: 16px 20px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--bg); transition: background 0.2s; }
+    .mobile-menu-list li a:hover { background: var(--primary-light); color: var(--primary); }
+
+    @media (min-width: 768px) {
+      body { font-size: 15px; }
+      .hero-title { font-size: 32px; }
+      .hero { padding: 40px 20px 50px; }
+      .hero-image { aspect-ratio: 21/9; }
+      .section { padding: 40px 20px; }
+      .section-title { font-size: 22px; }
+      .services-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .stats-inner { max-width: 700px; }
+      .stat-value { font-size: 22px; }
     }
-    </script>
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
-        :root { --primary: #00bfa5; --primary-dark: #009688; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; --yellow: #ffd54f; }
-        html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
-
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; width: 100%; }
-        .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--primary); }
-        .brand-icon { width: 32px; height: 32px; border-radius: 10px; overflow: hidden; background: var(--primary); }
-        .brand-icon img { width: 100%; height: 100%; object-fit: cover; }
-        .top-actions { display: flex; gap: 8px; }
-        .icon-btn { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 18px; transition: all 0.2s; }
-        .icon-btn.phone { background: var(--primary-light); color: var(--primary); }
-        .icon-btn.whatsapp { background: #e7f9ef; color: #25D366; }
-
-        .hero { background: white; padding: 20px 16px 30px; }
-        .hero-inner { max-width: 1100px; margin: auto; }
-        .hero-title { font-size: 22px; font-weight: 900; line-height: 1.5; margin-bottom: 8px; }
-        .hero-sub { font-size: 13px; color: var(--text-sec); margin-bottom: 20px; }
-        .hero-image { width: 100%; aspect-ratio: 16/10; border-radius: 16px; overflow: hidden; margin-bottom: 20px; background: #f0f0f0; }
-        .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .price-box { background: var(--primary-light); border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
-        .price-label { font-size: 12px; color: var(--text-sec); }
-        .price-value { font-size: 15px; font-weight: 800; color: var(--primary); }
-
-        .quick-actions { display: flex; gap: 10px; margin-bottom: 16px; }
-        .quick-btn { flex: 1; padding: 14px; border-radius: 12px; text-decoration: none; text-align: center; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s; }
-        .quick-btn.call { background: var(--primary); color: white; box-shadow: 0 8px 20px rgba(0,191,165,0.3); }
-        .quick-btn.wa { background: #25D366; color: white; box-shadow: 0 8px 20px rgba(37,211,102,0.3); }
-
-        .stats { background: white; padding: 20px 16px; border-top: 1px solid var(--border); }
-        .stats-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-around; text-align: center; }
-        .stat-item { flex: 1; }
-        .stat-value { font-size: 18px; font-weight: 900; }
-        .stat-label { font-size: 11px; color: var(--text-sec); margin-top: 4px; }
-        .stat-item + .stat-item { border-right: 1px solid var(--border); }
-
-        .tabs-wrap { position: sticky; top: 60px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-        .tabs-wrap::-webkit-scrollbar { display: none; }
-        .tabs { display: flex; gap: 6px; padding: 10px 16px; max-width: 1100px; margin: auto; white-space: nowrap; }
-        .tab { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; background: transparent; color: var(--text-sec); border: 1.5px solid var(--border); cursor: pointer; white-space: nowrap; }
-        .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
-       
-        .tabs-spacer { height: 57px; display: block; }
-        .section { padding: 24px 16px; max-width: 1100px; margin: auto; }
-        .section-title { font-size: 18px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-        .section-title::before { content: ''; width: 4px; height: 20px; background: var(--primary); border-radius: 2px; }
-        .section-sub { font-size: 12px; color: var(--text-sec); margin-bottom: 18px; }
-
-        .services-list { display: flex; flex-direction: column; gap: 12px; }
-        .service-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-        .about-box { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-        .about-image { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #f0f0f0; }
-        .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .about-text { padding: 20px; font-size: 13px; line-height: 2; }
-        .service-image { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #f0f0f0; }
-        .service-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .service-body { padding: 16px; }
-        .service-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-        .service-desc { font-size: 12px; color: var(--text-sec); line-height: 1.7; margin-bottom: 6px; }
-        .service-price { font-size: 13px; font-weight: 700; color: var(--primary); }
-
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .gallery-item { border-radius: 14px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor: pointer; position: relative; }
-        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,191,165,0.25); border-color: var(--primary); }
-        .gallery-item::after { content: '🔍'; position: absolute; top: 10px; left: 10px; background: rgba(0,191,165,0.9); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; opacity: 0; transition: opacity 0.3s; }
-        .gallery-item:hover::after { opacity: 1; }
-        .gallery-item.linked::after { content: '📂'; background: rgba(255,152,0,0.95); }
-        .gallery-image { width: 100%; aspect-ratio: 1; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.1); }
-        .gallery-title { font-size: 12px; color: var(--text-sec); font-weight: 600; padding: 10px; text-align: center; transition: color 0.3s; }
-        .gallery-item:hover .gallery-title { color: var(--primary); font-weight: 700; }
-
-        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-        .lightbox.active { display: flex; }
-        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
-        .lightbox img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
-        .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; text-align: center; }
-        .lightbox-counter { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 6px; }
-        .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
-        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 26px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
-        .lightbox-prev { right: -60px; }
-        .lightbox-next { left: -60px; }
-        @media (max-width: 768px) { .lightbox-prev { right: 10px; } .lightbox-next { left: 10px; } .lightbox-close { top: 10px; left: 10px; } }
-
-        .review-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 16px; margin-bottom: 12px; }
-        .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0; }
-        .review-name { font-size: 13px; font-weight: 700; }
-        .review-meta { font-size: 11px; color: var(--text-sec); }
-        .review-text { font-size: 13px; line-height: 1.9; }
-        .review-service { display: inline-block; margin-top: 10px; padding: 4px 10px; border-radius: 8px; background: var(--primary-light); color: var(--primary); font-size: 11px; font-weight: 600; }
-        .review-stars { font-size: 16px; margin-bottom: 8px; letter-spacing: 2px; line-height: 1; }
-        .review-stars .star.filled { color: #ffd54f; }
-        .review-stars .star.empty { color: #d1d5db; }
-
-        .review-hidden { display: none; }
-        .review-hidden.show { display: block; }
-        .show-more-btn { display: block; width: 100%; padding: 14px; background: white; border: 1.5px solid var(--primary); color: var(--primary); border-radius: 14px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit; margin-top: 8px; }
-
-        .qa-section { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
-        .qa-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-        .qa-count { font-size: 14px; font-weight: 800; }
-        .qa-count span { color: var(--primary); }
-        .qa-ask-btn { background: var(--primary); color: white; padding: 10px 16px; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px; }
-        .qa-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
-        .qa-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .qa-item:first-child { padding-top: 0; }
-        .qa-meta { font-size: 11px; color: var(--text-sec); margin-bottom: 6px; }
-        .qa-meta .qa-author { font-weight: 700; color: var(--text); }
-        .qa-question { font-size: 13px; font-weight: 600; line-height: 1.9; margin-bottom: 10px; }
-        .qa-actions { display: flex; align-items: center; gap: 16px; font-size: 12px; }
-        .qa-toggle { background: none; border: none; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 4px; font-family: inherit; padding: 0; }
-        .qa-toggle .arrow { transition: transform 0.3s; display: inline-block; font-size: 10px; }
-        .qa-item.open .qa-toggle .arrow { transform: rotate(180deg); }
-        .qa-reply-btn { background: none; border: none; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; padding: 0; text-decoration: none; }
-        .qa-replies { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-        .qa-item.open .qa-replies { max-height: 1000px; margin-top: 12px; }
-        .qa-reply { background: var(--bg); border-radius: 12px; padding: 14px; margin-top: 10px; border-right: 3px solid var(--primary); }
-        .qa-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-        .qa-reply-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
-        .qa-reply-name { font-size: 12px; font-weight: 700; }
-        .qa-reply-date { font-size: 10px; color: var(--text-sec); }
-        .qa-reply-text { font-size: 12.5px; line-height: 1.9; color: var(--text); }
-        .qa-show-more { display: block; width: 100%; margin-top: 16px; padding: 12px; background: transparent; border: 1.5px solid var(--primary); color: var(--primary); border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
-
-        .faq-item { background: white; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px; overflow: hidden; }
-        .faq-question { padding: 16px; font-size: 13px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 10px; }
-        .faq-icon { width: 24px; height: 24px; flex-shrink: 0; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform 0.3s; }
-        .faq-item.open .faq-icon { transform: rotate(180deg); }
-        .faq-answer { padding: 0 16px; max-height: 0; overflow: hidden; font-size: 12.5px; color: var(--text-sec); line-height: 1.9; transition: all 0.3s ease; }
-        .faq-item.open .faq-answer { padding: 0 16px 16px; max-height: 500px; }
-
-        .contact-box { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
-        .contact-item { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; }
-        .contact-item:last-child { border-bottom: none; }
-        .contact-icon { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-        .contact-icon.wa { background: #e7f9ef; color: #25D366; }
-        .contact-icon.map { background: #fef3c7; color: #d97706; }
-        .contact-info { flex: 1; }
-        .contact-label { font-size: 11px; color: var(--text-sec); }
-        .contact-value { font-size: 14px; font-weight: 700; }
-
-        .neshan-map-container { margin-top: 20px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: white; }
-        .neshan-map-container #neshan-map { width: 100%; height: 300px; z-index: 1; }
-        .map-link { display: block; padding: 14px; text-align: center; background: var(--primary-light); color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 700; }
-        .map-link:active { background: var(--primary); color: white; }
-        .trust-badges { display: flex; gap: 12px; margin-top: 16px; }
-        .trust-badge { flex: 1; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; }
-        .trust-icon { font-size: 28px; margin-bottom: 6px; }
-        .trust-text { font-size: 10px; color: var(--text-sec); line-height: 1.5; }
-
-        .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px 100px; text-align: center; margin-top: 30px; }
-        .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
-        .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
-        .footer-social { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
-        .social-btn { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; }
-        .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
-
-
-        /* دکمه منو و منوی موبایل */
-        .menu-btn { background: transparent; border: none; font-size: 22px; cursor: pointer; color: var(--primary); padding: 4px; display: flex; align-items: center; justify-content: center; margin-left: 4px; }
-        .menu-btn:active { background: var(--primary-light); border-radius: 8px; }
-        
-        .mobile-menu-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background: white; z-index: 2000; box-shadow: -5px 0 30px rgba(0,0,0,0.15); transition: right 0.3s ease; display: flex; flex-direction: column; }
-        .mobile-menu-overlay.active { right: 0; }
-        .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid var(--border); font-weight: 800; font-size: 16px; color: var(--text); }
-        .menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-sec); padding: 4px; }
-        .mobile-menu-list { list-style: none; padding: 10px 0; display: flex; flex-direction: column; }
-        .mobile-menu-list li a { display: block; padding: 16px 20px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--bg); transition: background 0.2s; }
-        .mobile-menu-list li a:hover { background: var(--primary-light); color: var(--primary); }
-
-        @media (min-width: 768px) {
-            body { font-size: 15px; }
-            .hero-title { font-size: 32px; }
-            .hero { padding: 40px 20px 50px; }
-            .hero-image { aspect-ratio: 21/9; }
-            .section { padding: 40px 20px; }
-            .section-title { font-size: 22px; }
-            .services-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-            .stats-inner { max-width: 700px; }
-            .stat-value { font-size: 22px; }
-        }
-    </style>
+  </style>
 </head>
 <body>
 
-    <!-- منوی موبایل -->
-    <div class="mobile-menu-overlay" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <span>منوی سایت</span>
-            <button class="menu-close-btn" onclick="toggleMenu()" aria-label="بستن">✕</button>
-        </div>
-                <ul class="mobile-menu-list">
-            <li><a href="index.html" onclick="toggleMenu()">خانه</a></li>
-            <li><a href="blog/index.html" onclick="toggleMenu()">وبلاگ</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">تماس با ما</a></li>
-        </ul>
+  <!-- منوی موبایل -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span>منوی سایت</span>
+      <button class="menu-close-btn" onclick="toggleMenu()" aria-label="بستن">✕</button>
     </div>
+        <ul class="mobile-menu-list">
+      <li><a href="index.html" onclick="toggleMenu()">خانه</a></li>
+      <li><a href="blog/index.html" onclick="toggleMenu()">وبلاگ</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">تماس با ما</a></li>
+    </ul>
+  </div>
 
-    <header class="top-bar">
-        <div class="top-inner">
-            <div class="brand">
-                <button class="menu-btn" onclick="toggleMenu()" aria-label="منو">☰</button>
-                <div class="brand-icon"><img src="images/logo.webp" alt="{{.Name}}"></div>
-                <span>{{.Name}}</span>
-            </div>
-            <div class="top-actions">
-       <!-- بعد -->
-        <a href="tel:{{.PhoneRaw}}" class="icon-btn phone" aria-label="تماس"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
-        <a href="https://wa.me/{{.Whatsapp}}" class="icon-btn whatsapp" aria-label="واتساپ" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-            </div>
-        </div>
-    </header>
+  <header class="top-bar">
+    <div class="top-inner">
+      <div class="brand">
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="منو">☰</button>
+        <div class="brand-icon"><img src="images/logo.webp" alt="{{.Name}}"></div>
+        <span>{{.Name}}</span>
+      </div>
+      <div class="top-actions">
+    <!-- بعد -->
+    <a href="tel:{{.PhoneRaw}}" class="icon-btn phone" aria-label="تماس"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+    <a href="https://wa.me/{{.Whatsapp}}" class="icon-btn whatsapp" aria-label="واتساپ" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+  </header>
 
-    <section class="hero">
-        <div class="hero-inner">
-            <h1 class="hero-title">{{.H1Title}}</h1>
-            <p class="hero-sub">{{.About}}</p>
-            <div class="hero-image"><img src="{{.HeroImage}}" alt="تعمیرات مبل در شیراز" fetchpriority="high"></div>
-            <div class="price-box">
-                <span class="price-label">هزینه خدمات</span>
-                <span class="price-value">از ۲۰۰ هزار تومان</span>
-            </div>
-            <div class="quick-actions">
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">{{.H1Title}}</h1>
+      <p class="hero-sub">{{.About}}</p>
+      <div class="hero-image"><img src="{{.HeroImage}}" alt="تعمیرات مبل در شیراز" fetchpriority="high"></div>
+      <div class="price-box">
+        <span class="price-label">هزینه خدمات</span>
+        <span class="price-value">از ۲۰۰ هزار تومان</span>
+      </div>
+      <div class="quick-actions">
 
 		<a href="tel:{{.PhoneRaw}}" class="quick-btn call"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> تماس فوری</a>
 		<a href="https://wa.me/{{.Whatsapp}}" class="quick-btn wa" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> واتساپ</a>
 
-            </div>
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="stats-inner">
-            <div class="stat-item"><div class="stat-value">{{.OrdersCount}}</div><div class="stat-label">سفارش موفق</div></div>
-            <div class="stat-item"><div class="stat-value">{{.Rating}}</div><div class="stat-label">امتیاز ({{.ReviewsNum}} نظر)</div></div>
-            <div class="stat-item"><div class="stat-value">{{.Experience}} سال</div><div class="stat-label">سابقه کار</div></div>
-        </div>
-    </section>
-
-    <div class="tabs-wrap">
-        <div class="tabs">
-            <button class="tab active" data-tab="about">درباره ما</button>
-            <button class="tab" data-tab="services">خدمات</button>
-            <button class="tab" data-tab="gallery">نمونه کارها</button>
-            <button class="tab" data-tab="qanda">پرسش و پاسخ</button>
-            <button class="tab" data-tab="reviews">نظرات</button>
-            <button class="tab" data-tab="faq">سوالات متداول</button>
-            <button class="tab" data-tab="contact">تماس</button>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="tabs-spacer"></div>
+  <section class="stats">
+    <div class="stats-inner">
+      <div class="stat-item"><div class="stat-value">{{.OrdersCount}}</div><div class="stat-label">سفارش موفق</div></div>
+      <div class="stat-item"><div class="stat-value">{{.Rating}}</div><div class="stat-label">امتیاز ({{.ReviewsNum}} نظر)</div></div>
+      <div class="stat-item"><div class="stat-value">{{.Experience}} سال</div><div class="stat-label">سابقه کار</div></div>
+    </div>
+  </section>
 
-    <section class="section" id="about">
-        <h2 class="section-title">درباره ما</h2>
-        <p class="section-sub">با بیش از ۷ سال تجربه در تعمیرات مبل در شیراز</p>
-        <div class="about-box">
-            <div class="about-image"><img src="{{.AboutImage}}" alt="کارگاه تعمیرات مبل قهرمانی در شیراز" loading="lazy" decoding="async"></div>
-            <div class="about-text"><p>{{.LongAbout}}</p></div>
+  <div class="tabs-wrap">
+    <div class="tabs">
+      <button class="tab active" data-tab="about">درباره ما</button>
+      <button class="tab" data-tab="services">خدمات</button>
+      <button class="tab" data-tab="gallery">نمونه کارها</button>
+      <button class="tab" data-tab="qanda">پرسش و پاسخ</button>
+      <button class="tab" data-tab="reviews">نظرات</button>
+      <button class="tab" data-tab="faq">سوالات متداول</button>
+      <button class="tab" data-tab="contact">تماس</button>
+    </div>
+  </div>
+
+  <div class="tabs-spacer"></div>
+
+  <section class="section" id="about">
+    <h2 class="section-title">درباره ما</h2>
+    <p class="section-sub">با بیش از ۷ سال تجربه در تعمیرات مبل در شیراز</p>
+    <div class="about-box">
+      <div class="about-image"><img src="{{.AboutImage}}" alt="کارگاه تعمیرات مبل در شیراز" loading="lazy" decoding="async"></div>
+      <div class="about-text"><p>{{.LongAbout}}</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2 class="section-title">خدمات ما</h2>
+    <p class="section-sub">با کیفیت‌ترین خدمات تعمیرات مبل در شیراز</p>
+    <div class="services-list">
+      {{range .Services}}
+      <div class="service-card">
+        <div class="service-image"><img src="{{.Image}}" alt="{{.Title}} در شیراز" loading="lazy" decoding="async"></div>
+        <div class="service-body">
+          <div class="service-name">{{.Title}}</div>
+          <div class="service-desc">{{.Desc}}</div>
+          <div class="service-price">{{.Price}}</div>
         </div>
-    </section>
+      </div>
+      {{end}}
+    </div>
+  </section>
 
-    <section class="section" id="services">
-        <h2 class="section-title">خدمات ما</h2>
-        <p class="section-sub">با کیفیت‌ترین خدمات تعمیرات مبل در شیراز</p>
-        <div class="services-list">
-            {{range .Services}}
-            <div class="service-card">
-                <div class="service-image"><img src="{{.Image}}" alt="{{.Title}} در شیراز" loading="lazy" decoding="async"></div>
-                <div class="service-body">
-                    <div class="service-name">{{.Title}}</div>
-                    <div class="service-desc">{{.Desc}}</div>
-                    <div class="service-price">{{.Price}}</div>
-                </div>
-            </div>
-            {{end}}
-        </div>
-    </section>
+  <section class="section" id="gallery">
+    <h2 class="section-title">نمونه کارها</h2>
+    <p class="section-sub">روی هر عکس کلیک کنید</p>
+    <div class="gallery-grid">
+      {{range $index, $item := .Gallery}}
+      <div class="gallery-item{{if $item.Link}} linked{{end}}" data-link="{{$item.Link}}" data-index="{{$index}}" onclick="handleGalleryClick(this)">
+        <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}} در شیراز" loading="lazy" decoding="async"></div>
+        <div class="gallery-title">{{$item.Title}}</div>
+      </div>
+      {{end}}
+    </div>
+  </section>
 
-    <section class="section" id="gallery">
-        <h2 class="section-title">نمونه کارها</h2>
-        <p class="section-sub">روی هر عکس کلیک کنید</p>
-        <div class="gallery-grid">
-            {{range $index, $item := .Gallery}}
-            <div class="gallery-item{{if $item.Link}} linked{{end}}" data-link="{{$item.Link}}" data-index="{{$index}}" onclick="handleGalleryClick(this)">
-                <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}} در شیراز" loading="lazy" decoding="async"></div>
-                <div class="gallery-title">{{$item.Title}}</div>
-            </div>
-            {{end}}
+  <section class="section" id="qanda">
+    <h2 class="section-title">پرسش و پاسخ</h2>
+    <p class="section-sub">سوالات مشتریان و پاسخ‌های ما</p>
+    <div class="qa-section">
+      <div class="qa-header">
+        <div class="qa-count"><span>{{len .QandAs}}</span> پرسش</div>
+        <a href="https://wa.me/{{.Whatsapp}}" class="qa-ask-btn" target="_blank">+ ثبت پرسش</a>
+      </div>
+      {{range $index, $qa := .QandAs}}
+      <div class="qa-item{{if eq $index 0}} open{{end}}">
+        <div class="qa-meta"><span class="qa-author">{{$qa.Name}}</span> · {{$qa.Date}}</div>
+        <div class="qa-question">{{$qa.Question}}</div>
+        <div class="qa-actions">
+          <button class="qa-toggle" onclick="toggleQA(this)"><span class="arrow">▾</span><span>مشاهده {{len $qa.Replies}} پاسخ</span></button>
+          <a href="https://wa.me/{{$.Whatsapp}}" class="qa-reply-btn" target="_blank">ثبت پاسخ ←</a>
         </div>
-    </section>
+        <div class="qa-replies">
+          {{range $qa.Replies}}
+          <div class="qa-reply">
+            <div class="qa-reply-header"><div class="qa-reply-avatar">{{slice .Author 0 3}}</div><div><div class="qa-reply-name">{{.Author}}</div><div class="qa-reply-date">{{.Date}}</div></div></div>
+            <div class="qa-reply-text">{{.Text}}</div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+      {{end}}
+      <button class="qa-show-more" onclick="alert('به زودی...')">+ نمایش بیشتر</button>
+    </div>
+  </section>
 
-    <section class="section" id="qanda">
-        <h2 class="section-title">پرسش و پاسخ</h2>
-        <p class="section-sub">سوالات مشتریان و پاسخ‌های ما</p>
-        <div class="qa-section">
-            <div class="qa-header">
-                <div class="qa-count"><span>{{len .QandAs}}</span> پرسش</div>
-                <a href="https://wa.me/{{.Whatsapp}}" class="qa-ask-btn" target="_blank">+ ثبت پرسش</a>
-            </div>
-            {{range $index, $qa := .QandAs}}
-            <div class="qa-item{{if eq $index 0}} open{{end}}">
-                <div class="qa-meta"><span class="qa-author">{{$qa.Name}}</span> · {{$qa.Date}}</div>
-                <div class="qa-question">{{$qa.Question}}</div>
-                <div class="qa-actions">
-                    <button class="qa-toggle" onclick="toggleQA(this)"><span class="arrow">▾</span><span>مشاهده {{len $qa.Replies}} پاسخ</span></button>
-                    <a href="https://wa.me/{{$.Whatsapp}}" class="qa-reply-btn" target="_blank">ثبت پاسخ ←</a>
-                </div>
-                <div class="qa-replies">
-                    {{range $qa.Replies}}
-                    <div class="qa-reply">
-                        <div class="qa-reply-header"><div class="qa-reply-avatar">{{slice .Author 0 3}}</div><div><div class="qa-reply-name">{{.Author}}</div><div class="qa-reply-date">{{.Date}}</div></div></div>
-                        <div class="qa-reply-text">{{.Text}}</div>
-                    </div>
-                    {{end}}
-                </div>
-            </div>
-            {{end}}
-            <button class="qa-show-more" onclick="alert('به زودی...')">+ نمایش بیشتر</button>
-        </div>
-    </section>
+  <section class="section" id="reviews">
+    <h2 class="section-title">نظرات مشتریان</h2>
+    <p class="section-sub">افتخار ما، رضایت شماست</p>
+    {{range $index, $rev := .Reviews}}
+    <div class="review-card{{if ge $index 3}} review-hidden{{end}}">
+      <div class="review-header">
+        <div class="review-avatar">{{$rev.Initial}}</div>
+        <div><div class="review-name">{{$rev.Name}}</div><div class="review-meta">{{$rev.City}} · {{$rev.Date}}</div></div>
+      </div>
+      <div class="review-stars">{{stars $rev.Rating}}</div>
+      <p class="review-text">{{$rev.Text}}</p>
+      <span class="review-service">{{$rev.Service}}</span>
+    </div>
+    {{end}}
+    {{if gt (len .Reviews) 3}}
+    <button class="show-more-btn" onclick="showMoreReviews(this)">+ نمایش نظرات بیشتر ({{len .Reviews}} نظر)</button>
+    {{end}}
+  </section>
 
-    <section class="section" id="reviews">
-        <h2 class="section-title">نظرات مشتریان</h2>
-        <p class="section-sub">افتخار ما، رضایت شماست</p>
-        {{range $index, $rev := .Reviews}}
-        <div class="review-card{{if ge $index 3}} review-hidden{{end}}">
-            <div class="review-header">
-                <div class="review-avatar">{{$rev.Initial}}</div>
-                <div><div class="review-name">{{$rev.Name}}</div><div class="review-meta">{{$rev.City}} · {{$rev.Date}}</div></div>
-            </div>
-            <div class="review-stars">{{stars $rev.Rating}}</div>
-            <p class="review-text">{{$rev.Text}}</p>
-            <span class="review-service">{{$rev.Service}}</span>
-        </div>
-        {{end}}
-        {{if gt (len .Reviews) 3}}
-        <button class="show-more-btn" onclick="showMoreReviews(this)">+ نمایش نظرات بیشتر ({{len .Reviews}} نظر)</button>
-        {{end}}
-    </section>
+  <section class="section" id="faq">
+    <h2 class="section-title">سوالات متداول</h2>
+    <p class="section-sub">پاسخ سوالات پرتکرار شما</p>
+    {{range .FAQs}}
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)"><span>{{.Question}}</span><span class="faq-icon">▾</span></div>
+      <div class="faq-answer">{{.Answer}}</div>
+    </div>
+    {{end}}
+  </section>
 
-    <section class="section" id="faq">
-        <h2 class="section-title">سوالات متداول</h2>
-        <p class="section-sub">پاسخ سوالات پرتکرار شما</p>
-        {{range .FAQs}}
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)"><span>{{.Question}}</span><span class="faq-icon">▾</span></div>
-            <div class="faq-answer">{{.Answer}}</div>
-        </div>
-        {{end}}
-    </section>
-
-    <section class="section" id="contact">
-        <h2 class="section-title">تماس با ما</h2>
-        <p class="section-sub">برای مشاوره و سفارش در تماس باشید</p>
-        <div class="contact-box">
-	    <a href="tel:{{.PhoneRaw}}" class="contact-item"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div class="contact-info"><div class="contact-label">تماس تلفنی</div><div class="contact-value">{{.Phone}}</div></div></a>
-            <a href="https://wa.me/{{.Whatsapp}}" class="contact-item" target="_blank"><div class="contact-icon wa"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div class="contact-info"><div class="contact-label">واتساپ</div><div class="contact-value">ارسال پیام در واتساپ</div></div></a>
-            <a href="https://instagram.com/{{.Instagram}}" class="contact-item" target="_blank"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div><div class="contact-info"><div class="contact-label">اینستاگرام</div><div class="contact-value">@{{.Instagram}}</div></div></a>
-            <div class="contact-item"><div class="contact-icon map"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div class="contact-info"><div class="contact-label">آدرس کارگاه</div><div class="contact-value">{{.Address}}</div></div></div>
-        </div>
-        <a href="https://nshn.ir/be_bgLzhPFQAyo" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00bfa5, #009688); color:white; text-align:center; padding:18px; border-radius:14px; font-weight:bold; text-decoration:none; margin-top:20px; box-shadow:0 8px 20px rgba(0,191,165,0.3); font-family:tahoma;">
-    📍 مشاهده آدرس کارگاه روی نقشه نشان
+  <section class="section" id="contact">
+    <h2 class="section-title">تماس با ما</h2>
+    <p class="section-sub">برای مشاوره و سفارش در تماس باشید</p>
+    <div class="contact-box">
+	  <a href="tel:{{.PhoneRaw}}" class="contact-item"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div class="contact-info"><div class="contact-label">تماس تلفنی</div><div class="contact-value">{{.Phone}}</div></div></a>
+      <a href="https://wa.me/{{.Whatsapp}}" class="contact-item" target="_blank"><div class="contact-icon wa"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div class="contact-info"><div class="contact-label">واتساپ</div><div class="contact-value">ارسال پیام در واتساپ</div></div></a>
+      <a href="https://instagram.com/{{.Instagram}}" class="contact-item" target="_blank"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div><div class="contact-info"><div class="contact-label">اینستاگرام</div><div class="contact-value">@{{.Instagram}}</div></div></a>
+      <div class="contact-item"><div class="contact-icon map"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div class="contact-info"><div class="contact-label">آدرس کارگاه</div><div class="contact-value">{{.Address}}</div></div></div>
+    </div>
+    <a href="https://nshn.ir/be_bgLzhPFQAyo" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00bfa5, #009688); color:white; text-align:center; padding:18px; border-radius:14px; font-weight:bold; text-decoration:none; margin-top:20px; box-shadow:0 8px 20px rgba(0,191,165,0.3); font-family:tahoma;">
+  📍 مشاهده آدرس کارگاه روی نقشه نشان
 </a>
-            <div class="trust-badges">
-            <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
-            <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text">۷ سال سابقه</div></div>
-            <div class="trust-badge"><div class="trust-icon">💰</div><div class="trust-text">قیمت منصفانه</div></div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-brand">{{.Name}}</div>
-        <p class="footer-text">{{.Slogan}}</p>
-        <div class="footer-social">
-            <a href="tel:{{.PhoneRaw}}" class="social-btn" aria-label="تماس">📞</a>
-            <a href="https://wa.me/{{.Whatsapp}}" class="social-btn" target="_blank" aria-label="واتساپ">💬</a>
-            <a href="https://instagram.com/{{.Instagram}}" class="social-btn" target="_blank" aria-label="اینستاگرام">📷</a>
-        </div>
-        <p class="footer-copy">© ۱۴۰۳ {{.Name}} — تعمیرات مبل در شیراز</p>
-    </footer>
-
-
-    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" onclick="closeLightbox()" aria-label="بستن">✕</button>
-            <button class="lightbox-nav lightbox-prev" onclick="prevImage()" aria-label="قبلی">›</button>
-            <img id="lightbox-img" src="" alt="">
-            <button class="lightbox-nav lightbox-next" onclick="nextImage()" aria-label="بعدی">‹</button>
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-            <div class="lightbox-counter" id="lightbox-counter"></div>
-        </div>
+      <div class="trust-badges">
+      <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
+      <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text">۷ سال سابقه</div></div>
+      <div class="trust-badge"><div class="trust-icon">💰</div><div class="trust-text">قیمت منصفانه</div></div>
     </div>
+  </section>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
-        }
+  <footer class="footer">
+    <div class="footer-brand">{{.Name}}</div>
+    <p class="footer-text">{{.Slogan}}</p>
+    <div class="footer-social">
+      <a href="tel:{{.PhoneRaw}}" class="social-btn" aria-label="تماس">📞</a>
+      <a href="https://wa.me/{{.Whatsapp}}" class="social-btn" target="_blank" aria-label="واتساپ">💬</a>
+      <a href="https://instagram.com/{{.Instagram}}" class="social-btn" target="_blank" aria-label="اینستاگرام">📷</a>
+    </div>
+    <p class="footer-copy">© ۱۴۰۳ {{.Name}} — تعمیرات مبل در شیراز</p>
+  </footer>
 
-        function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
-        function toggleQA(el) { el.closest('.qa-item').classList.toggle('open'); }
-        function showMoreReviews(btn) { document.querySelectorAll('.review-hidden').forEach(el => el.classList.add('show')); btn.style.display = 'none'; }
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const el = document.getElementById(tab.dataset.tab);
-                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
 
-        const galleryImages = [{{range .Gallery}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
-        let currentIndex = 0;
+  <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="بستن">✕</button>
+      <button class="lightbox-nav lightbox-prev" onclick="prevImage()" aria-label="قبلی">›</button>
+      <img id="lightbox-img" src="" alt="">
+      <button class="lightbox-nav lightbox-next" onclick="nextImage()" aria-label="بعدی">‹</button>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+  </div>
 
-        function handleGalleryClick(el) {
-            const link = el.dataset.link;
-            if (link && link !== '') { window.location.href = link; }
-            else { openLightbox(parseInt(el.dataset.index)); }
-        }
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+      document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+    }
 
-        function openLightbox(index) { currentIndex = index; updateLightbox(); document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
-        function nextImage() { currentIndex = (currentIndex + 1) % galleryImages.length; updateLightbox(); }
-        function prevImage() { currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); }
-        function updateLightbox() {
-            const item = galleryImages[currentIndex];
-            document.getElementById('lightbox-img').src = item.src;
-            document.getElementById('lightbox-caption').textContent = item.title;
-            document.getElementById('lightbox-counter').textContent = (currentIndex + 1) + ' از ' + galleryImages.length;
-        }
-        document.addEventListener('keydown', (e) => {
-            if (!document.getElementById('lightbox').classList.contains('active')) return;
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowLeft') nextImage();
-            if (e.key === 'ArrowRight') prevImage();
-        });
-    </script>
+    function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+    function toggleQA(el) { el.closest('.qa-item').classList.toggle('open'); }
+    function showMoreReviews(btn) { document.querySelectorAll('.review-hidden').forEach(el => el.classList.add('show')); btn.style.display = 'none'; }
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const el = document.getElementById(tab.dataset.tab);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const galleryImages = [{{range .Gallery}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
+    let currentIndex = 0;
+
+    function handleGalleryClick(el) {
+      const link = el.dataset.link;
+      if (link && link !== '') { window.location.href = link; }
+      else { openLightbox(parseInt(el.dataset.index)); }
+    }
+
+    function openLightbox(index) { currentIndex = index; updateLightbox(); document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
+    function nextImage() { currentIndex = (currentIndex + 1) % galleryImages.length; updateLightbox(); }
+    function prevImage() { currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); }
+    function updateLightbox() {
+      const item = galleryImages[currentIndex];
+      document.getElementById('lightbox-img').src = item.src;
+      document.getElementById('lightbox-caption').textContent = item.title;
+      document.getElementById('lightbox-counter').textContent = (currentIndex + 1) + ' از ' + galleryImages.length;
+    }
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') nextImage();
+      if (e.key === 'ArrowRight') prevImage();
+    });
+  </script>
 </body>
 </html>`
 
 const sandaliTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00bfa5">
+  <title>گالری تعمیر صندلی | {{.Name}}</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="نمونه کارهای تعمیر صندلی در کارگاه تعمیرات مبل شیراز">
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00bfa5">
-    <title>گالری تعمیر صندلی | {{.Name}}</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <meta name="description" content="نمونه کارهای تعمیر صندلی در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
-        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
+    :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
 
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
-        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+    .brand { font-weight: 800; font-size: 15px; color: var(--text); }
 
-        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
-        .header p { font-size: 13px; color: var(--text-sec); }
+    .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .header p { font-size: 13px; color: var(--text-sec); }
 
-        .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
-        .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-        .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
-        .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.03); }
-        .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
+    .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
+    .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
+    .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
+    .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover .gallery-image img { transform: scale(1.03); }
+    .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
 
-        .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
+    .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
 
-        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-        .lightbox.active { display: flex; }
-        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
-        .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
-        .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
-        .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .lightbox.active { display: flex; }
+    .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+    .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
+    .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
 
-        @media (min-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .header h1 { font-size: 32px; }
-        }
-    </style>
+    @media (min-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .header h1 { font-size: 32px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="top-inner">
-            <a href="index.html" class="back-btn">← بازگشت به سایت</a>
-            <div class="brand">🛋️ {{.Name}}</div>
-        </div>
-    </header>
-
-    <div class="header">
-        <h1>گالری تعمیر صندلی</h1>
-        <p>نمونه‌کارهای تعمیر صندلی در کارگاه ما (قبل و بعد)</p>
+  <header class="top-bar">
+    <div class="top-inner">
+      <a href="index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="brand">🛋️ {{.Name}}</div>
     </div>
+  </header>
 
-    <div class="gallery-container">
-        {{if .Images}}
-        <div class="gallery-grid">
-            {{range $index, $item := .Images}}
-            <div class="gallery-item" onclick="openLightbox({{$index}})">
-                <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
-                <div class="gallery-title">{{$item.Title}}</div>
-            </div>
-            {{end}}
-        </div>
-        {{else}}
-        <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
-        {{end}}
+  <div class="header">
+    <h1>گالری تعمیر صندلی</h1>
+    <p>نمونه‌کارهای تعمیر صندلی در کارگاه ما (قبل و بعد)</p>
+  </div>
+
+  <div class="gallery-container">
+    {{if .Images}}
+    <div class="gallery-grid">
+      {{range $index, $item := .Images}}
+      <div class="gallery-item" onclick="openLightbox({{$index}})">
+        <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
+        <div class="gallery-title">{{$item.Title}}</div>
+      </div>
+      {{end}}
     </div>
+    {{else}}
+    <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
+    {{end}}
+  </div>
 
-    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
+  <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
+  </div>
 
-    <script>
-        const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
-        function openLightbox(index) {
-            document.getElementById('lightbox-img').src = images[index].src;
-            document.getElementById('lightbox-caption').textContent = images[index].title;
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
+  <script>
+    const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
+    function openLightbox(index) {
+      document.getElementById('lightbox-img').src = images[index].src;
+      document.getElementById('lightbox-caption').textContent = images[index].title;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>`
 
 const parcheTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00bfa5">
+  <title>گالری تعویض پارچه مبل | {{.Name}}</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="نمونه کارهای تعویض پارچه مبل در کارگاه تعمیرات مبل شیراز">
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00bfa5">
-    <title>گالری تعویض پارچه مبل | {{.Name}}</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <meta name="description" content="نمونه کارهای تعویض پارچه مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
-        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
+    :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
 
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
-        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+    .brand { font-weight: 800; font-size: 15px; color: var(--text); }
 
-        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
-        .header p { font-size: 13px; color: var(--text-sec); }
+    .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .header p { font-size: 13px; color: var(--text-sec); }
 
-        .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
-        .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-        .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
-        .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.03); }
-        .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
+    .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
+    .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
+    .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
+    .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover .gallery-image img { transform: scale(1.03); }
+    .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
 
-        .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
+    .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
 
-        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-        .lightbox.active { display: flex; }
-        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
-        .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
-        .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
-        .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .lightbox.active { display: flex; }
+    .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+    .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
+    .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
 
-        @media (min-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .header h1 { font-size: 32px; }
-        }
-    </style>
+    @media (min-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .header h1 { font-size: 32px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="top-inner">
-            <a href="index.html" class="back-btn">← بازگشت به سایت</a>
-            <div class="brand">🛋️ {{.Name}}</div>
-        </div>
-    </header>
-
-    <div class="header">
-        <h1>گالری تعویض پارچه مبل</h1>
-        <p>نمونه‌کارهای تعویض پارچه مبل در کارگاه ما (قبل و بعد)</p>
+  <header class="top-bar">
+    <div class="top-inner">
+      <a href="index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="brand">🛋️ {{.Name}}</div>
     </div>
+  </header>
 
-    <div class="gallery-container">
-        {{if .Images}}
-        <div class="gallery-grid">
-            {{range $index, $item := .Images}}
-            <div class="gallery-item" onclick="openLightbox({{$index}})">
-                <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
-                <div class="gallery-title">{{$item.Title}}</div>
-            </div>
-            {{end}}
-        </div>
-        {{else}}
-        <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
-        {{end}}
+  <div class="header">
+    <h1>گالری تعویض پارچه مبل</h1>
+    <p>نمونه‌کارهای تعویض پارچه مبل در کارگاه ما (قبل و بعد)</p>
+  </div>
+
+  <div class="gallery-container">
+    {{if .Images}}
+    <div class="gallery-grid">
+      {{range $index, $item := .Images}}
+      <div class="gallery-item" onclick="openLightbox({{$index}})">
+        <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
+        <div class="gallery-title">{{$item.Title}}</div>
+      </div>
+      {{end}}
     </div>
+    {{else}}
+    <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
+    {{end}}
+  </div>
 
-    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
+  <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
+  </div>
 
-    <script>
-        const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
-        function openLightbox(index) {
-            document.getElementById('lightbox-img').src = images[index].src;
-            document.getElementById('lightbox-caption').textContent = images[index].title;
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
+  <script>
+    const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
+    function openLightbox(index) {
+      document.getElementById('lightbox-img').src = images[index].src;
+      document.getElementById('lightbox-caption').textContent = images[index].title;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>`
 
 const restorationTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00bfa5">
+  <title>گالری بازسازی کامل مبل | {{.Name}}</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="نمونه کارهای بازسازی کامل مبل در کارگاه تعمیرات مبل شیراز">
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00bfa5">
-    <title>گالری بازسازی کامل مبل | {{.Name}}</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <meta name="description" content="نمونه کارهای بازسازی کامل مبل در کارگاه تعمیرات مبل قهرمانی شیراز">
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
-        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
+    :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
 
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
-        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+    .brand { font-weight: 800; font-size: 15px; color: var(--text); }
 
-        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
-        .header p { font-size: 13px; color: var(--text-sec); }
+    .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .header p { font-size: 13px; color: var(--text-sec); }
 
-        .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
-        .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-        .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
-        .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.03); }
-        .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
+    .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
+    .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
+    .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
+    .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover .gallery-image img { transform: scale(1.03); }
+    .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
 
-        .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
+    .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
 
-        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-        .lightbox.active { display: flex; }
-        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
-        .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
-        .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
-        .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .lightbox.active { display: flex; }
+    .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+    .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
+    .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
 
-        @media (min-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .header h1 { font-size: 32px; }
-        }
-    </style>
+    @media (min-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .header h1 { font-size: 32px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="top-inner">
-            <a href="index.html" class="back-btn">← بازگشت به سایت</a>
-            <div class="brand">🛋️ {{.Name}}</div>
-        </div>
-    </header>
-
-    <div class="header">
-        <h1>گالری بازسازی کامل مبل</h1>
-        <p>نمونه‌کارهای بازسازی کامل مبل در کارگاه ما (قبل و بعد)</p>
+  <header class="top-bar">
+    <div class="top-inner">
+      <a href="index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="brand">🛋️ {{.Name}}</div>
     </div>
+  </header>
 
-    <div class="gallery-container">
-        {{if .Images}}
-        <div class="gallery-grid">
-            {{range $index, $item := .Images}}
-            <div class="gallery-item" onclick="openLightbox({{$index}})">
-                <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
-                <div class="gallery-title">{{$item.Title}}</div>
-            </div>
-            {{end}}
-        </div>
-        {{else}}
-        <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
-        {{end}}
+  <div class="header">
+    <h1>گالری بازسازی کامل مبل</h1>
+    <p>نمونه‌کارهای بازسازی کامل مبل در کارگاه ما (قبل و بعد)</p>
+  </div>
+
+  <div class="gallery-container">
+    {{if .Images}}
+    <div class="gallery-grid">
+      {{range $index, $item := .Images}}
+      <div class="gallery-item" onclick="openLightbox({{$index}})">
+        <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
+        <div class="gallery-title">{{$item.Title}}</div>
+      </div>
+      {{end}}
     </div>
+    {{else}}
+    <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
+    {{end}}
+  </div>
 
-    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
+  <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
+  </div>
 
-    <script>
-        const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
-        function openLightbox(index) {
-            document.getElementById('lightbox-img').src = images[index].src;
-            document.getElementById('lightbox-caption').textContent = images[index].title;
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
+  <script>
+    const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
+    function openLightbox(index) {
+      document.getElementById('lightbox-img').src = images[index].src;
+      document.getElementById('lightbox-caption').textContent = images[index].title;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>`
 const blogIndexTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{if eq .CurrentPage 1}}
+  <title>وبلاگ تعمیرات مبل شیراز | مقالات تخصصی</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  {{else}}
+  <title>وبلاگ تعمیرات مبل شیراز - صفحه {{.CurrentPage}} | مقالات تخصصی</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  {{end}}
+  <meta name="description" content="مقالات آموزشی و راهنمای تخصصی تعمیر، بازسازی و نگهداری مبل در شیراز. جدیدترین مطالب درباره مبل چستر، استیل، راحتی و صندلی.">
+  {{if eq .CurrentPage 1}}
+  <link rel="canonical" href="https://moblshiraz.ir/blog/">
+  {{else}}
+  <link rel="canonical" href="https://moblshiraz.ir/blog/page{{.CurrentPage}}.html">
+  {{end}}
+  {{if .PrevPage}}
+  <link rel="prev" href="{{.PrevPage}}">
+  {{end}}
+  {{if .NextPage}}
+  <link rel="next" href="{{.NextPage}}">
+  {{end}}
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{if eq .CurrentPage 1}}
-    <title>وبلاگ تعمیرات مبل شیراز | مقالات تخصصی</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    {{else}}
-    <title>وبلاگ تعمیرات مبل شیراز - صفحه {{.CurrentPage}} | مقالات تخصصی</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    {{end}}
-    <meta name="description" content="مقالات آموزشی و راهنمای تخصصی تعمیر، بازسازی و نگهداری مبل در شیراز. جدیدترین مطالب درباره مبل چستر، استیل، راحتی و صندلی.">
-    {{if eq .CurrentPage 1}}
-    <link rel="canonical" href="https://moblshiraz.ir/blog/">
-    {{else}}
-    <link rel="canonical" href="https://moblshiraz.ir/blog/page{{.CurrentPage}}.html">
-    {{end}}
-    {{if .PrevPage}}
-    <link rel="prev" href="{{.PrevPage}}">
-    {{end}}
-    {{if .NextPage}}
-    <link rel="next" href="{{.NextPage}}">
-    {{end}}
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
-        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
-        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
-        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
-        .header p { font-size: 13px; color: var(--text-sec); }
-        .container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
-        .post-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
-        .post-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: transform 0.3s; }
-        .post-card:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.15); }
-        .post-image { width: 100%; aspect-ratio: 16/9; background: var(--primary-light); display: flex; align-items: center; justify-content: center; font-size: 48px; color: var(--primary); }
-        .post-body { padding: 20px; }
-        .post-date { font-size: 11px; color: var(--text-sec); margin-bottom: 8px; }
-        .post-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: var(--text); text-decoration: none; display: block; }
-        .post-title:hover { color: var(--primary); }
-        .post-excerpt { font-size: 13px; color: var(--text-sec); line-height: 1.8; margin-bottom: 14px; }
-        .read-more { display: inline-block; color: var(--primary); font-weight: 700; font-size: 13px; text-decoration: none; }
-        .read-more:hover { text-decoration: underline; }
-        .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 30px; padding: 20px 0; flex-wrap: wrap; }
-        .pagination a, .pagination span { display: flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 14px; transition: all 0.2s; }
-        .pagination a { background: white; color: var(--text); border: 1.5px solid var(--border); }
-        .pagination a:hover { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
-        .pagination .current { background: var(--primary); color: white; border: 1.5px solid var(--primary); }
-        .pagination .nav-btn { background: var(--primary); color: white; border: 1.5px solid var(--primary); padding: 0 16px; }
-        .pagination .nav-btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: white; }
-        .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px; text-align: center; margin-top: 30px; }
-        .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
-        .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
-        .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
-        @media (min-width: 768px) {
-            .post-grid { grid-template-columns: repeat(2, 1fr); }
-            .header h1 { font-size: 32px; }
-        }
-    </style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
+    :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+    .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+    .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .header p { font-size: 13px; color: var(--text-sec); }
+    .container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+    .post-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .post-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: transform 0.3s; }
+    .post-card:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.15); }
+    .post-image { width: 100%; aspect-ratio: 16/9; background: var(--primary-light); display: flex; align-items: center; justify-content: center; font-size: 48px; color: var(--primary); }
+    .post-body { padding: 20px; }
+    .post-date { font-size: 11px; color: var(--text-sec); margin-bottom: 8px; }
+    .post-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: var(--text); text-decoration: none; display: block; }
+    .post-title:hover { color: var(--primary); }
+    .post-excerpt { font-size: 13px; color: var(--text-sec); line-height: 1.8; margin-bottom: 14px; }
+    .read-more { display: inline-block; color: var(--primary); font-weight: 700; font-size: 13px; text-decoration: none; }
+    .read-more:hover { text-decoration: underline; }
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 30px; padding: 20px 0; flex-wrap: wrap; }
+    .pagination a, .pagination span { display: flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 14px; transition: all 0.2s; }
+    .pagination a { background: white; color: var(--text); border: 1.5px solid var(--border); }
+    .pagination a:hover { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+    .pagination .current { background: var(--primary); color: white; border: 1.5px solid var(--primary); }
+    .pagination .nav-btn { background: var(--primary); color: white; border: 1.5px solid var(--primary); padding: 0 16px; }
+    .pagination .nav-btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: white; }
+    .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px; text-align: center; margin-top: 30px; }
+    .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
+    .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
+    .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
+    @media (min-width: 768px) {
+      .post-grid { grid-template-columns: repeat(2, 1fr); }
+      .header h1 { font-size: 32px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="top-inner">
-            <a href="../index.html" class="back-btn">← بازگشت به سایت</a>
-            <div class="brand">🛋️ مبل شیراز</div>
-        </div>
-    </header>
-
-    <div class="header">
-        <h1>وبلاگ تعمیرات مبل شیراز</h1>
-        <p>مقالات تخصصی، راهنماها و نکات کاربردی درباره تعمیر و نگهداری مبل</p>
+  <header class="top-bar">
+    <div class="top-inner">
+      <a href="../index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="brand">🛋️ مبل شیراز</div>
     </div>
+  </header>
 
-    <div class="container">
-        <div class="post-grid">
-            {{range .Posts}}
-            <div class="post-card">
-                                <div class="post-image">
-                <img src="../{{.ImageThumb}}" alt="{{.ImageAlt}}" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover;">
-                </div>
-                <div class="post-body">
-                    <div class="post-date">{{.Date}}</div>
-                    <a href="{{.Slug}}.html" class="post-title">{{.Title}}</a>
-                    <p class="post-excerpt">{{.Excerpt}}</p>
-                    <a href="{{.Slug}}.html" class="read-more">ادامه مطلب ←</a>
-                </div>
-            </div>
-            {{end}}
+  <div class="header">
+    <h1>وبلاگ تعمیرات مبل شیراز</h1>
+    <p>مقالات تخصصی، راهنماها و نکات کاربردی درباره تعمیر و نگهداری مبل</p>
+  </div>
+
+  <div class="container">
+    <div class="post-grid">
+      {{range .Posts}}
+      <div class="post-card">
+                <div class="post-image">
+        <img src="../{{.ImageThumb}}" alt="{{.ImageAlt}}" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover;">
         </div>
+        <div class="post-body">
+          <div class="post-date">{{.Date}}</div>
+          <a href="{{.Slug}}.html" class="post-title">{{.Title}}</a>
+          <p class="post-excerpt">{{.Excerpt}}</p>
+          <a href="{{.Slug}}.html" class="read-more">ادامه مطلب ←</a>
+        </div>
+      </div>
+      {{end}}
     </div>
+  </div>
 
-        {{if gt .TotalPages 1}}
-        <div class="pagination">
-            {{if .PrevPage}}
-            <a href="{{.PrevPage}}" class="nav-btn">← قبلی</a>
-            {{end}}
-            
-            {{range $i := loop .TotalPages}}
-                {{$pageNum := add $i 1}}
-                {{if eq $pageNum $.CurrentPage}}
-                    <span class="current">{{$pageNum}}</span>
-                {{else if eq $pageNum 1}}
-                    <a href="index.html">{{$pageNum}}</a>
-                {{else}}
-                    <a href="page{{$pageNum}}.html">{{$pageNum}}</a>
-                {{end}}
-            {{end}}
-            
-            {{if .NextPage}}
-            <a href="{{.NextPage}}" class="nav-btn">بعدی →</a>
-            {{end}}
-        </div>
+    {{if gt .TotalPages 1}}
+    <div class="pagination">
+      {{if .PrevPage}}
+      <a href="{{.PrevPage}}" class="nav-btn">← قبلی</a>
+      {{end}}
+      
+      {{range $i := loop .TotalPages}}
+        {{$pageNum := add $i 1}}
+        {{if eq $pageNum $.CurrentPage}}
+          <span class="current">{{$pageNum}}</span>
+        {{else if eq $pageNum 1}}
+          <a href="index.html">{{$pageNum}}</a>
+        {{else}}
+          <a href="page{{$pageNum}}.html">{{$pageNum}}</a>
         {{end}}
+      {{end}}
+      
+      {{if .NextPage}}
+      <a href="{{.NextPage}}" class="nav-btn">بعدی →</a>
+      {{end}}
+    </div>
+    {{end}}
 
 
-    <footer class="footer">
-        <div class="footer-brand">مبل شیراز</div>
-        <p class="footer-text">تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما</p>
-        <p class="footer-copy">© ۱۴۰۵ مبل شیراز — تعمیرات مبل در شیراز</p>
-    </footer>
+  <footer class="footer">
+    <div class="footer-brand">مبل شیراز</div>
+    <p class="footer-text">تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما</p>
+    <p class="footer-copy">© ۱۴۰۵ مبل شیراز — تعمیرات مبل در شیراز</p>
+  </footer>
 
 </body>
 </html>`
@@ -1702,89 +1702,89 @@ const blogIndexTemplate = `<!DOCTYPE html>
 const blogPostTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{.Title}}</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="{{.Excerpt}}">
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{.Title}}</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <meta name="description" content="{{.Excerpt}}">
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
-        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
-        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
-        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
-        .header .meta { font-size: 12px; color: var(--text-sec); }
-        .container { max-width: 800px; margin: auto; padding: 24px 16px 100px; }
-        .content { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
-        .content h1 { font-size: 22px; font-weight: 900; margin-bottom: 16px; }
-        .content h2 { font-size: 18px; font-weight: 800; margin-top: 24px; margin-bottom: 10px; color: var(--primary); }
-        .content h3 { font-size: 15px; font-weight: 700; margin-top: 18px; margin-bottom: 8px; }
-        .content p { margin-bottom: 14px; line-height: 2; }
-        .content ul, .content ol { margin-right: 20px; margin-bottom: 14px; }
-        .content li { margin-bottom: 6px; }
-        .content a { color: var(--primary); text-decoration: none; font-weight: 700; }
-        .content a:hover { text-decoration: underline; }
-        .content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
-        .content table th, .content table td { border: 1px solid var(--border); padding: 10px; text-align: right; }
-        .content table th { background: var(--primary-light); color: var(--primary); font-weight: 700; }
-        .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px; text-align: center; margin-top: 30px; }
-        .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
-        .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
-        .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
-        @media (min-width: 768px) {
-            .header h1 { font-size: 32px; }
-            .content { padding: 40px; }
-        }
-    </style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; }
+    :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+    .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+    .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .header .meta { font-size: 12px; color: var(--text-sec); }
+    .container { max-width: 800px; margin: auto; padding: 24px 16px 100px; }
+    .content { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+    .content h1 { font-size: 22px; font-weight: 900; margin-bottom: 16px; }
+    .content h2 { font-size: 18px; font-weight: 800; margin-top: 24px; margin-bottom: 10px; color: var(--primary); }
+    .content h3 { font-size: 15px; font-weight: 700; margin-top: 18px; margin-bottom: 8px; }
+    .content p { margin-bottom: 14px; line-height: 2; }
+    .content ul, .content ol { margin-right: 20px; margin-bottom: 14px; }
+    .content li { margin-bottom: 6px; }
+    .content a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .content a:hover { text-decoration: underline; }
+    .content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+    .content table th, .content table td { border: 1px solid var(--border); padding: 10px; text-align: right; }
+    .content table th { background: var(--primary-light); color: var(--primary); font-weight: 700; }
+    .footer { background: white; border-top: 1px solid var(--border); padding: 30px 16px; text-align: center; margin-top: 30px; }
+    .footer-brand { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
+    .footer-text { font-size: 12px; color: var(--text-sec); margin-bottom: 16px; }
+    .footer-copy { font-size: 11px; color: #adb5bd; padding-top: 16px; border-top: 1px solid var(--border); }
+    @media (min-width: 768px) {
+      .header h1 { font-size: 32px; }
+      .content { padding: 40px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="top-inner">
-            <a href="../index.html" class="back-btn">← بازگشت به سایت</a>
-            <div class="brand">🛋️ مبل شیراز</div>
-        </div>
-    </header>
-
-        <div class="header">
-        <h1>{{.Title}}</h1>
-        <div class="meta">تاریخ انتشار: {{.Date}}</div>
+  <header class="top-bar">
+    <div class="top-inner">
+      <a href="../index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="brand">🛋️ مبل شیراز</div>
     </div>
+  </header>
 
-    <div class="container" style="padding-bottom:0;">
-        <img src="../{{.Image}}" alt="{{.ImageAlt}}" loading="lazy" decoding="async" style="width:100%; border-radius:16px; margin-bottom:20px; box-shadow:0 8px 30px rgba(0,0,0,0.1);">
+    <div class="header">
+    <h1>{{.Title}}</h1>
+    <div class="meta">تاریخ انتشار: {{.Date}}</div>
+  </div>
+
+  <div class="container" style="padding-bottom:0;">
+    <img src="../{{.Image}}" alt="{{.ImageAlt}}" loading="lazy" decoding="async" style="width:100%; border-radius:16px; margin-bottom:20px; box-shadow:0 8px 30px rgba(0,0,0,0.1);">
+  </div>
+
+  <div class="container">
+    <div class="content">
+      {{.Content}}
     </div>
+  </div>
 
-    <div class="container">
-        <div class="content">
-            {{.Content}}
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-brand">مبل شیراز</div>
-        <p class="footer-text">تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما</p>
-        <p class="footer-copy">© ۱۴۰۵ مبل شیراز — تعمیرات مبل در شیراز</p>
-    </footer>
+  <footer class="footer">
+    <div class="footer-brand">مبل شیراز</div>
+    <p class="footer-text">تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما</p>
+    <p class="footer-copy">© ۱۴۰۵ مبل شیراز — تعمیرات مبل در شیراز</p>
+  </footer>
 
 </body>
 </html>`
@@ -1792,213 +1792,213 @@ const blogPostTemplate = `<!DOCTYPE html>
 const chesterTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00bfa5">
+  <title>گالری تعمیر مبل چستر | {{.Name}}</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="نمونه کارهای تعمیر مبل چستر در کارگاه تعمیرات مبل شیراز">
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00bfa5">
-    <title>گالری تعمیر مبل چستر | {{.Name}}</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <meta name="description" content="نمونه کارهای تعمیر مبل چستر در کارگاه تعمیرات مبل شیراز">
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
-        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
-        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
-        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
-        .header p { font-size: 13px; color: var(--text-sec); }
-        .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
-        .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-        .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
-        .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.03); }
-        .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
-        .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
-        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-        .lightbox.active { display: flex; }
-        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
-        .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
-        .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
-        .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
-        @media (min-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .header h1 { font-size: 32px; }
-        }
-    </style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
+    :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+    .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+    .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .header p { font-size: 13px; color: var(--text-sec); }
+    .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
+    .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
+    .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
+    .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover .gallery-image img { transform: scale(1.03); }
+    .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
+    .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .lightbox.active { display: flex; }
+    .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+    .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
+    .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    @media (min-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .header h1 { font-size: 32px; }
+    }
+  </style>
 </head>
 <body>
-    <header class="top-bar">
-        <div class="top-inner">
-            <a href="index.html" class="back-btn">← بازگشت به سایت</a>
-            <div class="brand">🛋️ {{.Name}}</div>
-        </div>
-    </header>
-    <div class="header">
-        <h1>گالری تعمیر مبل چستر</h1>
-        <p>نمونه‌کارهای تعمیر مبل چستر در کارگاه ما</p>
+  <header class="top-bar">
+    <div class="top-inner">
+      <a href="index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="brand">🛋️ {{.Name}}</div>
     </div>
-    <div class="gallery-container">
-        {{if .Images}}
-        <div class="gallery-grid">
-            {{range $index, $item := .Images}}
-            <div class="gallery-item" onclick="openLightbox({{$index}})">
-                <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
-                <div class="gallery-title">{{$item.Title}}</div>
-            </div>
-            {{end}}
-        </div>
-        {{else}}
-        <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
-        {{end}}
+  </header>
+  <div class="header">
+    <h1>گالری تعمیر مبل چستر</h1>
+    <p>نمونه‌کارهای تعمیر مبل چستر در کارگاه ما</p>
+  </div>
+  <div class="gallery-container">
+    {{if .Images}}
+    <div class="gallery-grid">
+      {{range $index, $item := .Images}}
+      <div class="gallery-item" onclick="openLightbox({{$index}})">
+        <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
+        <div class="gallery-title">{{$item.Title}}</div>
+      </div>
+      {{end}}
     </div>
-    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
+    {{else}}
+    <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
+    {{end}}
+  </div>
+  <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
-    <script>
-        const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
-        function openLightbox(index) {
-            document.getElementById('lightbox-img').src = images[index].src;
-            document.getElementById('lightbox-caption').textContent = images[index].title;
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
+  </div>
+  <script>
+    const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
+    function openLightbox(index) {
+      document.getElementById('lightbox-img').src = images[index].src;
+      document.getElementById('lightbox-caption').textContent = images[index].title;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>`
 
 const rahatiTemplate = `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:site_name" content="مبل شیراز">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "مبل شیراز",
-      "url": "https://moblshiraz.ir/"
+  <meta charset="UTF-8">
+  <meta property="og:site_name" content="مبل شیراز">
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "مبل شیراز",
+   "url": "https://moblshiraz.ir/"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00bfa5">
+  <title>گالری تعمیر مبل راحتی | {{.Name}}</title>
+  <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="نمونه کارهای تعمیر مبل راحتی در کارگاه تعمیرات مبل شیراز">
+  <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
+    -face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/Vazirmatn.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00bfa5">
-    <title>گالری تعمیر مبل راحتی | {{.Name}}</title>
-    <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-    <meta name="description" content="نمونه کارهای تعمیر مبل راحتی در کارگاه تعمیرات مبل شیراز">
-    <style>@font-face{font-family:Vazirmatn;src:url(/fonts/Vazirmatn.woff2)format("woff2");font-weight:100 900;font-display:swap}
-        -face {
-            font-family: 'Vazirmatn';
-            src: url('/fonts/Vazirmatn.woff2') format('woff2');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
-        :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
-        body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
-        .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
-        .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
-        .brand { font-weight: 800; font-size: 15px; color: var(--text); }
-        .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-        .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
-        .header p { font-size: 13px; color: var(--text-sec); }
-        .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
-        .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-        .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
-        .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
-        .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
-        .gallery-item:hover .gallery-image img { transform: scale(1.03); }
-        .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
-        .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
-        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-        .lightbox.active { display: flex; }
-        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
-        .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
-        .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
-        .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
-        @media (min-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .header h1 { font-size: 32px; }
-        }
-    </style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
+    :root { --primary: #00bfa5; --primary-light: #e0f2f1; --bg: #f8f9fa; --text: #212529; --text-sec: #6c757d; --border: #e9ecef; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; font-size: 14px; }
+    .top-bar { background: white; padding: 12px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .top-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .back-btn { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--primary); font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 10px; background: var(--primary-light); }
+    .brand { font-weight: 800; font-size: 15px; color: var(--text); }
+    .header { background: white; padding: 30px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .header p { font-size: 13px; color: var(--text-sec); }
+    .gallery-container { max-width: 1100px; margin: auto; padding: 24px 16px 100px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; }
+    .gallery-item { border-radius: 16px; overflow: hidden; background: white; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,191,165,0.2); }
+    .gallery-image { width: 100%; overflow: hidden; background: #f0f0f0; }
+    .gallery-image img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover .gallery-image img { transform: scale(1.03); }
+    .gallery-title { font-size: 14px; color: var(--text); font-weight: 700; padding: 14px; text-align: center; }
+    .empty-msg { text-align: center; padding: 60px 20px; color: var(--text-sec); background: white; border-radius: 16px; }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .lightbox.active { display: flex; }
+    .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+    .lightbox img { max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .lightbox-caption { color: white; font-size: 15px; font-weight: 700; margin-top: 16px; }
+    .lightbox-close { position: absolute; top: -10px; left: -10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); color: white; border: none; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    @media (min-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .header h1 { font-size: 32px; }
+    }
+  </style>
 </head>
 <body>
-    <header class="top-bar">
-        <div class="top-inner">
-            <a href="index.html" class="back-btn">← بازگشت به سایت</a>
-            <div class="brand">🛋️ {{.Name}}</div>
-        </div>
-    </header>
-    <div class="header">
-        <h1>گالری تعمیر مبل راحتی</h1>
-        <p>نمونه‌کارهای تعمیر مبل راحتی در کارگاه ما</p>
+  <header class="top-bar">
+    <div class="top-inner">
+      <a href="index.html" class="back-btn">← بازگشت به سایت</a>
+      <div class="brand">🛋️ {{.Name}}</div>
     </div>
-    <div class="gallery-container">
-        {{if .Images}}
-        <div class="gallery-grid">
-            {{range $index, $item := .Images}}
-            <div class="gallery-item" onclick="openLightbox({{$index}})">
-                <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
-                <div class="gallery-title">{{$item.Title}}</div>
-            </div>
-            {{end}}
-        </div>
-        {{else}}
-        <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
-        {{end}}
+  </header>
+  <div class="header">
+    <h1>گالری تعمیر مبل راحتی</h1>
+    <p>نمونه‌کارهای تعمیر مبل راحتی در کارگاه ما</p>
+  </div>
+  <div class="gallery-container">
+    {{if .Images}}
+    <div class="gallery-grid">
+      {{range $index, $item := .Images}}
+      <div class="gallery-item" onclick="openLightbox({{$index}})">
+        <div class="gallery-image"><img src="{{$item.Image}}" alt="{{$item.Title}}" loading="lazy" decoding="async"></div>
+        <div class="gallery-title">{{$item.Title}}</div>
+      </div>
+      {{end}}
     </div>
-    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
+    {{else}}
+    <div class="empty-msg">📭 هنوز عکسی برای این گالری اضافه نشده است.</div>
+    {{end}}
+  </div>
+  <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
-    <script>
-        const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
-        function openLightbox(index) {
-            document.getElementById('lightbox-img').src = images[index].src;
-            document.getElementById('lightbox-caption').textContent = images[index].title;
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
+  </div>
+  <script>
+    const images = [{{range .Images}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
+    function openLightbox(index) {
+      document.getElementById('lightbox-img').src = images[index].src;
+      document.getElementById('lightbox-caption').textContent = images[index].title;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>`
