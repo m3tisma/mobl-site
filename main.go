@@ -711,11 +711,13 @@ const htmlTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
@@ -1207,11 +1209,13 @@ const sandaliTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
@@ -1325,11 +1329,13 @@ const parcheTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
@@ -1443,11 +1449,13 @@ const restorationTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
@@ -1560,11 +1568,13 @@ const blogIndexTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
@@ -1704,11 +1714,13 @@ const blogPostTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
@@ -1794,11 +1806,13 @@ const chesterTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
@@ -1901,11 +1915,13 @@ const rahatiTemplate = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta property="og:site_name" content="مبل شیراز">
+    <meta name="application-name" content="مبل شیراز">
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
    "@type": "WebSite",
    "name": "مبل شیراز",
+   "alternateName": ["moblshiraz.ir", "تعمیرات مبل شیراز", "تعمیر مبل در شیراز"],
    "url": "https://moblshiraz.ir/"
   }
   </script>
