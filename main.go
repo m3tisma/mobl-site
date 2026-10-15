@@ -1238,7 +1238,7 @@ const htmlTemplate = `<!DOCTYPE html>
     .contact-item:last-child { border-bottom: none; }
     .contact-icon { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
     .contact-icon.wa { background: #e7f9ef; color: #25D366; }
-    .contact-icon.map { background: #fef3c7; color: #d97706; }
+    .contact-icon.map { background: #e6f7f4; color: #d97706; }
     .contact-info { flex: 1; }
     .contact-label { font-size: 11px; color: var(--text-sec); }
     .contact-value { font-size: 14px; font-weight: 700; }
@@ -1284,7 +1284,7 @@ const htmlTemplate = `<!DOCTYPE html>
       .stats-inner { max-width: 700px; }
       .stat-value { font-size: 22px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
@@ -1655,7 +1655,7 @@ const sandaliTemplate = `<!DOCTYPE html>
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
       .header h1 { font-size: 32px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
@@ -1810,7 +1810,7 @@ const parcheTemplate = `<!DOCTYPE html>
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
       .header h1 { font-size: 32px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
@@ -1965,7 +1965,7 @@ const restorationTemplate = `<!DOCTYPE html>
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
       .header h1 { font-size: 32px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
@@ -2136,7 +2136,7 @@ const blogIndexTemplate = `<!DOCTYPE html>
       .post-grid { grid-template-columns: repeat(2, 1fr); }
       .header h1 { font-size: 32px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
@@ -2313,7 +2313,7 @@ const blogPostTemplate = `<!DOCTYPE html>
       .header h1 { font-size: 32px; }
       .content { padding: 40px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
@@ -2457,7 +2457,7 @@ const chesterTemplate = `<!DOCTYPE html>
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
       .header h1 { font-size: 32px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
@@ -2601,7 +2601,7 @@ const rahatiTemplate = `<!DOCTYPE html>
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
       .header h1 { font-size: 32px; }
     }
-  .site-footer { background: #fef3c7; color: #4a4a4a; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
+  .site-footer { background: #e6f7f4; color: #333333; padding: 40px 16px 20px; text-align: center; margin-top: 40px; }
 .site-footer .footer-inner { max-width: 800px; margin: 0 auto; }
 .site-footer .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 800; color: #00bfa5; margin-bottom: 10px; }
 .site-footer .footer-brand img { border-radius: 6px; }
