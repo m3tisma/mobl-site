@@ -721,6 +721,28 @@ const htmlTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#00bfa5">
   <title>{{.Title}}</title>
@@ -1219,6 +1241,28 @@ const sandaliTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#00bfa5">
   <title>گالری تعمیر صندلی | {{.Name}}</title>
@@ -1339,6 +1383,28 @@ const parcheTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#00bfa5">
   <title>گالری تعویض پارچه مبل | {{.Name}}</title>
@@ -1459,6 +1525,28 @@ const restorationTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#00bfa5">
   <title>گالری بازسازی کامل مبل | {{.Name}}</title>
@@ -1578,6 +1666,28 @@ const blogIndexTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{if eq .CurrentPage 1}}
   <title>وبلاگ تعمیرات مبل شیراز | مقالات تخصصی</title>
@@ -1724,6 +1834,28 @@ const blogPostTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{.Title}}</title>
   <link rel="preload" href="/fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
@@ -1816,6 +1948,28 @@ const chesterTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#00bfa5">
   <title>گالری تعمیر مبل چستر | {{.Name}}</title>
@@ -1925,6 +2079,28 @@ const rahatiTemplate = `<!DOCTYPE html>
    "url": "https://moblshiraz.ir/"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مبل شیراز",
+    "url": "https://moblshiraz.ir/",
+    "logo": "https://moblshiraz.ir/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+989013643428",
+      "contactType": "customer service"
+    },
+    "sameAs": ["https://instagram.com/moblshiraz.ir"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "شیراز",
+      "addressRegion": "فارس",
+      "addressCountry": "IR"
+    }
+  }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#00bfa5">
   <title>گالری تعمیر مبل راحتی | {{.Name}}</title>
