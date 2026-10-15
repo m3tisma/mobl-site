@@ -1238,7 +1238,7 @@ const htmlTemplate = `<!DOCTYPE html>
     .contact-item:last-child { border-bottom: none; }
     .contact-icon { width: 40px; height: 40px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
     .contact-icon.wa { background: #e7f9ef; color: #25D366; }
-    .contact-icon.map { background: #e6f7f4; color: #d97706; }
+    .contact-icon.map { background: #e6f7f4; color: #7c3aed; }
     .contact-info { flex: 1; }
     .contact-label { font-size: 11px; color: var(--text-sec); }
     .contact-value { font-size: 14px; font-weight: 700; }
@@ -1247,7 +1247,6 @@ const htmlTemplate = `<!DOCTYPE html>
     .neshan-map-container #neshan-map { width: 100%; height: 300px; z-index: 1; }
     .map-link { display: block; padding: 14px; text-align: center; background: var(--primary-light); color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 700; }
     .map-link:active { background: var(--primary); color: white; }
-    .trust-badges { display: flex; gap: 12px; margin-top: 16px; }
     .trust-badge { flex: 1; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; }
     .trust-icon { font-size: 28px; margin-bottom: 6px; }
     .trust-text { font-size: 10px; color: var(--text-sec); line-height: 1.5; }
@@ -1483,13 +1482,8 @@ const htmlTemplate = `<!DOCTYPE html>
       <a href="https://nshn.ir/be_bgLzhPFQAyo" target="_blank" class="contact-item"><div class="contact-icon map"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div class="contact-info"><div class="contact-label">آدرس کارگاه</div><div class="contact-value">{{.Address}}</div></div></a>
     </div>
     <a href="https://nshn.ir/be_bgLzhPFQAyo" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00bfa5, #009688); color:white; text-align:center; padding:18px; border-radius:14px; font-weight:bold; text-decoration:none; margin-top:20px; box-shadow:0 8px 20px rgba(0,191,165,0.3); font-family:tahoma;">
-  📍 مشاهده آدرس کارگاه روی نقشه نشان
+  مشاهده آدرس کارگاه روی نقشه نشان
 </a>
-      <div class="trust-badges">
-      <div class="trust-badge"><div class="trust-icon">✅</div><div class="trust-text">ضمانت ۶ ماهه</div></div>
-      <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text">۷ سال سابقه</div></div>
-      <div class="trust-badge"><div class="trust-icon">💰</div><div class="trust-text">قیمت منصفانه</div></div>
-    </div>
   </section>
 
   <footer class="site-footer">
