@@ -329,6 +329,7 @@ type SiteData struct {
 	Title             string
 	Name              string
 	Slogan            string
+    H1Title           string
 	About             string
 	LongAbout         string
 	Phone             string
@@ -369,9 +370,10 @@ func main() {
 	}
 
 	data := SiteData{
-		Title:       "تعمیرات مبل شیراز",
+		Title:       "تعمیرات مبل شیراز | تعمیر مبل در شیراز",
 		Name:        "مبل شیراز",
 		Slogan:      "تعمیر تخصصی انواع مبل، صندلی و پرسی در کارگاه ما",
+            H1Title:     "تعمیرات مبل در شیراز",
 		About:       "با بیش از ۷ سال تجربه، مبل شما را در کارگاه تخصصی‌مان تعمیر می‌کنیم",
 		LongAbout:   "کارگاه تعمیرات مبل شیراز با بیش از ۷ سال سابقه در زمینه تعمیر و بازسازی انواع مبل، صندلی و پرسی در شیراز فعالیت می‌کند. ما با بهره‌گیری از ابزارهای حرفه‌ای، مواد اولیه باکیفیت و تیمی مجرب، مبل قدیمی شما را به روزهای اوجش برمی‌گردانیم. هدف ما فقط تعمیر نیست؛ بلکه بازگرداندن زیبایی، راحتی و خاطرات خانه شماست. ضمانت ما لبخند رضایت شماست و تا رسیدن به بهترین نتیجه کنارتان می‌مانیم.",
 		Phone:       "09013643428",
@@ -973,7 +975,7 @@ const htmlTemplate = `<!DOCTYPE html>
 
     <section class="hero">
         <div class="hero-inner">
-            <h1 class="hero-title">{{.Slogan}}</h1>
+            <h1 class="hero-title">{{.H1Title}}</h1>
             <p class="hero-sub">{{.About}}</p>
             <div class="hero-image"><img src="{{.HeroImage}}" alt="تعمیرات مبل در شیراز" fetchpriority="high"></div>
             <div class="price-box">
