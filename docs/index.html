@@ -810,7 +810,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (match) {
           tabs.forEach(function(t) { t.classList.remove('active'); });
           match.tab.classList.add('active');
-          match.tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          var targetLeft = match.tab.offsetLeft - (tabsWrap.clientWidth / 2) + (match.tab.clientWidth / 2);
+          tabsWrap.scrollTo({ left: targetLeft, behavior: "smooth" });
         }
       }
     });
