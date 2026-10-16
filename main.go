@@ -1618,32 +1618,35 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     const el = document.getElementById(tab.dataset.tab);
-document.addEventListener('DOMContentLoaded', function() {
-  var tabs = document.querySelectorAll('.tab');
-  var tabsWrap = document.querySelector('.tabs-wrap');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+var tabs = document.querySelectorAll('.tab');
+var tabsWrap = document.querySelector('.tabs-wrap');
+if (tabs.length && tabsWrap) {
   var sections = [];
   tabs.forEach(function(tab) {
     var section = document.getElementById(tab.dataset.tab);
     if (section) sections.push({ tab: tab, section: section });
   });
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        var match = sections.find(function(s) { return s.section === entry.target; });
-        if (match) {
-          tabs.forEach(function(t) { t.classList.remove('active'); });
-          match.tab.classList.add('active');
-          var targetLeft = match.tab.offsetLeft - (tabsWrap.clientWidth / 2) + (match.tab.clientWidth / 2);
-          tabsWrap.scrollTo({ left: targetLeft, behavior: "smooth" });
+  if (sections.length) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var match = sections.find(function(s) { return s.section === entry.target; });
+          if (match) {
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            match.tab.classList.add('active');
+            var targetLeft = match.tab.offsetLeft - (tabsWrap.clientWidth / 2) + (match.tab.clientWidth / 2);
+            tabsWrap.scrollTo({ left: targetLeft, behavior: 'smooth' });
+          }
         }
-      }
-    });
-  }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
-  sections.forEach(function(s) { observer.observe(s.section); });
-});
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
+      });
+    }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+    sections.forEach(function(s) { observer.observe(s.section); });
+  }
+}
+
 const galleryImages = [{{range .Gallery}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
 let currentIndex = 0;
 function handleGalleryClick(el) {
