@@ -1143,11 +1143,8 @@ const htmlTemplate = `<!DOCTYPE html>
     .stat-label { font-size: 11px; color: var(--text-sec); margin-top: 4px; }
     .stat-item + .stat-item { border-right: 1px solid var(--border); }
 
-    .tabs-wrap { position: sticky; top: 60px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .tabs-wrap { position: sticky; top: 60px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; ; -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
     .tabs-wrap::-webkit-scrollbar { display: none; }
-    .tabs-wrap::before, .tabs-wrap::after { content: ""; position: absolute; top: 0; bottom: 0; width: 30px; pointer-events: none; z-index: 5; }
-    .tabs-wrap::before { right: 0; background: linear-gradient(to left, white, transparent); }
-    .tabs-wrap::after { left: 0; background: linear-gradient(to right, white, transparent); }
     .tabs { display: flex; gap: 6px; padding: 10px 16px; max-width: 1100px; margin: auto; white-space: nowrap; }
     .tab { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; background: transparent; color: var(--text-sec); border: 1.5px solid var(--border); cursor: pointer; white-space: nowrap; }
     .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
