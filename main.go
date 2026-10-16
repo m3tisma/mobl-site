@@ -3277,25 +3277,30 @@ const blogPostTemplate = `<!DOCTYPE html>
     <style>
       .related-posts { margin-top: 30px; }
       .related-title { font-size: 18px; font-weight: 800; margin-bottom: 16px; color: #00bfa5; }
-      .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .related-card { display: block; background: white; border: 1px solid #e9ecef; border-radius: 12px; overflow: hidden; text-decoration: none; transition: transform 0.2s; }
-      .related-card:hover { transform: translateY(-2px); }
-      .related-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
-      .related-card span { display: block; padding: 10px; font-size: 13px; font-weight: 700; color: #212529; text-align: center; }
-      @media (min-width: 768px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+      .related-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      .related-card { display: block; background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 16px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+      .related-card:hover { border-color: #00bfa5; background: #f0fdfb; }
+      .related-card-title { font-size: 14px; font-weight: 800; color: #212529; margin-bottom: 6px; line-height: 1.6; }
+      .related-card-date { font-size: 11px; color: #6c757d; margin-bottom: 8px; }
+      .related-card-excerpt { font-size: 12px; color: #495057; line-height: 1.8; margin-bottom: 8px; }
+      .related-card-more { font-size: 12px; font-weight: 700; color: #00bfa5; }
+      @media (min-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
     <div class="related-posts">
       <h2 class="related-title">مقالات مرتبط</h2>
       <div class="related-grid">
         {{range .RelatedPosts}}
         <a href="{{.Slug}}.html" class="related-card">
-          <img src="../{{.ImageThumb}}" alt="{{.ImageAlt}}" loading="lazy" decoding="async" width="400" height="225">
-          <span>{{.Title}}</span>
+          <div class="related-card-title">{{.Title}}</div>
+          <div class="related-card-date">{{.Date}}</div>
+          <div class="related-card-excerpt">{{.Excerpt}}</div>
+          <div class="related-card-more">ادامه مطلب ←</div>
         </a>
         {{end}}
       </div>
     </div>
   </div>
+
 
 <footer class="site-footer">
   <div class="footer-inner">
