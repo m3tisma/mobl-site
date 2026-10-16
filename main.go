@@ -1138,6 +1138,9 @@ const htmlTemplate = `<!DOCTYPE html>
 
     .tabs-wrap { position: sticky; top: 60px; z-index: 90; background: white; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
     .tabs-wrap::-webkit-scrollbar { display: none; }
+    .tabs-wrap::before, .tabs-wrap::after { content: ""; position: absolute; top: 0; bottom: 0; width: 30px; pointer-events: none; z-index: 5; }
+    .tabs-wrap::before { right: 0; background: linear-gradient(to left, white, transparent); }
+    .tabs-wrap::after { left: 0; background: linear-gradient(to right, white, transparent); }
     .tabs { display: flex; gap: 6px; padding: 10px 16px; max-width: 1100px; margin: auto; white-space: nowrap; }
     .tab { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; background: transparent; color: var(--text-sec); border: 1.5px solid var(--border); cursor: pointer; white-space: nowrap; }
     .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
@@ -1615,6 +1618,28 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     const el = document.getElementById(tab.dataset.tab);
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.tab');
+  var tabsWrap = document.querySelector('.tabs-wrap');
+  var sections = [];
+  tabs.forEach(function(tab) {
+    var section = document.getElementById(tab.dataset.tab);
+    if (section) sections.push({ tab: tab, section: section });
+  });
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var match = sections.find(function(s) { return s.section === entry.target; });
+        if (match) {
+          tabs.forEach(function(t) { t.classList.remove('active'); });
+          match.tab.classList.add('active');
+          match.tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    });
+  }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+  sections.forEach(function(s) { observer.observe(s.section); });
+});
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
