@@ -766,6 +766,16 @@ func main() {
 
 	blogPosts := []BlogPost{
 		{
+			Title:      "راهنمای کامل انتخاب پارچه مبل در شیراز (۱۴۰۵)",
+			Slug:       "rahnamaye-entekhab-parche-mobl",
+			Date:       "۱۴۰۵/۰۷/۲۵",
+			Excerpt:    "در این راهنمای جامع، انواع پارچه‌های مبل، مزایا و معایب هر کدام، راهنمای انتخاب بر اساس سبک زندگی و قیمت تقریبی پارچه‌ها در شیراز (۱۴۰۵) را بررسی می‌کنیم.",
+			Image:      "images/blog4-main.webp",
+			ImageThumb: "images/blog4-thumb.webp",
+			ImageAlt:   "راهنمای انتخاب پارچه مبل در شیراز",
+			Content:    template.HTML(fourthBlogPostContent),
+		},
+		{
 			Title:      "تفاوت مبل چستر و استیل چیست؟ راهنمای کامل انتخاب و تعمیر (۱۴۰۵)",
 			Slug:       "tafavot-chester-va-estil",
 			Date:       "۱۴۰۵/۰۷/۲۳",
