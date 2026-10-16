@@ -627,6 +627,11 @@ type BlogPost struct {
 	Content template.HTML
 }
 
+type BlogPostPageData struct {
+    BlogPost
+    RelatedPosts []BlogPost
+}
+
 type BlogPageData struct {
 	Posts    []BlogPost
 	CurrentPage int
