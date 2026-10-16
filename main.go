@@ -794,6 +794,13 @@ func main() {
 
 
 	funcMap := template.FuncMap{
+		"truncate": func(s string, n int) string {
+			runes := []rune(s)
+			if len(runes) <= n {
+				return s
+			}
+			return string(runes[:n])
+		},
 		"loop": func(n int) []int {
 			result := make([]int, n)
 			for i := 0; i < n; i++ {
@@ -1477,7 +1484,7 @@ const htmlTemplate = `<!DOCTYPE html>
         <div class="qa-replies">
           {{range $qa.Replies}}
           <div class="qa-reply">
-            <div class="qa-reply-header"><div class="qa-reply-avatar">{{slice .Author 0 3}}</div><div><div class="qa-reply-name">{{.Author}}</div><div class="qa-reply-date">{{.Date}}</div></div></div>
+            <div class="qa-reply-header"><div class="qa-reply-avatar">{{truncate .Author 3}}</div><div><div class="qa-reply-name">{{.Author}}</div><div class="qa-reply-date">{{.Date}}</div></div></div>
             <div class="qa-reply-text">{{.Text}}</div>
           </div>
           {{end}}
