@@ -1353,18 +1353,6 @@ const htmlTemplate = `<!DOCTYPE html>
 </div>
 
 
-  <!-- منوی موبایل -->
-  <div class="mobile-menu-overlay" id="mobileMenu">
-    <div class="mobile-menu-header">
-      <span>منوی سایت</span>
-      <button class="menu-close-btn" onclick="toggleMenu()" aria-label="بستن">✕</button>
-    </div>
-        <ul class="mobile-menu-list">
-      <li><a href="index.html" onclick="toggleMenu()">خانه</a></li>
-      <li><a href="blog/index.html" onclick="toggleMenu()">وبلاگ</a></li>
-      <li><a href="#contact" onclick="toggleMenu()">تماس با ما</a></li>
-    </ul>
-  </div>
 
   <header class="top-bar">
   <div class="top-inner">
