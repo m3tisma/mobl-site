@@ -1019,7 +1019,7 @@ func main() {
 	}
 
 	// ساخت صفحات مقالات
-	for _, post := range blogPosts {
+		for i, post := range blogPosts {
 		tmplPost, err := template.New("blogPost").Parse(blogPostTemplate)
 		if err != nil {
 			log.Fatal(err)
@@ -1028,11 +1028,25 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		if err := tmplPost.Execute(fPost, post); err != nil {
+		var related []BlogPost
+		for j, p := range blogPosts {
+			if j != i {
+				related = append(related, p)
+			}
+		}
+		if len(related) > 2 {
+			related = related[:2]
+		}
+		pageData := BlogPostPageData{
+			BlogPost:     post,
+			RelatedPosts: related,
+		}
+		if err := tmplPost.Execute(fPost, pageData); err != nil {
 			log.Fatal(err)
 		}
 		fPost.Close()
 	}
+
 
 	log.Println("✅ صفحات وبلاگ ساخته شدند")
 }
