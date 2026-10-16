@@ -1567,50 +1567,48 @@ const htmlTemplate = `<!DOCTYPE html>
   </div>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('active');
-      document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
     }
-
-    function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
-    function toggleQA(el) { el.closest('.qa-item').classList.toggle('open'); }
-    function showMoreReviews(btn) { document.querySelectorAll('.review-hidden').forEach(el => el.classList.add('show')); btn.style.display = 'none'; }
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const el = document.getElementById(tab.dataset.tab);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-
-    const galleryImages = [{{range .Gallery}}{ src: '{{.Image}}', title: '{{.Title}}' },{{end}}];
-    let currentIndex = 0;
-
-    function handleGalleryClick(el) {
-      const link = el.dataset.link;
-      if (link && link !== '') { window.location.href = link; }
-      else { openLightbox(parseInt(el.dataset.index)); }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
     }
-
-    function openLightbox(index) { currentIndex = index; updateLightbox(); document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
-    function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
-    function nextImage() { currentIndex = (currentIndex + 1) % galleryImages.length; updateLightbox(); }
-    function prevImage() { currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); }
-    function updateLightbox() {
-      const item = galleryImages[currentIndex];
-      document.getElementById('lightbox-img').src = item.src;
-      document.getElementById('lightbox-caption').textContent = item.title;
-      document.getElementById('lightbox-counter').textContent = (currentIndex + 1) + ' از ' + galleryImages.length;
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
     }
-    document.addEventListener('keydown', (e) => {
-      if (!document.getElementById('lightbox').classList.contains('active')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') nextImage();
-      if (e.key === 'ArrowRight') prevImage();
-    });
-  </script>
+  });
+});
+</script>
+
 <script>
 function toggleMenu() {
   var menu = document.getElementById('mobileMenu');
@@ -1619,7 +1617,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var currentPath = window.location.pathname;
@@ -1655,13 +1687,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
 
@@ -1893,7 +1937,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -1951,13 +2029,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
 
@@ -2189,7 +2279,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -2247,13 +2371,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
 
@@ -2485,7 +2621,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -2543,13 +2713,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
 const blogIndexTemplate = `<!DOCTYPE html>
@@ -2825,7 +3007,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var currentPath = window.location.pathname;
@@ -2861,13 +3077,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
 
@@ -3090,7 +3318,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var currentPath = window.location.pathname;
@@ -3126,13 +3388,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
 
@@ -3353,7 +3627,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -3411,13 +3719,25 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
 
@@ -3638,7 +3958,41 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    item.classList.remove('active');
+    var href = item.getAttribute('href');
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
+      item.classList.add('active');
+    }
+  });
+});
 </script>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -3696,12 +4050,24 @@ document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash;
   var items = document.querySelectorAll('.mobile-menu-list li a');
   items.forEach(function(item) {
+    item.classList.remove('active');
     var href = item.getAttribute('href');
-    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+    if (href.indexOf('#contact') !== -1) {
+      if (hash === '#contact') item.classList.add('active');
+      return;
+    }
+    if (href === '/' || href === '/index.html' || href === 'index.html') {
+      if ((path === '/' || path === '/index.html' || path === '') && hash !== '#contact') {
+        item.classList.add('active');
+      }
+      return;
+    }
+    if (path === href || (href !== '/' && path.indexOf(href) === 0)) {
       item.classList.add('active');
     }
   });
 });
 </script>
+
 </body>
 </html>`
