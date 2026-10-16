@@ -128,10 +128,13 @@
 .site-footer .footer-links a { color: #555; text-decoration: none; font-size: 13px; transition: color 0.3s; }
 .site-footer .footer-links a:hover { color: #00bfa5; }
 .site-footer .footer-copy { font-size: 12px; color: #777; border-top: 1px solid #c8e6e0; padding-top: 16px; }
+.mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+.mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
 </style>
 </head>
 <body>
-<div class="mobile-menu-overlay" id="mobileMenu">
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop" onclick="toggleMenu()"></div><div class="mobile-menu-overlay" id="mobileMenu">
   <div class="mobile-menu-header">
     <span>منوی سایت</span>
     <button class="menu-close-btn" onclick="toggleMenu()" aria-label="بستن">✕</button>
@@ -279,6 +282,17 @@ function toggleMenu() {
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
   }
 }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var currentPath = window.location.pathname;
+  var menuLinks = document.querySelectorAll(".mobile-menu-list li a");
+  menuLinks.forEach(function(link) {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
 </script>
 </body>
 </html>
