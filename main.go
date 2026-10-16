@@ -1337,6 +1337,8 @@ const htmlTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -1629,6 +1631,37 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
+    }
+  });
+});
+</script>
 </body>
 </html>`
 
@@ -1770,6 +1803,8 @@ const sandaliTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -1888,6 +1923,37 @@ document.addEventListener("DOMContentLoaded", function() {
   menuLinks.forEach(function(link) {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
     }
   });
 });
@@ -2033,6 +2099,8 @@ const parcheTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -2151,6 +2219,37 @@ document.addEventListener("DOMContentLoaded", function() {
   menuLinks.forEach(function(link) {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
     }
   });
 });
@@ -2296,6 +2395,8 @@ const restorationTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -2414,6 +2515,37 @@ document.addEventListener("DOMContentLoaded", function() {
   menuLinks.forEach(function(link) {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
     }
   });
 });
@@ -2575,6 +2707,8 @@ const blogIndexTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -2699,6 +2833,37 @@ document.addEventListener("DOMContentLoaded", function() {
   menuLinks.forEach(function(link) {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
     }
   });
 });
@@ -2839,6 +3004,8 @@ const blogPostTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -2931,6 +3098,37 @@ document.addEventListener("DOMContentLoaded", function() {
   menuLinks.forEach(function(link) {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
     }
   });
 });
@@ -3070,6 +3268,8 @@ const chesterTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -3183,6 +3383,37 @@ document.addEventListener("DOMContentLoaded", function() {
   menuLinks.forEach(function(link) {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
     }
   });
 });
@@ -3322,6 +3553,8 @@ const rahatiTemplate = `<!DOCTYPE html>
 .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1999; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .mobile-menu-backdrop.active { opacity: 1; visibility: visible; }
 .mobile-menu-list li a.active { background: #00bfa5 !important; color: white !important; }
+.mobile-menu-list li a.active { background: #00bfa5 !important; color: #ffffff !important; }
+.mobile-menu-list li a.active:hover { background: #009688 !important; color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -3435,6 +3668,37 @@ document.addEventListener("DOMContentLoaded", function() {
   menuLinks.forEach(function(link) {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  if (!menu || !menu.classList.contains('active')) return;
+  var link = e.target.closest('.mobile-menu-list a');
+  if (link) {
+    toggleMenu();
+    var items = document.querySelectorAll('.mobile-menu-list li a');
+    items.forEach(function(item) { item.classList.remove('active'); });
+    link.classList.add('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var items = document.querySelectorAll('.mobile-menu-list li a');
+  items.forEach(function(item) {
+    var href = item.getAttribute('href');
+    if (href === path || (hash === '#contact' && href.indexOf('#contact') !== -1)) {
+      item.classList.add('active');
     }
   });
 });
