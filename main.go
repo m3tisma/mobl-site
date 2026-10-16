@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.tab');
+  var tabsWrap = document.querySelector('.tabs-wrap');
+  if (!tabs.length || !tabsWrap) return;
+  var sections = [];
+  tabs.forEach(function(tab) {
+    var section = document.getElementById(tab.dataset.tab);
+    if (section) sections.push({ tab: tab, section: section });
+  });
+  if (!sections.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var match = sections.find(function(s) { return s.section === entry.target; });
+        if (match) {
+          tabs.forEach(function(t) { t.classList.remove('active'); });
+          match.tab.classList.add('active');
+          var targetLeft = match.tab.offsetLeft - (tabsWrap.clientWidth / 2) + (match.tab.clientWidth / 2);
+          tabsWrap.scrollTo({ left: targetLeft, behavior: 'smooth' });
+        }
+      }
+    });
+  }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+  sections.forEach(function(s) { observer.observe(s.section); });
+});
 package main
 
 import (
