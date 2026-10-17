@@ -767,7 +767,7 @@ func main() {
 	}
 
 	// تنظیمات صفحه‌بندی وبلاگ
-	postsPerPage := 6
+	postsPerPage := 5
 
 
 	blogPosts := []BlogPost{
@@ -1050,8 +1050,8 @@ func main() {
 				related = append(related, p)
 			}
 		}
-		if len(related) > 2 {
-			related = related[:2]
+		if len(related) > 3 {
+			related = related[:3]
 		}
 		pageData := BlogPostPageData{
 			BlogPost:     post,
