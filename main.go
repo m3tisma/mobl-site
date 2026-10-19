@@ -724,6 +724,7 @@ func main() {
 			{Image: "images/gallery-6.webp", Title: "بازسازی کامل", Link: "gallery-restoration.html"},
 		},
 		RestorationImages: []GalleryItem{
+		{Image: "images/restoration-new.webp", Title: "بازسازی کامل مبل - نمونه جدید"},
 			{Image: "images/before-after-1.webp", Title: "بازسازی کامل مبل راحتی"},
 		},
 		ParcheImages: []GalleryItem{
