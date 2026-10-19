@@ -184,6 +184,11 @@
     <div class="gallery-grid">
       
       <div class="gallery-item" onclick="openLightbox( 0 )">
+        <div class="gallery-image"><img src="images/restoration-new.webp" alt="بازسازی کامل مبل - نمونه جدید" loading="lazy" decoding="async"></div>
+        <div class="gallery-title">بازسازی کامل مبل - نمونه جدید</div>
+      </div>
+      
+      <div class="gallery-item" onclick="openLightbox( 1 )">
         <div class="gallery-image"><img src="images/before-after-1.webp" alt="بازسازی کامل مبل راحتی" loading="lazy" decoding="async"></div>
         <div class="gallery-title">بازسازی کامل مبل راحتی</div>
       </div>
@@ -201,7 +206,7 @@
   </div>
 
   <script>
-    const images = [{ src: 'images\/before-after-1.webp', title: 'بازسازی کامل مبل راحتی' },];
+    const images = [{ src: 'images\/restoration-new.webp', title: 'بازسازی کامل مبل - نمونه جدید' },{ src: 'images\/before-after-1.webp', title: 'بازسازی کامل مبل راحتی' },];
     function openLightbox(index) {
       document.getElementById('lightbox-img').src = images[index].src;
       document.getElementById('lightbox-caption').textContent = images[index].title;
