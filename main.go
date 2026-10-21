@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"encoding/json"
 	"log"
 	"os"
 	"path/filepath"
