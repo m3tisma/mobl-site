@@ -1,7 +1,7 @@
 import json
 import random
+from datetime import datetime
 
-# ================= دیتای نظرات =================
 first_names = ["علی", "سارا", "محمد", "زهرا", "رضا", "مریم", "حسین", "نرگس", "امیر", "فاطمه", "مهدی", "الهام", "پویا", "نگار", "کیان", "آیدا"]
 last_names = ["محمدی", "رضایی", "حسینی", "کریمی", "احمدی", "نوری", "صادقی", "موسوی", "جعفری", "قاسمی", "زمانی", "عبدی", "بهرامی", "شریفی"]
 weird_names = ["مبل‌دوست", "دکوراتور", "شیرازی", "کاربر مهمان", "خریدار قبلی"]
@@ -15,8 +15,6 @@ review_texts = [
     "قبل از کار دقیق راهنمایی کردن و هیچ هزینه اضافه‌ای نگرفتن. عالی بود.",
     "مبل مادرم رو بردیم، خیلی قشنگ و سریع تحویل دادن. واقعاً حرفه‌ای هستن."
 ]
-
-# ================= دیتای پرسش و پاسخ =================
 qanda_questions = [
     "سلام، هزینه تعمیر مبل استیل ۹ نفره چقدر میشه؟",
     "برای مبل چستر که پارچه‌ش پاره شده، پارچه خودم رو دارم. هزینه دستمزد چقدره؟",
@@ -45,50 +43,72 @@ def generate_name():
     elif choice == 3: return f"{first} {last[0]}."
     else: return f"{first} {random.choice(weird_names)}"
 
-# ۱. آپدیت نظرات
+now = datetime.now()
+today_str = now.strftime('%Y-%m-%d')
+
+# ---- Reviews ----
 try:
     with open('data_reviews.json', 'r', encoding='utf-8') as f:
         reviews = json.load(f)
 except:
     reviews = []
 
-name = generate_name()
-new_review = {
-    "Name": name,
-    "City": random.choice(cities),
-    "Date": "همین امروز",
-    "Rating": 5,
-    "Service": random.choice(services),
-    "Initial": name[0] if name else "ک",
-    "Text": random.choice(review_texts)
-}
-reviews.insert(0, new_review)
+should_add = True
+if reviews:
+    last_date_str = reviews[0].get('CreatedAt', '2000-01-01')
+    last_date = datetime.strptime(last_date_str, '%Y-%m-%d')
+    # انتخاب تصادفی بین ۲ تا ۴ روز
+    if (now - last_date).days < random.randint(2, 4):
+        should_add = False
+
+if should_add:
+    name = generate_name()
+    new_review = {
+        "Name": name,
+        "City": random.choice(cities),
+        "CreatedAt": today_str,
+        "Rating": 5,
+        "Service": random.choice(services),
+        "Initial": name[0] if name else "ک",
+        "Text": random.choice(review_texts)
+    }
+    reviews.insert(0, new_review)
+
 with open('data_reviews.json', 'w', encoding='utf-8') as f:
     json.dump(reviews, f, ensure_ascii=False, indent=2)
 
-# ۲. آپدیت پرسش و پاسخ
+# ---- QandA ----
 try:
     with open('data_qanda.json', 'r', encoding='utf-8') as f:
         qandas = json.load(f)
 except:
     qandas = []
 
-q_name = generate_name()
-new_qanda = {
-    "ID": len(qandas) + 1,
-    "Name": q_name,
-    "Date": "همین امروز",
-    "Question": random.choice(qanda_questions),
-    "Replies": [
-        {
-            "Author": "مبل شیراز",
-            "Date": "همین امروز",
-            "Text": random.choice(qanda_answers)
-        }
-    ]
-}
-qandas.insert(0, new_qanda)
+should_add_qa = True
+if qandas:
+    last_date_str = qandas[0].get('CreatedAt', '2000-01-01')
+    last_date = datetime.strptime(last_date_str, '%Y-%m-%d')
+    if (now - last_date).days < random.randint(2, 4):
+        should_add_qa = False
+
+if should_add_qa:
+    q_name = generate_name()
+    new_qanda = {
+        "ID": len(qandas) + 1,
+        "Name": q_name,
+        "CreatedAt": today_str,
+        "Question": random.choice(qanda_questions),
+        "Replies": [
+            {
+                "Author": "مبل شیراز",
+                "CreatedAt": today_str,
+                "Text": random.choice(qanda_answers)
+            }
+        ]
+    }
+    qandas.insert(0, new_qanda)
+
 with open('data_qanda.json', 'w', encoding='utf-8') as f:
     json.dump(qandas, f, ensure_ascii=False, indent=2)
 
-print("✅ نظر جدید و پرسش و پاسخ جدید اضافه شد!")
+print("✅ پردازش با موفقیت انجام شد!")

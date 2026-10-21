@@ -1,8 +1,8 @@
 name: Auto Add Review
 on:
   schedule:
-    - cron: '0 0 */3 * *' # هر ۳ روز یکبار
-  workflow_dispatch: # اجازه میده دستی هم اجراش کنی
+    - cron: '0 0 * * *' # هر روز ساعت ۱۲ شب اجرا میشه
+  workflow_dispatch: 
 
 permissions:
   contents: write
@@ -27,5 +27,5 @@ jobs:
           git config --global user.name 'Auto Reviewer Bot'
           git config --global user.email 'bot@moblshiraz.ir'
           git add data_reviews.json data_qanda.json
-          git commit -m "🤖 Auto-added new review and Q&A"
+          git commit -m "🤖 Auto-update dates and maybe add new review/Q&A" || exit 0
           git push

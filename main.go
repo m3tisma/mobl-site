@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"time"
 	"encoding/json"
 	"log"
 	"os"
@@ -597,7 +598,7 @@ type GalleryItem struct {
 type Review struct {
 	Name  string
 	City  string
-	Date  string
+	CreatedAt string
 	Rating int
 	Text  string
 	Service string
@@ -611,14 +612,14 @@ type FAQ struct {
 
 type QReply struct {
 	Author string
-	Date  string
+	CreatedAt string
 	Text  string
 }
 
 type QandA struct {
 	ID    int
 	Name   string
-	Date   string
+	CreatedAt string
 	Question string
 	Replies []QReply
 }
@@ -870,6 +871,36 @@ func main() {
 
 
 	funcMap := template.FuncMap{
+
+        "relativeDate": func(dateStr string) string {
+            t, err := time.Parse("2006-01-02", dateStr)
+            if err != nil {
+                return dateStr
+            }
+            now := time.Now()
+            now = time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, time.Local)
+            t = time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, time.Local)
+            days := int(now.Sub(t).Hours() / 24)
+            if days <= 0 { return "همین امروز" }
+            if days == 1 { return "۱ روز پیش" }
+            if days == 2 { return "۲ روز پیش" }
+            if days == 3 { return "۳ روز پیش" }
+            if days == 4 { return "۴ روز پیش" }
+            if days == 5 { return "۵ روز پیش" }
+            if days == 6 { return "۶ روز پیش" }
+            if days >= 7 && days < 14 { return "۱ هفته پیش" }
+            if days >= 14 && days < 21 { return "۲ هفته پیش" }
+            if days >= 21 && days < 30 { return "۳ هفته پیش" }
+            months := days / 30
+            if months == 1 { return "۱ ماه پیش" }
+            if months == 2 { return "۲ ماه پیش" }
+            if months == 3 { return "۳ ماه پیش" }
+            if months == 4 { return "۴ ماه پیش" }
+            if months == 5 { return "۵ ماه پیش" }
+            if months == 6 { return "۶ ماه پیش" }
+            return fmt.Sprintf("%d ماه پیش", months)
+        },
+    
 		"truncate": func(s string, n int) string {
 			runes := []rune(s)
 			if len(runes) <= n {
@@ -1562,7 +1593,7 @@ const htmlTemplate = `<!DOCTYPE html>
       </div>
       {{range $index, $qa := .QandAs}}
       <div class="qa-item{{if eq $index 0}} open{{end}}">
-        <div class="qa-meta"><span class="qa-author">{{$qa.Name}}</span> · {{$qa.Date}}</div>
+        <div class="qa-meta"><span class="qa-author">{{$qa.Name}}</span> · {{relativeDate $qa.CreatedAt}}</div>
         <div class="qa-question">{{$qa.Question}}</div>
         <div class="qa-actions">
           <button class="qa-toggle" onclick="toggleQA(this)"><span class="arrow">▾</span><span>مشاهده {{len $qa.Replies}} پاسخ</span></button>
@@ -1571,7 +1602,7 @@ const htmlTemplate = `<!DOCTYPE html>
         <div class="qa-replies">
           {{range $qa.Replies}}
           <div class="qa-reply">
-            <div class="qa-reply-header"><div class="qa-reply-avatar">{{truncate .Author 3}}</div><div><div class="qa-reply-name">{{.Author}}</div><div class="qa-reply-date">{{.Date}}</div></div></div>
+            <div class="qa-reply-header"><div class="qa-reply-avatar">{{truncate .Author 3}}</div><div><div class="qa-reply-name">{{.Author}}</div><div class="qa-reply-date">{{relativeDate .CreatedAt}}</div></div></div>
             <div class="qa-reply-text">{{.Text}}</div>
           </div>
           {{end}}
@@ -1589,7 +1620,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <div class="review-card{{if ge $index 3}} review-hidden{{end}}">
       <div class="review-header">
         <div class="review-avatar">{{$rev.Initial}}</div>
-        <div><div class="review-name">{{$rev.Name}}</div><div class="review-meta">{{$rev.City}} · {{$rev.Date}}</div></div>
+        <div><div class="review-name">{{$rev.Name}}</div><div class="review-meta">{{$rev.City}} · {{relativeDate $rev.CreatedAt}}</div></div>
       </div>
       <div class="review-stars">{{stars $rev.Rating}}</div>
       <p class="review-text">{{$rev.Text}}</p>
