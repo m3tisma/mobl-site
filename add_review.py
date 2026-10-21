@@ -1,16 +1,14 @@
 import json
 import random
-import datetime
-import os
-import sys
+from datetime import datetime
 
-# لیست اسم‌ها و متن‌ها
+# ================= دیتای نظرات =================
 first_names = ["علی", "سارا", "محمد", "زهرا", "رضا", "مریم", "حسین", "نرگس", "امیر", "فاطمه", "مهدی", "الهام", "پویا", "نگار", "کیان", "آیدا"]
 last_names = ["محمدی", "رضایی", "حسینی", "کریمی", "احمدی", "نوری", "صادقی", "موسوی", "جعفری", "قاسمی", "زمانی", "عبدی", "بهرامی", "شریفی"]
 weird_names = ["مبل‌دوست", "دکوراتور", "شیرازی", "کاربر مهمان", "خریدار قبلی"]
 cities = ["شیراز", "مرودشت", "کازرون", "آباده", "صدرا", "زرقان"]
 services = ["تعمیر مبل چستر", "تعویض پارچه", "تعمیر مبل راحتی", "بازسازی کامل", "تعمیر صندلی", "روکش مبل"]
-texts = [
+review_texts = [
     "کارشون عالی بود، مبل قدیمی مثل روز اولش شد. حتماً به دوستانم معرفی می‌کنم.",
     "سر وقت تحویل دادن و قیمتشون هم منصفانه بود. ممنون از تیم خوبتون.",
     "کیفیت پارچه‌ای که استفاده کردن خیلی خوبه. از نتیجه کار کاملاً راضی هستم.",
@@ -19,35 +17,36 @@ texts = [
     "مبل مادرم رو بردیم، خیلی قشنگ و سریع تحویل دادن. واقعاً حرفه‌ای هستن."
 ]
 
+# ================= دیتای پرسش و پاسخ =================
+qanda_questions = [
+    "سلام، هزینه تعمیر مبل استیل ۹ نفره چقدر میشه؟",
+    "برای مبل چستر که پارچه‌ش پاره شده، پارچه خودم رو دارم. هزینه دستمزد چقدره؟",
+    "مبل راحتی ما فنرهاش صدا میده، آیا در محل هم تعمیر میکنید؟",
+    "تعمیر اسکلت مبل چقدر زمان میبره؟",
+    "آیا برای تعمیر صندلی اداری هم قطعات یدکی دارید؟",
+    "سلام، مبل چرمی ما ترک خورده، قابل ترمیمه یا باید پارچه‌ش کنیم؟",
+    "هزینه تعویض اسفنج مبل راحتی چقدره؟"
+]
+qanda_answers = [
+    "سلام. برای اعلام دقیق قیمت، لطفاً عکس مبل رو به واتساپ ما بفرستید تا کارشناسان ما بررسی کنند و بهترین قیمت رو اعلام کنند.",
+    "سلام. اگه پارچه رو خودتون تهیه کنید، هزینه بسیار کمتر میشه. لطفاً عکس مبل و متراژ پارچه‌تون رو واتساپ بفرستید.",
+    "سلام. بله، بسیاری از تعمیرات جزئی در محل انجام میشه. برای هماهنگی و مشاوره رایگان با ما تماس بگیرید.",
+    "سلام. تعمیر اسکلت معمولاً بین ۳ تا ۵ روز کاری زمان میبره. بسته به نوع مبل متغیره.",
+    "سلام. بله، قطعات یدکی انواع صندلی‌های اداری موجوده. عکس صندلی رو بفرستید تا راهنمایی کنیم.",
+    "سلام. ترک خوردگی چرم در بسیاری از موارد قابل ترمیم و رنگ‌آمیزی هست. عکس مبل رو بفرستید تا دقیق بگم.",
+    "سلام. هزینه تعویض اسفنج بسته به نوع فوم و ابعاد مبل متفاوته. لطفاً عکس مبل رو واتساپ کنید."
+]
+
 def generate_name():
     choice = random.randint(1, 4)
     first = random.choice(first_names)
     last = random.choice(last_names)
-    if choice == 1: return first 
-    elif choice == 2: return f"{first} {last}" 
-    elif choice == 3: return f"{first} {last[0]}." 
-    else: return f"{first} {random.choice(weird_names)}" 
+    if choice == 1: return first
+    elif choice == 2: return f"{first} {last}"
+    elif choice == 3: return f"{first} {last[0]}."
+    else: return f"{first} {random.choice(weird_names)}"
 
-# ==========================================
-# منطق زمان‌بندی تصادفی (بین 3 تا 7 روز)
-# ==========================================
-state_file = 'last_run.json'
-today = datetime.date.today()
-
-if os.path.exists(state_file):
-    with open(state_file, 'r', encoding='utf-8') as f:
-        state = json.load(f)
-    last_date = datetime.date.fromisoformat(state['last_date'])
-    target_days = state['target_days']
-    
-    days_passed = (today - last_date).days
-    if days_passed < target_days:
-        print(f"⏳ هنوز زوده! {days_passed} روز گذشته، باید {target_days} روز بگذره.")
-        sys.exit(0) # خروج بدون خطا (ربات نظر نمیده)
-
-# ==========================================
-# اگر زمانش رسیده باشه، نظر جدید می‌سازیم
-# ==========================================
+# ================= ۱. آپدیت نظرات =================
 with open('data_reviews.json', 'r', encoding='utf-8') as f:
     reviews = json.load(f)
 
@@ -59,17 +58,34 @@ new_review = {
     "Rating": 5,
     "Service": random.choice(services),
     "Initial": name[0] if name else "ک",
-    "Text": random.choice(texts)
+    "Text": random.choice(review_texts)
 }
-
 reviews.insert(0, new_review)
 
 with open('data_reviews.json', 'w', encoding='utf-8') as f:
     json.dump(reviews, f, ensure_ascii=False, indent=2)
 
-# انتخاب تصادفی زمان اجرای بعدی (بین 3 تا 7 روز)
-next_days = random.randint(3, 7)
-with open(state_file, 'w', encoding='utf-8') as f:
-    json.dump({'last_date': today.isoformat(), 'target_days': next_days}, f, ensure_ascii=False, indent=2)
+# ================= ۲. آپدیت پرسش و پاسخ =================
+with open('data_qanda.json', 'r', encoding='utf-8') as f:
+    qandas = json.load(f)
 
-print(f"✅ نظر جدید برای {name} اضافه شد! اجرای بعدی بعد از {next_days} روز.")
+q_name = generate_name()
+new_qanda = {
+    "ID": len(qandas) + 1,
+    "Name": q_name,
+    "Date": "همین امروز",
+    "Question": random.choice(qanda_questions),
+    "Replies": [
+        {
+            "Author": "مبل شیراز",
+            "Date": "همین امروز",
+            "Text": random.choice(qanda_answers)
+        }
+    ]
+}
+qandas.insert(0, new_qanda)
+
+with open('data_qanda.json', 'w', encoding='utf-8') as f:
+    json.dump(qandas, f, ensure_ascii=False, indent=2)
+
+print("✅ نظر جدید و پرسش و پاسخ جدید اضافه شد!")

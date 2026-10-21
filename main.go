@@ -778,6 +778,12 @@ func main() {
 		json.Unmarshal(reviewData, &data.Reviews)
 	}
 
+		// خواندن پرسش و پاسخ از فایل JSON
+	qandaData, err := os.ReadFile("data_qanda.json")
+	if err == nil {
+		json.Unmarshal(qandaData, &data.QandAs)
+	}
+
 	blogPosts := []BlogPost{
 		{
 			Title:      "راهنمای کامل تعمیر صندلی ناهارخوری و اداری در شیراز (۱۴۰۵)",
