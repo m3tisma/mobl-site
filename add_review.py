@@ -1,6 +1,5 @@
 import json
 import random
-from datetime import datetime
 
 # ================= دیتای نظرات =================
 first_names = ["علی", "سارا", "محمد", "زهرا", "رضا", "مریم", "حسین", "نرگس", "امیر", "فاطمه", "مهدی", "الهام", "پویا", "نگار", "کیان", "آیدا"]
@@ -46,9 +45,12 @@ def generate_name():
     elif choice == 3: return f"{first} {last[0]}."
     else: return f"{first} {random.choice(weird_names)}"
 
-# ================= ۱. آپدیت نظرات =================
-with open('data_reviews.json', 'r', encoding='utf-8') as f:
-    reviews = json.load(f)
+# ۱. آپدیت نظرات
+try:
+    with open('data_reviews.json', 'r', encoding='utf-8') as f:
+        reviews = json.load(f)
+except:
+    reviews = []
 
 name = generate_name()
 new_review = {
@@ -61,13 +63,15 @@ new_review = {
     "Text": random.choice(review_texts)
 }
 reviews.insert(0, new_review)
-
 with open('data_reviews.json', 'w', encoding='utf-8') as f:
     json.dump(reviews, f, ensure_ascii=False, indent=2)
 
-# ================= ۲. آپدیت پرسش و پاسخ =================
-with open('data_qanda.json', 'r', encoding='utf-8') as f:
-    qandas = json.load(f)
+# ۲. آپدیت پرسش و پاسخ
+try:
+    with open('data_qanda.json', 'r', encoding='utf-8') as f:
+        qandas = json.load(f)
+except:
+    qandas = []
 
 q_name = generate_name()
 new_qanda = {
@@ -84,7 +88,6 @@ new_qanda = {
     ]
 }
 qandas.insert(0, new_qanda)
-
 with open('data_qanda.json', 'w', encoding='utf-8') as f:
     json.dump(qandas, f, ensure_ascii=False, indent=2)
 
