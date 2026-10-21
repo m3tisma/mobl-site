@@ -1,0 +1,31 @@
+name: Auto Add Review
+on:
+  schedule:
+    - cron: '0 0 */3 * *' # هر ۳ روز یکبار (ساعت ۱۲ شب)
+  workflow_dispatch: # اجازه میده دستی هم اجراش کنی (برای تست)
+
+permissions:
+  contents: write
+
+jobs:
+  update-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Add Review
+        run: python add_review.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'Auto Reviewer Bot'
+          git config --global user.email 'bot@moblshiraz.ir'
+          git add data_reviews.json
+          git commit -m "🤖 Auto-added a new review"
+          git push
