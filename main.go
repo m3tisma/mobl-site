@@ -772,6 +772,12 @@ func main() {
 	postsPerPage := 5
 
 
+		// خواندن نظرات از فایل JSON
+	reviewData, err := os.ReadFile("data_reviews.json")
+	if err == nil {
+		json.Unmarshal(reviewData, &data.Reviews)
+	}
+
 	blogPosts := []BlogPost{
 		{
 			Title:      "راهنمای کامل تعمیر صندلی ناهارخوری و اداری در شیراز (۱۴۰۵)",
