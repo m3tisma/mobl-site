@@ -1,8 +1,8 @@
 name: Auto Add Review
 on:
   schedule:
-    - cron: '0 0 */3 * *' # هر ۳ روز یکبار (ساعت ۱۲ شب)
-  workflow_dispatch: # اجازه میده دستی هم اجراش کنی (برای تست)
+    - cron: '0 0 * * *' # هر روز ساعت ۱۲ شب بیدار میشه تا چک کنه
+  workflow_dispatch: # اجازه اجرای دستی
 
 permissions:
   contents: write
@@ -27,5 +27,6 @@ jobs:
           git config --global user.name 'Auto Reviewer Bot'
           git config --global user.email 'bot@moblshiraz.ir'
           git add data_reviews.json
-          git commit -m "🤖 Auto-added a new review"
-          git push
+          git add last_run.json
+          # این خط چک میکنه اگه تغییری بود کامیت کنه، اگه نظر جدیدی اضافه نشده بود ارور نده
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-added a new review" && git push)
