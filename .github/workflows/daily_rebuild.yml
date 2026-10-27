@@ -1,0 +1,32 @@
+name: Daily Rebuild
+on:
+  schedule:
+    - cron: '0 0 * * *' # هر شب ساعت ۱۲ بیدار میشه
+  workflow_dispatch: # برای تست دستی
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Rebuild site
+        run: |
+          go run main.go
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'Auto Rebuild Bot'
+          git config --global user.email 'bot@moblshiraz.ir'
+          git add docs/
+          git commit -m "🤖 Daily rebuild to update relative dates" || exit 0
+          git push
